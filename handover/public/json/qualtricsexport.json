@@ -12,7 +12,7 @@
         "image": "./images/qualtrics/qualtrics-screener.png",
         "description": [
             "This is the page when you can edit the screener",
-            "For more information visit the qualtrics support pages <a href=\"https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/\" target=\"blank\">here</a>",
+            "For more information visit the qualtrics support pages (link in footer)",
             "To view and export collect data, click on the 'Data & Analysis' tab"
         ]
     },
@@ -43,12 +43,11 @@
     },
     {
         "name": "Step 5 - Editing columns",
-        "image": "./images/qualtrics-download2.png",
         "description": [
             "Open the downloaded excel file",
             "Delete the columns containing contact information",
             "The responses can still be identified using the 'id'",
-            "Copy and paste the remaining data into the 'Qualtrics Export' file on sharepoint (./Documents/2020Data/qualtrics) <a href=\"https://universityofexeteruk.sharepoint.com/:x:/r/sites/BA_Regulatory_Focus_and_Rumination/_layouts/15/Doc.aspx?sourcedoc=%7B807DD43E-F9A2-4321-A408-149983F6ED4E%7D&file=Qualtrics%20Export.xlsx&action=default&mobileredirect=true\" target=\"blank\">here</a>",
+            "Copy and paste the remaining data into the 'Qualtrics Export' file on sharepoint (./Documents/2020Data/qualtrics)",
             "You will need to add in the participant 'ID' and 'Condition' once participant has attended the lab session"
         ]
     }
