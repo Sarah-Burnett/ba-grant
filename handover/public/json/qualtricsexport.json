@@ -1,0 +1,55 @@
+[
+    {
+        "name": "Step 1 - Login to Qualtrics and navigate to 'BA Grant Screener' project page",
+        "image": "./images/qualtrics/qualtrics-project.png",
+        "description": [
+            "Login to Qualtrics <a href=\"https://exetercles.eu.qualtrics.com/login\" target=\"blank\">here</a>",
+            "Click on 'BA Grant Project' to navigate to project page"
+        ]
+    },
+    {
+        "name": "Step 2 - Navigate to Data & Analysis",
+        "image": "./images/qualtrics/qualtrics-screener.png",
+        "description": [
+            "This is the page when you can edit the screener",
+            "For more information visit the qualtrics support pages <a href=\"https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/\" target=\"blank\">here</a>",
+            "To view and export collect data, click on the 'Data & Analysis' tab"
+        ]
+    },
+    {
+        "name": "Step 3 - Viewing collected responses",
+        "image": "./images/qualtrics/qualtrics-data.png",
+        "description": [
+            "This is the page when you can view and download the data",
+            "To change the columns you can preview, click on 'Tools' and then 'Choose Columns"
+        ]
+    },
+    {
+        "name": "Step 4 - Downloading collected responses",
+        "image": "./images/qualtrics/qualtrics-download1.png",
+        "description": [
+            "To download the responses into excel, click 'Export and Import' and then 'Export data...'"
+        ]
+    },
+    {
+        "name": "Step 4 - Downloading excel file",
+        "image": "./images/qualtrics/qualtrics-download2.png",
+        "description": [
+            "Use the default tab to download as 'csv' file",
+            "Keep 'Download all fields' selected. (You will need to remove the contact fields from the download manually)",
+            "Select 'Use Numerical Values'",
+            "Click 'Download' to download" 
+        ]
+    },
+    {
+        "name": "Step 5 - Editing columns",
+        "image": "./images/qualtrics-download2.png",
+        "description": [
+            "Open the downloaded excel file",
+            "Delete the columns containing contact information",
+            "The responses can still be identified using the 'id'",
+            "Copy and paste the remaining data into the 'Qualtrics Export' file on sharepoint (./Documents/2020Data/qualtrics) <a href=\"https://universityofexeteruk.sharepoint.com/:x:/r/sites/BA_Regulatory_Focus_and_Rumination/_layouts/15/Doc.aspx?sourcedoc=%7B807DD43E-F9A2-4321-A408-149983F6ED4E%7D&file=Qualtrics%20Export.xlsx&action=default&mobileredirect=true\" target=\"blank\">here</a>",
+            "You will need to add in the participant 'ID' and 'Condition' once participant has attended the lab session"
+        ]
+    }
+]

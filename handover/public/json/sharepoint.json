@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Sharepoint",
+        "image": "./images/sharepoint/sharepoint-home.png",
+        "description": "Do click on 'Documents' first to access files"
+    },
+    {
+        "name": "2020 Documents and Protocol",
+        "image": "./images/sharepoint/sharepoint-documents.png",
+        "description": [
+            "'E-prime Scripts' - the files on the lab computer are the most up to date this needs updating",
+            "'Printed' - these are the materials that need printing for each participant (ethics materials, goal and rumination ratings)",
+            "There rest of the files are those programmed into e-prime (e.g. writing tasks)",
+            "This includes the mp3 files that are used in the audio induction"
+        ]
+    },
+    {
+        "name": "2020 Data",
+        "image":"./images/sharepoint/sharepoint-data.png",
+        "description": [
+            "'Participants' contains the log of participants and a record of pre-processing steps",
+            "The 'eprime' folder contains the raw e.dat files and those exported to excel (and pre-processed)",
+            "The 'macros' folder contains the macros I have created to pre-process the psychophys and SART data for your reference",
+            "The 'psychophys' folder contains the raw and pre-processed files from Acknowledge, as well as excel output files",
+            "The 'qualtrics' folder contains the export of the part 1 screener data from Qualtrics",
+            "The 'ratings' folder contains the scanned in ratings and the data inputted and crosschecked in excel",
+            "See the separate tutorial for each of these for details on extraction and preprocessing steps"
+        ]
+    },
+    {
+        "name": "Backing up data",
+        "image": "",
+        "description": [
+            "At the end of the day, all raw data needs uploading to sharepoint",
+            "All data is also backed up to harddrives",
+            "Lab computers are not connected to network therefore this is via hard drive (or memory stick for psychophys computer)",
+            "You will need to first move the eprime files from the live versions into a participant folder under 'Data'",
+            "On my laptop, I then copy memory stick files over onto harddrive and then all files are uploaded to sharepoint",
+            "Once a week, back up the harddrive onto the second harddrive too",
+            "The ratings sheets also need scanning and/or inputting into the excel file on sharepoint"
+        ]
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Logging in",
+        "image": "./images/qualtrics/qualtrics-login.png",
+        "description": [
+            "Navigate to the Exeter CLES Qualtrics login site",
+            "Input username and password",
+            "Use my login details until you add yourself"
+        ]
+    },
+    {
+        "name": "Project List",
+        "image": "./images/qualtrics/qualtrics-project.png",
+        "description": [
+            "Signing in you get navigated to the list of projects. Click on 'BA Grant Project'"
+        ]
+    },
+    {
+        "name": "Project Page",
+        "image": "./images/qualtrics/qualtrics-screener.png",
+        "description": [
+            "This is the page when you can edit the screener",
+            "'Survey Flow' details the order in which participants view the pages of the site including the set up of exclusions",
+            "For more information visit the qualtrics support pages"
+        ]
+    },
+    {
+        "name": "Actions",
+        "image": "",
+        "description": [
+            "This is the page where the automated emails are set up and monitored",
+            "For more information visit the qualtrics support pages"
+        ]
+    },
+    {
+        "name": "Data & Analysis",
+        "image": "./images/qualtrics/qualtrics-data.png",
+        "description": [
+            "This is the page when you can view and download the data",
+            "To change the columns you can preview, click on 'Tools' and then 'Choose Columns",
+            "For instructions on how to do download the data, view separate tutorial",
+            "For more information visit the qualtrics support pages"
+        ]
+    },
+    {
+        "name": "Logging Out",
+        "image": "./images/qualtrics/qualtrics-logout.png",
+        "description": [
+            "To logout, click on the icon top right and press 'Logout'"
+        ]
+    }
+]
