@@ -3,7 +3,7 @@ import React from 'react'
 const Description = ({desc}) => {
     return (
         <ul>
-            {desc.map( item => {return <li key={item}>{item}</li>})}
+            {desc.map( item => <li key={item}>{item}</li> )}
         </ul>
     )
 }

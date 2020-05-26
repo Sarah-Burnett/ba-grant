@@ -10,7 +10,7 @@ const SharepointIntro = () => {
         "description": [
            "The following information details how to navigate around sharepoint",
            "After this, see separate slides on introductions to the e-prime and psychophys data",
-           "Click 'next' to get started"
+           "Click 'Next' to get started"
         ]
     }
 

@@ -1,9 +1,9 @@
 [
     {
-        "name": "Step 1 - Login to Qualtrics and navigate to 'BA Grant Screener' project page",
+        "name": "Step 1 - Login to Qualtrics",
         "image": "./images/qualtrics/qualtrics-project.png",
         "description": [
-            "Login to Qualtrics <a href=\"https://exetercles.eu.qualtrics.com/login\" target=\"blank\">here</a>",
+            "Login to Qualtrics (click link in header)",
             "Click on 'BA Grant Project' to navigate to project page"
         ]
     },

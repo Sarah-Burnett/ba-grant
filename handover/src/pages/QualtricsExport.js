@@ -12,7 +12,7 @@ const QualtricsExport = () => {
            "It also covers cleaning up the excel file ready to add to sharepoint",
            "If you are new to Qualtrics, please view the getting started slides first",
            "For more information see the Qualtrics support pages",
-           "Click 'next' to get started"
+           "Click 'Next' to get started"
         ]
     }
 

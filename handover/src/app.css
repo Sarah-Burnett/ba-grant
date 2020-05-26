@@ -9,3 +9,7 @@ body {
     background: #e5f1f8;
     color: #001429;
 }
+
+h1, h2 {
+    font-family: 'Abel', sans-serif;
+}

@@ -1,12 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './app.css';
 import Nav from './layout/Nav'
-import Footer from './layout/Footer'
+import Home from './pages/Home'
 import QualtricsIntro from './pages/QualtricsIntro';
 import QualtricsExport from './pages/QualtricsExport';
 import SonaIntro from './pages/SonaIntro';
 import SharepointIntro from './pages/SharepointIntro'
+import PsychophysP from './pages/PsychophysP'
+import PsychophysP1 from './pages/PsychophysP1'
+
 
 function App() {
   return (
@@ -26,11 +29,13 @@ function App() {
           <Route path="/sharepoint-getting-started">
             <SharepointIntro/>
           </Route>
+          <Route path="/psychophys-preprocess">
+            <PsychophysP/>
+          </Route>
           <Route path="/">
-            <h2>I am home page</h2>
+            <Home/>
           </Route>
         </Switch>
-      <Footer/>
       </Router>
     </div>
   );

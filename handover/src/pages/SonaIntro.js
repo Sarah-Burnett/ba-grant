@@ -10,7 +10,7 @@ const SonaIntro = () => {
         "description": [
            "The following information details how to login and navigate around SONA",
            "After this, see separate tutorial for bulk granting credits for the screener survey.",
-           "Click 'next' to get started"
+           "Click 'Next' to get started"
         ]
     }
 

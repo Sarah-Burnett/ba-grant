@@ -6,13 +6,13 @@ const QualtricsIntro = () => {
 
     const startStep = {
         "name": "Getting starting with Qualtrics",
-        "image": "./images/qualtrics/qualtrics-intro.png",
+        "image": "./images/qualtrics/qualtrics-login.png",
         "description": [
            "The following information details how to login and navigate around Qualtrics",
            "This outlines the basic use of Qualtrics for the screening survey for part 1 of the study.",
            "After this, for more information on extracting the data see separate tutorial here.",
            "For more information see the Qualtrics support pages",
-           "Click 'next' to get started"
+           "Click 'Next' to get started"
         ]
     }
 

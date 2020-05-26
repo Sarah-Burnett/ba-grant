@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { lightBlue, darkBlue, accent } from '../Styles';
 
 const NavBar = styled.nav`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     min-height: 10vh;
-    background: #011934;
-    color: #e5f1f8;
-    margin-bottom: 10vh;
+    background: ${darkBlue};
+    color: ${lightBlue};
 `
 const Img = styled.div`
     height: 10vh;
@@ -30,10 +30,11 @@ const NavLinks = styled.ul`
         margin: 2vh 2vw;
     }
     a {
+        font-weight: bold;
         text-decoration: none;
-        color: #E5F1F8;
+        color: ${lightBlue};
         &:hover {
-            color: #95C5E2;
+            color: ${accent};
         }
     }
 `
