@@ -84,10 +84,11 @@ const Slideshow = ({json, startStep}) => {
     const [ start, setStart ] = useState(true);
     const [ end, setEnd ] = useState(false);
 
+    console.log(currentStep);
+
     const nextStep = () => {
         setStart(false);
         setEnd(false);
-        console.log(currentStep);
         const newIndex = currentIndex + 1
         if (newIndex < json.length) {
             setCurrentIndex(newIndex);
