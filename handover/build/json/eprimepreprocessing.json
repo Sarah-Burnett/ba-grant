@@ -1,0 +1,45 @@
+[
+    {
+        "name": "E-prime preprocessing",
+        "image": "./images/eprime/preprocessing-start.png",
+        "description": [
+            "This tutorial outlines the preprocessing for the PANAS, SART, goal practice task and writing tasks",
+            "The files for these are under 'eprime' on sharepoint"
+        ]
+    },
+    {
+        "name": "PANAS",
+        "image": "./images/eprime/preprocessing-panas.png",
+        "description": [
+            "Open the excel file called 'PANAS'",
+            "This document is currently laid out to allow a direct copy and paste from the e.dat files",
+            "Need to add in labelling to know which question is which",
+            "Open the e.dat file and copy over the PANAS column for each time point",
+            "Once this is complete you will be able to 'copy' and 'transpose' to get this laid out with participant as rows and the data as columns"
+        ]
+    },
+    {
+        "name": "Writing Tasks",
+        "image": "./images/eprime/preprocessing-writing-tasks.png",
+        "description": [
+            "Open the excel file called 'Writing tasks'",
+            "Like the PANAS this is a direct copy and paste from the e.dat files.",
+            "Use 'find' and 'replace' to remove all the extra characters",
+            "E.g. find '{SPACE}' and replace with ' '"
+        ]
+    },
+    {
+        "name": "SART",
+        "image": "./images/eprime/preprocessing-sart.png",
+        "description": [
+            "For the SART you will need to export the files into excel",
+            "Export as a text file which you can then open in excel",
+            "Open the text file and then save as excel macro enabled workbook",
+            "You can automate this process using the 'SARTConvertFileType' macro",
+            "Now you can run another macro to clean up this spreadsheet and output the thought probes, accuracy and reaction time data"
+        ]
+    },
+    {
+        "name": "TBC"
+   }
+]
