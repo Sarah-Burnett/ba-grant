@@ -26,6 +26,7 @@
     },
     {
         "name": "Actions",
+        "image": "./images/qualtrics/qualtrics-actions.png",
         "description": [
             "This is the page where the automated emails are set up and monitored",
             "For more information visit the qualtrics support pages"

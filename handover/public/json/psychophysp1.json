@@ -114,6 +114,7 @@
             "To add a 'qrs' label, ensure the cursor is on the peak click 'Add Event at Selected Peak'",
             "If a 'qrs' lavel is in the wrong place, press down 'alt' and move the 'qrs' to the correct location",
             "If the 'qrs' peaks are correct, click 'Ignore this Long IBI",
+            "Ensure you scroll either side of the peak to check the distance",
             "In this case the displayed 'qrs' labels are correctly placed so we will click ignore",
             "Keep doing this until you get a box in the middle of the screen, click 'continue'"
         ]
@@ -133,7 +134,7 @@
         "image": "./images/psychophys/preprocessing-1-check-bpm.png",
         "description": [
             "The final step of part 1 is to examine the new bpm channel to double-check the algorithm output",
-            "For this you will need to zoom in on channel 3 and 4",
+            "For this you will need to zoom in on channel 3 and 4 (hide the columns you do not need)",
             "Examine the entire bpm for any jaggedly lines",
             "If there are any jaggedly lines, then it is likely a 'qrs' peak is missing and you may need to rerun the script"
         ]

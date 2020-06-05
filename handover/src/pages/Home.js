@@ -6,6 +6,7 @@ import Qualtrics from '../images/qualtrics-logo.jpg';
 import EPrime from '../images/E-Prime2-logo.jpg';
 import BIOPAC from '../images/biopac-logo.png';
 import styled from 'styled-components';
+import { LinkIcon } from '../layout/Icons';
 import { darkBlue, darkGrey, white, accent } from '../Styles';
 
 const HomePage = styled.nav`
@@ -13,8 +14,8 @@ const HomePage = styled.nav`
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    min-height: 90vh;
     color: ${darkBlue};
+    min-height: 80vh;
 `
 
 const H2 = styled.h2`
@@ -25,15 +26,14 @@ const H2 = styled.h2`
 `
 
 const Links = styled.div`
+    position: relative;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto 1fr 20vh;
     text-align: center;
-    padding: 3vh 1vw;
-    margin: 3vh 0 ;
-    width: 250px;
+    margin: 3vh 5px;
+    width: 235px;
     background: ${white};
-    box-shadow: 0px 0px 10px 5px ${darkBlue};
     li {
         list-style: none;
         margin: 2vh 1vw;
@@ -46,11 +46,13 @@ const Links = styled.div`
             color: ${accent};
         }
     }
+    ul {
+        border-bottom: 1px solid ${darkGrey};
+        margin-bottom: 1vh;
+    }
 `
 
 const Img = styled.img`
-    border-top: 1px solid ${darkGrey};
-    padding-top: 1vh;
     height: 100%;
     width: 100%;
 `
@@ -63,6 +65,8 @@ const Home = () => {
                 <H2>Sharepoint</H2>
                 <ul>
                     <li><Link to="/sharepoint-getting-started">Navigation</Link></li>
+                    {/* <li>Participants Log</li>
+                    <li>Macros</li> */}
                 </ul>
                 <Img src={Sharepoint} alt="Sharepoint"/>
             </Links>
@@ -70,7 +74,8 @@ const Home = () => {
                 <H2>SONA</H2>
                 <ul>
                     <li><Link to="/sona-getting-started">Getting started</Link></li>
-                    <li>Batch credits</li>
+                    {/* <li>Batch grant credits</li> */}
+                    <li><a href="https://cles-mrbs.exeter.ac.uk/mdc/day.php" target="_blank" rel="noopener noreferrer">Lab Booking <LinkIcon/></a></li>
                 </ul>
                 <Img src={SONA} alt="SONA"/>
             </Links>
@@ -79,27 +84,32 @@ const Home = () => {
                 <ul>
                     <li><Link to="/qualtrics-getting-started">Getting started</Link></li>
                     <li><Link to="/qualtrics-export">Export data</Link></li>
-                    <li><a href="https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/" target="_blank" rel="noopener noreferrer">Support pages</a></li>
-                    <li><a href="https://exetercles.eu.qualtrics.com/jfe/form/SV_7aK3Ivy3A4i3A57" target="_blank" rel="noopener noreferrer">Live Survey</a></li>
+                    <li><a href="https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/" target="_blank" rel="noopener noreferrer">Support pages <LinkIcon/></a></li>
+                    <li><a href="https://exetercles.eu.qualtrics.com/jfe/form/SV_7aK3Ivy3A4i3A57" target="_blank" rel="noopener noreferrer">Live Survey <LinkIcon/></a></li>
                 </ul>
                 <Img src={Qualtrics} alt="Qualtrics"/>
             </Links>
             <Links>
                 <H2>E-prime</H2>
                 <ul>
-                    <li>Collection</li>
-                    <li>Preprocessing</li>
-                    <li>MSci Seminar</li>
+                    <li><a href="https://universityofexeteruk.sharepoint.com/sites/BA_Regulatory_Focus_and_Rumination/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FBA%5FRegulatory%5FFocus%5Fand%5FRumination%2FShared%20Documents%2F2020%20documents%20and%20protocol%2FE%2DPrime%20scripts%2FEPrime2%2E0GettingStartedGuide%2Epdf&parent=%2Fsites%2FBA%5FRegulatory%5FFocus%5Fand%5FRumination%2FShared%20Documents%2F2020%20documents%20and%20protocol%2FE%2DPrime%20scripts" target="_blank" rel="noopener noreferrer">Getting Started <LinkIcon/></a></li>
+                    {/* <li>Testing</li> */}
+                    <li><Link to="/eprime-preprocess">Preprocessing</Link></li>
+                    <li><a href="https://support.pstnet.com/hc/en-us/categories/204686967-E-Prime" target="_blank" rel="noopener noreferrer">Support Pages <LinkIcon/></a></li>
                 </ul>
                 <Img src={EPrime} alt="E-Prime"/>
             </Links>
             <Links>
                 <H2>Psychophys</H2>
                 <ul>
-                    <li>AcqKnowledge</li>
-                    <li>Collection</li>
-                    <li><Link to="/psychophys-preprocess">Preprocessing</Link></li>
-                    <li>MSci Seminar</li>
+                    {/* <li>AcqKnowledge</li>
+                    <li>Testing</li> */}
+                    <li className="dropdownHover">Preprocessing</li>
+                    <ul className="dropdownContent">
+                        <li><Link to="/psychophys-preprocess-p1">Part 1</Link></li>
+                        <li><Link to="/psychophys-preprocess-p2">Part 2</Link></li>
+                    </ul>
+                    <li><a href="https://www.biopac.com/wp-content/uploads/acqknowledge-4-software-guide.pdf" target="_blank" rel="noopener noreferrer">AcqKnowledge guide <LinkIcon/></a></li>
                 </ul>
                 <Img src={BIOPAC} alt="BIOPAC"/>
             </Links>

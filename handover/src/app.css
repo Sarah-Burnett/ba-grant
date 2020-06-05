@@ -13,3 +13,56 @@ body {
 h1, h2 {
     font-family: 'Abel', sans-serif;
 }
+
+
+.dropdownHover:hover + ul {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.dropdownContent {
+    position: absolute;
+    top: 145px;
+    left: 15px;
+    opacity: 0;
+    transition: opacity 50ms ease-in;
+    pointer-events: none;
+    width: 200px;
+    border: 1px solid grey;
+    z-index: 100;
+    background: #E5F1F8;
+}
+
+.dropdownContent:hover {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.dropdownContent::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent grey transparent;
+  }
+
+  .fade-enter {
+    opacity: 0;
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+  }

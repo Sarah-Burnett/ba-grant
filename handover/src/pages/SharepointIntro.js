@@ -5,7 +5,7 @@ const SharepointIntro = () => {
     const [ json, setJson ] = useState([]);
 
     const startStep = {
-        "name": "Navigation around sharepoint",
+        "name": "Navigation around SharePoint",
         "image": "./images/sharepoint/sharepoint-home.png",
         "description": [
            "The following information details how to navigate around sharepoint",

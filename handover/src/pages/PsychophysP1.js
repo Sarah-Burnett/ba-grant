@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import FullSlides from '../components/FullSlides';
+import Slideshow from '../components/Slideshow';
 
 
 const PsychophysP1 = () => {
@@ -25,7 +25,7 @@ const PsychophysP1 = () => {
     }, [])
 
     return (
-        <FullSlides json={json}/>
+        <Slideshow json={json} startStep={startStep}  redirectLink="/psychophys-preprocess-p2" redirectMsg="Proceed to Part 2"/>
     )
 }
 

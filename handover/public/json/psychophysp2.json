@@ -1,0 +1,172 @@
+[
+    {
+        "name": "Step 1 - Open file", 
+        "image": "./images/psychophys/preprocessing-2-intro.png",
+        "description": [
+            "Open processed file e.g. '1p'",
+            "We are now going to extract the mean heart rate and skin conductance for each of the interested tasks",
+            "We will also extract the minimum and maximum skin conductance",
+            "We first need to tell Acqknowledge which timepoints correspond to each of the interested tasks",
+            "To do this we can create 'focus areas'"
+        ]
+    }, 
+    {
+        "name": "Step 2 - Show selection palette  ", 
+        "image": "./images/psychophys/preprocessing-2-display-show.png",
+        "description": [
+            "First we need to display the 'Selection Palette' and 'Show Focus Area' tools",
+            "Click 'Display' then 'Show'",
+            "Click 'Selection Palette'"
+        ]
+    },
+    {
+        "name": "Step 3 - Show Focus Areas  ", 
+        "image": "./images/psychophys/preprocessing-2-show-focus-areas.png",
+        "description": [
+            "You should now see the selection palette with the currently highlighted area",
+            "Repeat the process to also show the focus areas"
+        ]
+    },
+    {
+        "name": "Step 4 - Baseline Focus Area  ", 
+        "image": "./images/psychophys/preprocessing-2-baseline.png",
+        "description": [
+            "Zoom in over the first trigger peak - the baseline",
+            "Place the cursor at the beginning of the peak",
+            "Then in the 'Right' input box on the selection palette add 5 minutes",
+            "This should then highlight all the baseline pick",
+            "Then click the dropdown arrow to the right",
+            "Click 'Create Focus Area'",
+            "Then type in 'Baseline' as the focus area label"
+        ]
+    },
+    {
+        "name": "Step 5 - SART Practice Focus Area  ", 
+        "image": "./images/psychophys/preprocessing-2-practice-SART.png",
+        "description": [
+            "Now if you click outside the selection, you should still the 'Baseline' focus area in pink",
+            "The next timepoint of interest is the practice SART task",
+            "Again place your cursor at the beginning of the next peak",
+            "This time add 1 minute to the right selection palette",
+            "Create a new focus area with label 'SART practice'"
+        ]
+    },
+    {
+        "name": "Step 6 - Audio Focus Area", 
+        "image": "./images/psychophys/preprocessing-2-audio.png",
+        "description": [
+            "The next task we want data for is the audio recording",
+            "Skip the next peak over the goal focus recording and place your cursor at the beginning of the audio peak (~35mins)",
+            "We can only make analysis over whole minutes so add 9 minutes for this selection",
+            "There will be some recording not selected that is fine",
+            "Again create focus area this time called 'Audio'"
+        ]
+    },
+    {
+        "name": "Step 7 - SART Focus Areas", 
+        "image": "./images/psychophys/preprocessing-2-sart.png",
+        "description": [
+            "The SART analysis is being performed for the first 30 minutes",
+            "This 30 minutes is being broken up into 9 time windows",
+            "The first 10 minutes is in 1 minute focus areas:",
+            "SART 1min, SART 2min, SART 3min, SART 4min, SART 5min, SART 6min,SART 7min, SART 8min, SART 9min, SART 10min",
+            "Then the remaining 20 minutes is split up into 5 minute focus areas:",
+            "SART 15min, SART 20min, SART 25min, SART 30min",
+            "Start the first selection at the beginning of the peak and then add 1/5 minutes updating the left and right selection palette each time",
+            "When you're done your screen should look like the image"
+        ]
+    },
+    {
+        "name": "Step 8 - Check Focus Areas", 
+        "image": "./images/psychophys/preprocessing-2-all-focus-areas.png",
+        "description": [
+            "Zoom out to view the whole collection",
+            "Before we start the analysis, just double check that all the focus areas are correct",
+            "To make any necessary edits use the 'Focus Area Bar'",
+            "Again you can find this in 'Display' then 'Show'",
+            "To delete a focus area, press the '-'",
+            "To rename a focus area, press the '...'"
+        ]
+    },
+    {
+        "name": "Step 9 - Extracting means", 
+        "image": "./images/psychophys/preprocessing-2-epoch-analysis.png",
+        "description": [
+            "Now we will extract the means (and min and max for SCR) into excel for each focus area",
+            "Click 'Analysis'",
+            "Click 'Epoch Analysis'"
+        ]
+    },
+    {
+        "name": "Step 10 - Epoch Analysis", 
+        "image": "./images/psychophys/preprocessing-2-epoch-analysis-2.png",
+        "description": [
+            "Change Epoch width to 60 seconds'",
+            "At the bottom for 'Analyze' click 'focus areas only'",
+            "Then For 'Locate epochs at:' click 'fixed time intervals' ",
+            "Ensure 'Start first epoch at:' is 'left edge of focus area'",
+            "Change 'Time between epochs' to 0 seconds",
+            "Change 'Output type' to 'Excel Spreadsheet Only",
+            "Click 'OK'"
+        ]
+    },
+    {
+        "name": "Step 10 - Data to extract", 
+        "image": "./images/psychophys/preprocessing-2-epoch-analysis-3.png",
+        "description": [
+            "Now we tell the software which data to extract",
+            "Click 'Add..'",
+            "Select 'Mean' and click 'OK'",
+            "Select the BPM channel (4)",
+            "Repeat the above for 'Mean' of the SCR channel (6)",
+            "Repeat the above for 'Min' of the SCR channel (6)",
+            "Repeat the above for 'Max' of the SCR channel (6)",
+            "Your screen should match the image and then click 'Ok'"
+        ]
+    },
+    {
+        "name": "Step 11 - Save Spreadsheet", 
+        "image": "./images/psychophys/preprocessing-2-save-spreadsheet.png",
+        "description": [
+            "The software will now conduct the analysis and export it to excel",
+            "Check through the file ensuring that data looks good",
+            "E.g. check the heart rate is between ~60-120bpm",
+            "Save the resulting spreadsheet in 'Output' with the file number"
+        ]
+    },
+    {
+        "name": "Step 12 - Further heart rate analysis",
+        "image": "./images/psychophys/preprocessing-2-start-hrv.png",
+        "description": [
+            "Keep the excel file open and go back to AcqKnowledge",
+            "Firstly go into the Journal (box at the bottom) and delete the contents (you will get an error in the next step otherwise)",
+            "Then click 'Analysis'",
+            "Click 'HRV and RSA",
+            "Click 'Multi-epoch HRV and RSA - Spectral"
+        ]
+    },
+    {
+        "name": "Step 13 - HRV spectral analysis",
+        "image": "./images/psychophys/preprocessing-2-hrv-settings.png",
+        "description": [
+            "Ensure the ECG channel is selected (3)",
+            "Change 'Extract HRV and RSA for' to 'Focus Areas'",
+            "Change 'Output type' to 'Excel Spreadsheet Only'",
+            "Click 'OK'"
+        ]
+    },
+    {
+        "name": "Step 13 - HRV spectral analysis",
+        "image": "./images/psychophys/preprocessing-2-hrv-settings.png",
+        "description": [
+            "Ensure the ECG channel is selected (3)",
+            "Change 'Extract HRV and RSA for' to 'Focus Areas'",
+            "Change 'Output type' to 'Excel Spreadsheet Only'",
+            "Click 'OK'"
+        ]
+    },
+    {
+        "name": "TBC"
+    }
+]
+

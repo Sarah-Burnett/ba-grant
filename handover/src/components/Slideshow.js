@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 import SlideDots from './SlideDots';
+import FullSlides from './FullSlides';
 import styled from 'styled-components';
-import { lightGrey, darkGrey, darkBlue, accent, white } from '../Styles';
+import { lightGrey, darkGrey, darkBlue, accent, white, tablet, Button } from '../Styles';
 
 const Container = styled.div`
     width: 100vw;
     min-height: 90vh;
     margin: auto;
-    display: flex;
-    background: ${lightGrey};
+    background: ${white};
+    @media (min-width: ${tablet}) {
+        display: flex;
+    }
 `
 
 const H1 = styled.h1`
@@ -53,38 +57,21 @@ const Buttons = styled.div`
     width: 100%;
 `
 
-const Button = styled.button`
-    padding: 2vh 2vw;
-    margin: 1vh 0;
-    width: 100%;
-    border: none;
-    color: #001429;
-    cursor: pointer;
-    background: #95c5e2;
-    box-shadow: 0px 0px 2px 2px ${darkBlue};
-    &:hover {
-        background: #001429;
-        color: ${accent};
-    }
-    &:disabled {
-        opacity: 0;
-        pointer-events: none;
-    }
-`
+
 
 const PrimaryButton = styled(Button)`
     background: ${accent};
     
 `
 
-const Slideshow = ({json, startStep}) => {
+const Slideshow = ({json, startStep, redirectLink="/", redirectMsg="Back to Home"}) => {
     const [ currentIndex, setCurrentIndex ] = useState(-1);
     const [ currentStep, setCurrentStep ] = useState(startStep);
     const [ title, setTitle ] = useState(currentStep.name);
     const [ start, setStart ] = useState(true);
     const [ end, setEnd ] = useState(false);
-
-    console.log(currentStep);
+    const [ fullSlides, setFullSlides ] = useState(false);
+    const [ showSlides, setShowSlides ] = useState(true);
 
     const nextStep = () => {
         setStart(false);
@@ -107,7 +94,9 @@ const Slideshow = ({json, startStep}) => {
         if (newIndex === 0) setStart(true)
     };
     return (
-        <Container>
+        <div>
+            { fullSlides && <FullSlides json={json} title={title}/>}
+            { !fullSlides && <Container>
                 <Text>
                     <H1>{title}</H1>
                     <Title>
@@ -118,16 +107,17 @@ const Slideshow = ({json, startStep}) => {
                     </div>
                 <Buttons>
                     <SlideDots json={json} currentIndex={currentIndex}/>
+                     { end && <Link to={redirectLink}><Button className="previous" type="button">{redirectMsg}</Button></Link>}
                     { !end && <PrimaryButton className="next" type="button" onClick={nextStep}>Next</PrimaryButton> }
-                    { end && <Link to="/"><PrimaryButton className="next" type="button">Back to menu</PrimaryButton></Link> }
                     { !start && <Button className="previous" type="button" onClick={prevStep}>Previous</Button> }
-                    <Button>View Full Page</Button>
+                    <Button onClick={() => setFullSlides(true)}>View Full Slides</Button>
                 </Buttons> 
                 </Text>
                 <Img>
                 { currentStep.image && <img src={currentStep.image } alt="screenshot"/>}
                 </Img>      
-           </Container>
+           </Container> }
+        </div>
     )
 };
 

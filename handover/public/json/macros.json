@@ -1,0 +1,37 @@
+[
+     {
+        "name": "Part 1 - Excel macros",
+        "descripton": [
+            "When to use each macro will be covered by the preprocessing tutorials but this will go through how to download and run the macros on your device.",
+            "First go onto sharepoint and download the macros onto your machine",
+            "Alternatively you can use the files on the harddrive",
+            "To run the macros you first need to import them into excel"
+        ]
+    },
+    {
+        "name": "Part 2 - Enabling developer tools",
+        "descripton": [
+            "To run the macros onto your device, you will need to enable 'Developer' tools in excel",
+            "To do this.... "
+        ]
+    },
+    {
+        "name": "Part 3  - Importing macros into excel",
+        "description": [
+            "Click 'Developer' and then open the code editor 'Visual Basic'",
+            "Import each macro from sharepoint into your PERSONAL workbook",
+            "This will allow you to run the macro on any excel spreadsheet opened on your device",
+            "You will only need to do this once",
+            "Hopefully you will not need to edit the code but this is the screen to do it",
+            "You can now close visual basic"
+        ]
+    },
+    {
+        "name": "Part 4 - Running a macro",
+        "description": [
+            "To run the macro, on the 'Developer' tab click 'Macros'",
+            "Then select the macro you wish to use and click 'Run' ",
+            "When running the macros ensure you have the correct sheet selected"
+        ]
+    }
+]
