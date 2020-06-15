@@ -6,7 +6,7 @@ const EprimeTesting = () => {
 
     const startStep = {
         "name": "Collecting the e-prime data",
-        "image": "./images/eprime/preprocessing-start",
+        "image": "./images/eprime/collection-data-files.png",
         "description": [
            "The following information details the e-prime component of preparing the lab for testing",
            "Click 'Next' to get started"

@@ -6,12 +6,13 @@ const Macros = () => {
 
     const startStep = {
         "name": "Macros",
-        "descripton": [
-                "There are various excel and Ackknowledge macros to make the preprocessing more efficient",
-                "These are all within the 'Macros' folder in '2020 data' on sharepoint",
+        "image": "./images/sharepoint/sharepoint-macros.png",
+        "description": [
+                "There are various excel and Acqknowledge macros to make the preprocessing more efficient",
+                "These are all within the 'Macros' folder in '2020 data' on SharePoint",
                 "They are also on the first harddrive 'BA Grant 1'",
-                "This tutorial will go through using the excel macros I created",
-                "For the AcqKnowledge macros, see the separate psychophys preprocessing tutorial."
+                "This tutorial will go through using the excel macros I created (.bas)",
+                "For the AcqKnowledge macro (.bbs), see the separate psychophys preprocessing tutorials"
             ]
     }
 

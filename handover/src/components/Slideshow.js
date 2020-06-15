@@ -30,7 +30,7 @@ const Title = styled.h3`
 `
 
 const Img = styled.div`
-    height: 90vh;
+    min-height: 90vh;
     min-width: 50vw;
     overflow-y: scroll;
     img {

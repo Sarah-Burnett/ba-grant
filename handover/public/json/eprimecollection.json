@@ -1,7 +1,7 @@
 [
     { 
         "name": "Collecting the e-prime data",
-        "image": "./images/eprime/collecion-scripts", 
+        "image": "./images/eprime/collection-scripts.png", 
         "description": [
             "These are the steps taken to set up the lab for testing",
             "Use the 'Checklist' to track progress for each participant",
@@ -23,11 +23,11 @@
     },
     {
         "name": "Setting up lab computer",
-        "image": "./images/sharepoint/sharepoint-2020-docs.png",
+        "image": "./images/eprime/collection-monitor.png",
         "description": [
             "The control computers for lab 133b are at the back on the left as you go into 133b",
             "The E-prime computer is the one on the left",
-            "The password is 'mango chutney'",
+            "The password is 'mangochutney'",
             "The folders you need are on the desktop",
             "There is a general 'BA Grant' folder which contains all the files and then inidivual folders for each condition",
             "The condition folders are named by condition and the color of the corresponding file",
@@ -37,7 +37,7 @@
     },
     {
         "name": "Backing up data",
-        "image": "./images/eprime/collection-data-files",
+        "image": "./images/eprime/collection-data-files.png",
         "description": [
             "The files in the condition folders are shortcuts to the live files inside 'BA Grant'",
             "Therefore all generated data will be in the 'Live' Folder",
