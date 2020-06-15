@@ -15,7 +15,7 @@ const HomePage = styled.nav`
     justify-content: space-around;
     flex-wrap: wrap;
     color: ${darkBlue};
-    min-height: 80vh;
+    min-height: 79vh;
 `
 
 const H2 = styled.h2`
@@ -64,9 +64,9 @@ const Home = () => {
             <Links>
                 <H2>Sharepoint</H2>
                 <ul>
-                    <li><Link to="/sharepoint-getting-started">Navigation</Link></li>
-                    {/* <li>Participants Log</li>
-                    <li>Macros</li> */}
+                    <li><Link to="/sharepoint-getting-started">Getting started</Link></li>
+                    <li><Link to="/data-storage">Data storage</Link></li>
+                    <li><Link to="/using-macros">Using macros</Link></li>
                 </ul>
                 <Img src={Sharepoint} alt="Sharepoint"/>
             </Links>
@@ -92,9 +92,9 @@ const Home = () => {
             <Links>
                 <H2>E-prime</H2>
                 <ul>
-                    <li><a href="https://universityofexeteruk.sharepoint.com/sites/BA_Regulatory_Focus_and_Rumination/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FBA%5FRegulatory%5FFocus%5Fand%5FRumination%2FShared%20Documents%2F2020%20documents%20and%20protocol%2FE%2DPrime%20scripts%2FEPrime2%2E0GettingStartedGuide%2Epdf&parent=%2Fsites%2FBA%5FRegulatory%5FFocus%5Fand%5FRumination%2FShared%20Documents%2F2020%20documents%20and%20protocol%2FE%2DPrime%20scripts" target="_blank" rel="noopener noreferrer">Getting Started <LinkIcon/></a></li>
-                    {/* <li>Testing</li> */}
+                    <li><Link to="/eprime-testing">Testing</Link></li>
                     <li><Link to="/eprime-preprocess">Preprocessing</Link></li>
+                    <li><a href="https://universityofexeteruk.sharepoint.com/sites/BA_Regulatory_Focus_and_Rumination/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FBA%5FRegulatory%5FFocus%5Fand%5FRumination%2FShared%20Documents%2F2020%20documents%20and%20protocol%2FE%2DPrime%20scripts%2FEPrime2%2E0GettingStartedGuide%2Epdf&parent=%2Fsites%2FBA%5FRegulatory%5FFocus%5Fand%5FRumination%2FShared%20Documents%2F2020%20documents%20and%20protocol%2FE%2DPrime%20scripts" target="_blank" rel="noopener noreferrer">E-Prime guide <LinkIcon/></a></li>
                     <li><a href="https://support.pstnet.com/hc/en-us/categories/204686967-E-Prime" target="_blank" rel="noopener noreferrer">Support Pages <LinkIcon/></a></li>
                 </ul>
                 <Img src={EPrime} alt="E-Prime"/>
@@ -102,8 +102,7 @@ const Home = () => {
             <Links>
                 <H2>Psychophys</H2>
                 <ul>
-                    {/* <li>AcqKnowledge</li>
-                    <li>Testing</li> */}
+                    <li><Link to="/psychophys-testing">Testing</Link></li>
                     <li className="dropdownHover">Preprocessing</li>
                     <ul className="dropdownContent">
                         <li><Link to="/psychophys-preprocess-p1">Part 1</Link></li>

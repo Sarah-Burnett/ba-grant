@@ -22,7 +22,7 @@ h1, h2 {
 
 .dropdownContent {
     position: absolute;
-    top: 145px;
+    top: 190px;
     left: 15px;
     opacity: 0;
     transition: opacity 50ms ease-in;

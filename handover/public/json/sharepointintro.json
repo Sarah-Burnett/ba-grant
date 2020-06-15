@@ -33,16 +33,23 @@
         ]
     },
     {
+        "name": "Participant Log",
+        "image": "",
+        "description": [
+            "Two separate versions of this with different data (one on SharePoint, the other on harddrive1)",
+            "Both files list the participant number and the participant condition (either UV UM RV RM)",
+            "The harddrive version 'Participant Log' is password protected because is contains participants contact details",
+            "The Sharepoint version 'Participants' is separated by included/excluded and includes log of preprocessing progress"
+        ]
+    },
+    {
         "name": "Backing up data",
         "image":"./images/sharepoint/sharepoint-harddrive.png",
         "description": [
             "At the end of the day, all raw data from the EEG and psychophys computer needs uploading to sharepoint",
-            "Lab computers are not connected to network therefore this is via hard drive (or memory stick for psychophys computer)",
-            "This also means the harddrive contains back up of data too",
-            "You will need to first move the eprime files from the live versions into a participant folder under 'Data'",
-            "On my laptop, I then copy the memory stick files over onto the harddrive and then all files are uploaded to sharepoint",
-            "Once a week, back up the harddrive onto the second harddrive too",
-            "The ratings needi inputting into the excel file on sharepoint and the hard copy needs scanning in (there is a back log of this)"
+            "The ratings need inputting into the excel file on sharepoint and the hard copy needs scanning in (there is a back log of this)",
+            "The paper hard copies are stored in the cabinet in the MDC group office",
+            "For more information see the separate tutorial"
         ]
     }
 ]

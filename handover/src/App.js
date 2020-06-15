@@ -5,22 +5,30 @@ import './app.css';
 import Nav from './layout/Nav';
 import Footer from './layout/Footer';
 import Home from './pages/Home';
+import SharepointIntro from './pages/SharepointIntro';
+import Macros from './pages/Macros';
+import DataStorage from './pages/DataStorage';
 import SonaIntro from './pages/SonaIntro';
 import QualtricsIntro from './pages/QualtricsIntro';
 import QualtricsExport from './pages/QualtricsExport';
+import EprimeTesting from './pages/EprimeTesting';
 import EprimePreprocessing from './pages/EPrimePreprocessing';
-import SharepointIntro from './pages/SharepointIntro';
+import PsychophysTesting from './pages/PsychophysTesting';
 import PsychophysP1 from './pages/PsychophysP1';
 import PsychophysP2 from './pages/PsychophysP2';
 
 const routes = [
   { path: '/sharepoint-getting-started', Component: SharepointIntro },
+  { path: '/using-macros', Component: Macros },
+  { path: '/data-storage', Component: DataStorage },
   { path: '/sona-getting-started', Component: SonaIntro },
   { path: '/qualtrics-getting-started', Component: QualtricsIntro },
   { path: '/qualtrics-export', Component: QualtricsExport },
+  { path: '/eprime-testing', Component: EprimeTesting },
+  { path: '/eprime-preprocess', Component: EprimePreprocessing },
+  { path: '/psychophys-testing', Component: PsychophysTesting },
   { path: '/psychophys-preprocess-p1', Component: PsychophysP1 },
   { path: '/psychophys-preprocess-p2', Component: PsychophysP2 },
-  { path: '/eprime-preprocess', Component: EprimePreprocessing },
   { path: '/', Component: Home },
 ]
 
