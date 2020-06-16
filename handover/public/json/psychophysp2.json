@@ -125,13 +125,15 @@
         ]
     },
     {
-        "name": "Step 11 - Save Spreadsheet", 
+        "name": "Step 11 - Means Spreadsheet", 
         "image": "./images/psychophys/preprocessing-2-save-spreadsheet.png",
         "description": [
             "The software will now conduct the analysis and export it to excel",
             "Check through the file ensuring that data looks good",
             "E.g. check the heart rate is between ~60-120bpm",
-            "Save the resulting spreadsheet in 'Output' with the file number"
+            "Save the resulting spreadsheet in 'Output' with the file number",
+            "Add a new sheet and call it 'HRV'",
+            "Leave this file open to come back to"
         ]
     },
     {
@@ -166,7 +168,23 @@
         ]
     },
     {
-        "name": "TBC"
+        "name": "Step 14 - HRV spreadsheet",
+        "image": "./images/psychophys/preprocessing-2-hrv-excel.png",
+        "description": [
+            "The programme will now run the analysis and export to a second excel spreadsheet",
+            "Now we can merge the two spreadsheets together"
+        ]    
+    },
+    {
+        "name": "Step 16 - Merge spreadsheets",
+        "image": "./images/psychophys/preprocessing-2-final.png",
+        "description": [
+            "Copy and paste the HRV data into the 'HRV' sheet you created on the means column",
+            "Then add in the 'Time window' column to label the time windows",
+            "You can automate this using the 'PsychophysOutput' macro",
+            "Save the means spreadsheet and back up (you can discard the HRV one)",
+            "This is the end of part 2"
+        ]    
     }
 ]
 
