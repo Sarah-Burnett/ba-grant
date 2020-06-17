@@ -10,6 +10,7 @@ const EprimePreprocessing = () => {
         "image": "./images/eprime/preprocessing-start.png",
         "description": [
             "This tutorial outlines the preprocessing steps for the data collected on E-Prime",
+            "The majority of this will need to be done on a university computer with E-Prime installed",
             "Click 'next' to get started"
         ]
     }

@@ -6,12 +6,12 @@ const PsychophysTesting = () => {
 
     const startStep = {
         "name": "Collecting the psychophys data",
-        "image": "./images/psychophys/preprocess-1-intro",
+        "image": "./images/psychophys/testing-example.png", 
         "description": [
-           "The following information details the psychophys component of preparing the lab for testing",
+            "This will cover the steps taken to set up the lab for the psychophys recordings",
            "Click 'Next' to get started"
         ]
-    }
+    } 
 
     useEffect( () => {
         fetch('./json/psychophyscollection.json')

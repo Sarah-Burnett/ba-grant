@@ -23,7 +23,7 @@
         "description": [
             "The initial screen is for 'Active' surveys only",
             "The active study is called *2.5 credits* Mood, Concentration and Problem solving",
-            "A second study is also used to grant credits for part 1 only which is under 'Inactive' surveys"
+            "A second study is also used to grant credits for part 1 only which is under 'Inactive' surveys called *0.5 Credits* Mood, Concentration and Problem solving Survey"
         ]
     },
     {
@@ -51,7 +51,8 @@
         "description": [
             "Clicking on an individual timeslot brings you to this screen",
             "Most signups the participant signs themselves up although sometimes they may want to re-arrange",
-            "You can manually sign a person up on this screen by adding either their username (uni email) or name"
+            "You can manually sign a person up on this screen by adding either their username (uni email) or name",
+            "You can also use this to add participants to the inactive survey to grant them 0.5 credits for the Qualtrics survey"
         ]
     },
     {
@@ -61,8 +62,7 @@
             "Clicking 'View your uncredited timeslots' brings you a list of participants",
             "Your options here are to grant credits (2.5) or to report no-shows",
             "You also have the 'Mark all 'Participated'' option for granting credits to multiple participants",
-            "Ensure you click 'Process changes' to save",
-            "To grant 0.5 credits to participants who have completed just part 1, see separate tutorial"
+            "Ensure you click 'Process changes' to save"
         ]
     }
 ]

@@ -111,7 +111,7 @@
         ]
     },
     {
-        "name": "Step 10 - Data to extract", 
+        "name": "Step 11 - Data to extract", 
         "image": "./images/psychophys/preprocessing-2-epoch-analysis-3.png",
         "description": [
             "Now we tell the software which data to extract",
@@ -125,17 +125,19 @@
         ]
     },
     {
-        "name": "Step 11 - Save Spreadsheet", 
+        "name": "Step 12 - Means Spreadsheet", 
         "image": "./images/psychophys/preprocessing-2-save-spreadsheet.png",
         "description": [
             "The software will now conduct the analysis and export it to excel",
             "Check through the file ensuring that data looks good",
             "E.g. check the heart rate is between ~60-120bpm",
-            "Save the resulting spreadsheet in 'Output' with the file number"
+            "Save the resulting spreadsheet in 'Output' with the file number",
+            "Add a new sheet and call it 'HRV'",
+            "Leave this file open to come back to"
         ]
     },
     {
-        "name": "Step 12 - Further heart rate analysis",
+        "name": "Step 13 - Further heart rate analysis",
         "image": "./images/psychophys/preprocessing-2-start-hrv.png",
         "description": [
             "Keep the excel file open and go back to AcqKnowledge",
@@ -146,7 +148,7 @@
         ]
     },
     {
-        "name": "Step 13 - HRV spectral analysis",
+        "name": "Step 14 - HRV spectral analysis",
         "image": "./images/psychophys/preprocessing-2-hrv-settings.png",
         "description": [
             "Ensure the ECG channel is selected (3)",
@@ -156,17 +158,23 @@
         ]
     },
     {
-        "name": "Step 13 - HRV spectral analysis",
-        "image": "./images/psychophys/preprocessing-2-hrv-settings.png",
+        "name": "Step 15 - HRV spreadsheet",
+        "image": "./images/psychophys/preprocessing-2-hrv-excel.png",
         "description": [
-            "Ensure the ECG channel is selected (3)",
-            "Change 'Extract HRV and RSA for' to 'Focus Areas'",
-            "Change 'Output type' to 'Excel Spreadsheet Only'",
-            "Click 'OK'"
-        ]
+            "The programme will now run the analysis and export to a second excel spreadsheet",
+            "Now we can merge the two spreadsheets together"
+        ]    
     },
     {
-        "name": "TBC"
+        "name": "Step 16 - Merge spreadsheets",
+        "image": "./images/psychophys/preprocessing-2-final.png",
+        "description": [
+            "Copy and paste the HRV data into the 'HRV' sheet you created on the means column",
+            "Then add in the 'Time window' column to label the time windows",
+            "You can automate this using the 'PsychophysOutput' macro",
+            "Save the means spreadsheet and back up (you can discard the HRV one)",
+            "This is the end of part 2"
+        ]    
     }
 ]
 
