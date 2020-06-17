@@ -1,0 +1,33 @@
+[
+    { 
+        "name": "Collecting the psychophys data",
+        "image": "", 
+        "description": [
+            "These are the steps taken to set up the lab for testing",
+            "Use the 'Checklist' to track progress for each participant",
+            "Printed copies are in the black letter trays in the lab",
+            "On SharePoint found in 'Printed' under '2020 Document and Protocol'"
+        ]
+    },
+    {
+        "name": "",
+        "image": "./images/psychophys/collection",
+        "description": [
+
+        ]
+    },
+    {
+        "name": "",
+        "image": "./images/psychophys/collection",
+        "description": [
+
+        ]
+    },
+    {
+        "name": "",
+        "image": "./images/psychophys/collection",
+        "description": [
+
+        ]
+    }
+]
