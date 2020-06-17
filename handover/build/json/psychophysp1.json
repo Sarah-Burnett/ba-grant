@@ -99,10 +99,10 @@
         "description": [
             "First you will be shown each shorter than average IBI to evaluate whether the peaks have been placed correctly",
             "To remove a 'qrs' label, ensure this is selected and click 'Remove Selected Event'",
-            "If a 'qrs' lavel is in the wrong place, press down 'alt' and move the 'qrs' to the correct location",
-            "If the 'qrs' peaks are correct, click 'Ignore this Short IBI",
+            "If a 'qrs' lavel is in the wrong place, press down 'Alt' and move the 'qrs' to the correct location",
+            "If the 'qrs' peaks are correct, click 'Ignore this Short IBI'",
             "In this case the displayed 'qrs' labels are correctly placed so we will click ignore",
-            "Keep doing this until you reach the screen",
+            "Keep doing this until a new pop up appears",
             "If at any point you are not sure do send screenshots to Anke"
         ]
     },
@@ -112,8 +112,8 @@
         "description": [
             "Now you will be shown each longer than average IBI to evaluate whether any peaks have been missed",
             "To add a 'qrs' label, ensure the cursor is on the peak click 'Add Event at Selected Peak'",
-            "If a 'qrs' lavel is in the wrong place, press down 'alt' and move the 'qrs' to the correct location",
-            "If the 'qrs' peaks are correct, click 'Ignore this Long IBI",
+            "If a 'qrs' label is in the wrong place, press down 'alt' and move the 'qrs' to the correct location",
+            "If the 'qrs' peaks are correct, click 'Ignore this Long IBI'",
             "Ensure you scroll either side of the peak to check the distance",
             "In this case the displayed 'qrs' labels are correctly placed so we will click ignore",
             "Keep doing this until you get a box in the middle of the screen, click 'continue'"
@@ -134,7 +134,8 @@
         "image": "./images/psychophys/preprocessing-1-check-bpm.png",
         "description": [
             "The final step of part 1 is to examine the new bpm channel to double-check the algorithm output",
-            "For this you will need to zoom in on channel 3 and 4 (hide the columns you do not need)",
+            "For this you will need to zoom in on channel 3 and 4",
+            "You can remove uneccesary channels by selecting then while holding down 'Alt'",
             "Examine the entire bpm for any jaggedly lines",
             "If there are any jaggedly lines, then it is likely a 'qrs' peak is missing and you may need to rerun the script"
         ]

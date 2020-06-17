@@ -34,7 +34,7 @@
     },
     {
         "name": "Participant Log",
-        "image": "",
+        "image": "./images/sharepoint/sharepoint-participant-log.png",
         "description": [
             "Two separate versions of this with different data (one on SharePoint, the other on harddrive1)",
             "Both files list the participant number and the participant condition (either UV UM RV RM)",

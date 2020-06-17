@@ -1,7 +1,7 @@
 [
     {
         "name": "Paper files",
-        "image": "",
+        "image": "./images/sharepoint/sharepoint-printed.png",
         "description": [
             "Paper materials include the information sheet, consent forms, checklist for testing and the goal and rumination ratings",
             "These are found on sharepoint in 'Printed' in '2020 Documents and Protocol",
@@ -13,7 +13,7 @@
     },
     {
         "name": "Harddrives and dongle",
-        "image": "",
+        "image": "./images/sharepoint/sharepoint-harddrive.png",
         "description": [
             "The two harddrives and dongle for AcqKnowledge are stored with the paper files in the locked cabinet in MDC group office",
             "I use just one harddrive for backing up files",
@@ -22,22 +22,22 @@
     },
     {
         "name": "E-prime and psychophys",
-        "image": "",
+        "image": "./images/sharepoint/sharepoint-raw-files.png",
         "description": [
             "At the end of the day, all raw data from the EEG and psychophys computer needs uploading to sharepoint",
             "Lab computers are not connected to network therefore this is via hard drive (or memory stick for psychophys computer)",
             "This also means the harddrive contains back up of data too",
             "You will need to first move the eprime files from the live versions into a participant folder under 'Data'",
-            "On my laptop, I then copy the memory stick files over onto the harddrive and then all files are uploaded to sharepoint"
+            "On my laptop, I then copy the memory stick files over onto the harddrive and then all files are uploaded into raw files on sharepoint"
         ]
     },
     {
         "name": "Goal and rumination ratings",
-        "image": "",
+        "image": "./images/sharepoint/sharepoint-ratings.png",
         "description": [
             "The hardcopies of the ratings are stored in the cabinet",
-            "The hardcopies also need scanning into the folder in '2020 data' on Sharepoint",
-            "The data also needs entering into the spreadsheet on SharePoint"
+            "The hardcopies need scanning and imported into the 'scans' folder on Sharepoint",
+            "The data also needs entering into the 'Problem ratings' spreadsheet on SharePoint"
         ]
     }
 

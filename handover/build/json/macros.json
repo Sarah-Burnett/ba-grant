@@ -1,37 +1,68 @@
 [
      {
         "name": "Part 1 - Excel macros",
-        "descripton": [
-            "When to use each macro will be covered by the preprocessing tutorials but this will go through how to download and run the macros on your device.",
+        "image": "./images/sharepoint/macro-excel.png",
+        "description": [
+            "When to use each macro will be covered by the preprocessing tutorials but this will go through how to download and run the excel macros (.bas) on your device.",
             "First go onto sharepoint and download the macros onto your machine",
             "Alternatively you can use the files on the harddrive",
-            "To run the macros you first need to import them into excel"
+            "To run the macros, you first need to import them into excel",
+            "Open excel"
         ]
     },
     {
         "name": "Part 2 - Enabling developer tools",
-        "descripton": [
+        "image": "./images/sharepoint/macro-dev-tools.png",
+        "description": [
             "To run the macros onto your device, you will need to enable 'Developer' tools in excel",
-            "To do this.... "
+            "To do this open excel and click 'File'",
+            "Click 'Options' bottom left",
+            "Then click 'Customise Ribbon'",
+            "In 'Customise the Ribbon' on the right down scroll down to 'Developer' and check the box",
+            "Click 'Ok'"
         ]
     },
     {
-        "name": "Part 3  - Importing macros into excel",
+        "name": "Part 3 - Macros and creating PERSONAL workbook",
+        "image": "./images/sharepoint/macro-personal.png",
         "description": [
-            "Click 'Developer' and then open the code editor 'Visual Basic'",
-            "Import each macro from sharepoint into your PERSONAL workbook",
-            "This will allow you to run the macro on any excel spreadsheet opened on your device",
-            "You will only need to do this once",
-            "Hopefully you will not need to edit the code but this is the screen to do it",
+            "Macros are usually stored in the current open workbook",
+            "It is also possible to store them in the PERSONAL workbook which is available to any excel workbooks opened on your device.",
+            "We first need to open the PERSONAL workbook",
+            "You will now be able to access the 'Developer' tab",
+            "Click'Developer'",
+            "Click 'Record Macro'",   
+            "You do not need to give this macros a specific name or shortcut",
+            "Ensure you select 'Personal Macro Workbook' as the place to store macro in"        
+        ]
+    },
+    {
+        "name": "Part 5  - Visual Basic",
+        "image": "./images/sharepoint/macro-visual-basic.png",
+        "description": [
+            "Now to import the files into your newly created PERSONAL workbook we now need to open the code editor 'Visual Basic'",
+            "You do not need to write any code to do this",
+            "You should only have to do this once"
+        ]
+    },
+    {
+        "name": "Part 4  - Importing macros",
+        "image": "./images/sharepoint/macro-vba-files.png",
+        "description": [
+            "use 'File' and 'Import File...' to import each macro",
+            "Drag and drop the files into 'Modules' under 'VBAProject (PERSONAL.XLSB)",
+            "You can delete your macro you just created by right clicking on it and then clicking 'Remove Macro1'",
+            "When you are done your files should match the image (your code may be formatted differently)",
             "You can now close visual basic"
         ]
     },
     {
-        "name": "Part 4 - Running a macro",
+        "name": "Part 5 - Running a macro",
+        "image": "./images/sharepoint/macro-run-macro.png",
         "description": [
             "To run the macro, on the 'Developer' tab click 'Macros'",
             "Then select the macro you wish to use and click 'Run' ",
-            "When running the macros ensure you have the correct sheet selected"
+            "When running the macros ensure you have the correct sheet open"
         ]
     }
 ]

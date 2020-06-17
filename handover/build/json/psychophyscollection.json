@@ -1,33 +1,77 @@
 [
     { 
         "name": "Collecting the psychophys data",
-        "image": "", 
+        "image": "./images/sharepoint/sharepoint-checklist.png",
         "description": [
-            "These are the steps taken to set up the lab for testing",
-            "Use the 'Checklist' to track progress for each participant",
+            "Use the 'Checklist' to track your progress in setting up the lab for each participant",
             "Printed copies are in the black letter trays in the lab",
             "On SharePoint found in 'Printed' under '2020 Document and Protocol'"
         ]
     },
     {
-        "name": "",
-        "image": "./images/psychophys/collection",
+        "name": "Setting up BIOPAC",
+        "image": "./images/psychophys/testing-biopac.png",
         "description": [
-
+            "Enter the testing room 133b and find the BIOPAC machine at the back",
+            "Turn on the machine by pressing the button at the back on the left inwards",
+            "Switch air conditioning on"
+        ]
+    }, 
+    {
+        "name": "Setting up computer",
+        "image": "./images/psychophys/testing-open-acq.png",
+        "description": [
+            "The control computers are back out in the main room at the back on the left",
+            "The computer on the right is the Acqknowledge/BIOPAC machine",
+            "Switch this computer on (ensure you do this after turning the BIOPAC on)",
+            "The password is 'eeg'",
+            "There is a folder on the desktop called 'BA Grant'",
+            "This folder contains the template graph and a folder called 'Data' with the data in",
+            "Open Acknowledge"
         ]
     },
     {
-        "name": "",
-        "image": "./images/psychophys/collection",
+        "name": "Setting up AcqKnowledge",
+        "image": "./images/psychophys/testing-new-ppt.png",
         "description": [
-
+            "Open the template graph so that you can see channels for the ECG (heart rate), SCR (skin conductance) and trigger",
+            "Save as a new file in 'BA Grant/Data' with the participant number",
+            "As the experiment runs you will likely need to recenter the SCR vertically using the outlined button",
+            "To zoom out and view the whole experiment on screen click the button to the right"           
         ]
     },
     {
-        "name": "",
-        "image": "./images/psychophys/collection",
+        "name": "Changing the acquisition time",
+        "image": "./images/psychophys/testing-aquisition-time.png",
         "description": [
-
+            "The default collection length is 30minutes with AcqKnowledge so the recording will stop during the experiment",
+            "To do this, click 'MP160'",
+            "Then click 'Set Up Data Aquisition...",
+            "Increase the 'Aquisition Time' to '7200' seconds",
+            "Then you can close the window",
+            "When you are have placed the sensors on the participant and are ready to begin recording, press 'Start'"
+        ]
+    },
+    {
+        "name": "Sensors",
+        "image": "./images/psychophys/testing-sensors.png",
+        "description": [
+            "The heart rate sensors are disposable and stored in the cupboard on the left as you enter the main 133 room",
+            "You will need two for each participant",
+            "Place these, the alcohol and the Q-tips in the testing room ready",
+            "The skin conductance sensors are washed between participants and will be on the drying rack by the sink",
+            "Collect one (of two) of these wires and plug into the BIOPAC machine in channel 6 (no tape goes in middle)",
+            "Instructions for placing the sensors on the participant are in the protocol folder (and speak to Anke)"
+        ]
+    },
+    {
+        "name": "End of testing",
+        "image": "./images/psychophys/testing-data-files.png",
+        "description": [
+            "After each participant, unplug the sensors, bin the heart rate and wash the skin conductance",
+            "At the end of the day, turn off machines and the air conditioning",
+            "Then back the participant files up onto the harddrive and sharepoint (see separate tutorial)",
+            "You will likely have to do this via memory stick as the machine did not recognise harddrive"
         ]
     }
 ]
