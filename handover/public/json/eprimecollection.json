@@ -1,10 +1,9 @@
 [
     { 
         "name": "Collecting the e-prime data",
-        "image": "./images/eprime/collection-scripts.png", 
+        "image": "./images/sharepoint/sharepoint-checklist.png", 
         "description": [
-            "These are the steps taken to set up the lab for testing",
-            "Use the 'Checklist' to track progress for each participant",
+            "Use the 'Checklist' to track your progress in setting up the lab for each participant",
             "Printed copies are in the black letter trays in the lab",
             "On SharePoint found in 'Printed' under '2020 Document and Protocol'"
         ]

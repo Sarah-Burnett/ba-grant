@@ -43,12 +43,24 @@
     },
     {
         "name": "Step 5 - Editing columns",
+        "image": "./images/qualtrics/qualtrics-excel-download.png",
         "description": [
             "Open the downloaded excel file",
-            "Delete the columns containing contact information",
-            "The responses can still be identified using the 'id'",
-            "Copy and paste the remaining data into the 'Qualtrics Export' file on sharepoint (./Documents/2020Data/qualtrics)",
-            "You will need to add in the participant 'ID' and 'Condition' once participant has attended the lab session"
+            "Delete the columns containing personally identifying information",
+            "These are: 'Status', 'IPAddress', 'LocationLatitude', 'LocationLongitude', 'name' and 'email'", 
+            "The responses can still be identified using the 'id' (and as a back up by logging onto Qualtrics)"
+        ]
+    },
+    {
+        "name": "Step 6 - Updating sharepoint data",
+        "image": "./images/qualtrics/qualtrics-qualtrics-export.png",
+        "description": [
+            "Open the 'Qualtrics Export' file on SharePoint in '2020 Data' under 'qualtrics'",
+            "Identify the timepoint of your last update and find this row in the new download",
+            "Copy and paste data below this point into the sharepoint file (columns in grey are manually added)",
+            "Ensure the data fields match up (if not you have probably not deleted enough columns)",
+            "The 'id' column is a direct copy of the 'id' field from Qualtrics (FYI those in red are abbrievated from the ResponseID as these participants completed Qualtrics prior to adding of the participant generated id question)",
+            "The 'ID' and Condition' need adding in once participant has attended the lab session"
         ]
     }
 ]

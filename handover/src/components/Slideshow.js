@@ -8,11 +8,11 @@ import { lightGrey, darkGrey, darkBlue, accent, white, tablet, Button } from '..
 
 const Container = styled.div`
     width: 100vw;
-    min-height: 90vh;
     margin: auto;
     background: ${white};
     @media (min-width: ${tablet}) {
         display: flex;
+        height: 90vh;
     }
 `
 
@@ -27,21 +27,26 @@ const Title = styled.h3`
     line-height: 2;
     padding-bottom: 2vw;
     text-align: center;
+    width: 100%;
 `
 
 const Img = styled.div`
-    min-height: 90vh;
-    min-width: 50vw;
-    overflow-y: scroll;
     img {
         width: 100%;
+    }   
+    @media (min-width: ${tablet}) {
+        overflow-y: scroll;
+        height: 90vh;
+        max-width: 50vw;
+        img {
+            max-width: 50vw;
+        }
     }
 `
 
 const Text = styled.div`
     background: ${white};
-    width: 100%;
-    height: auto;
+    width: 100v%;
     padding: 2vh 2vw;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
@@ -49,6 +54,17 @@ const Text = styled.div`
     p {
         line-height: 2;
         margin-bottom: 2vh;
+    }
+    @media (min-width: ${tablet}) {
+        overflow-y: scroll;
+        height: 90vh;
+        width: 50vw;
+        scrollbar-width:
+        -ms-overflow-style: none; 
+        &::-webkit-scrollbar { 
+            width: 0;
+            height: 0;
+        }
     }
 `
 

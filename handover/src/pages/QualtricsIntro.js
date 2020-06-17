@@ -11,7 +11,7 @@ const QualtricsIntro = () => {
            "The following information details how to login and navigate around Qualtrics",
            "This outlines the basic use of Qualtrics for the screening survey for part 1 of the study.",
            "After this, for more information on extracting the data see separate tutorial",
-           "For more information see the Qualtrics support pages",
+           "For more information see the Qualtrics support pages (link on home page)",
            "Click 'Next' to get started"
         ]
     }
@@ -24,7 +24,7 @@ const QualtricsIntro = () => {
     }, [])
 
     return (
-        <Slideshow json={json} startStep={startStep}/>
+        <Slideshow json={json} startStep={startStep} redirectLink="/qualtrics-export-data" redirectMsg="Proceed to export data"/>
     )
 }
 

@@ -12,8 +12,7 @@ const PsychophysP1 = () => {
             "This slideshow goes through the steps for part 1 of the preprocessing",
             "The purpose of part 1 is to generate the beats (QRS peaks) per minute across the experiment",
             "First we will apply a filter to the heart rate (ECG) data and then we can identify all the QRS peaks to calculate BPM",
-            "This tutorial assumes basic knowledge on most common AcqKnowledge buttons",
-            "For further information, please speak to Anke and/or view the pdfs in the 'BiopacDA' folder",
+            "For further information, please speak to Anke and/or view the pdfs in the 'BiopacDA' folder on sharepoint/harddrive",
             "Click 'Next' to get started"
         ]
     }

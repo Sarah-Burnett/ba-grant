@@ -50,7 +50,7 @@
    },
    {
     "name": " SART p2 - Removing pesky '@' symbol for filter",
-    "image": "./images/eprime/preprocessing-run-sart-macro.png",
+    "image": "./images/eprime/preprocessing-at-filter.png",
     "description": [
         "In order to calculate the reaction time results, there are a couple of edits to make",
         "The macro does a couple of odd things so there are a couple of quick tweaks that need making before you get the results",
@@ -72,7 +72,9 @@
         "name": "SART p4 - Consolidate results",
         "image": "./images/eprime/preprocessing-sart.png",
         "description": [
-            "Once you have made the adjustments to the macro output for the reaction time (previous 2 slides), you can now copy and paste the data from the 'Results' tab into the correct participant row in the 'SART' spreadsheet on SharePoint"
+            "Once you have made the adjustments to the macro output for the reaction time (previous 2 slides), you can now add the data to the 'SART' spreadsheet on SharePoint",
+            "Open the file inside '2020 Data/eprime/SART'",
+            "In a new row, add in the participant ID into the first column, then copy and paste the data from the 'Results' tab you just created"
         ]
     }
 ]
