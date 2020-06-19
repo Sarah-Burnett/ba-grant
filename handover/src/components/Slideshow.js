@@ -4,15 +4,53 @@ import { CSSTransition } from 'react-transition-group';
 import SlideDots from './SlideDots';
 import FullSlides from './FullSlides';
 import styled from 'styled-components';
-import { lightGrey, darkGrey, darkBlue, accent, white, tablet, Button } from '../Styles';
+import { lightGrey, darkGrey, darkBlue, accent, white, Button } from '../Styles';
+
+const tablet = "850px";
 
 const Container = styled.div`
     width: 100vw;
+    min-height: 92vh;
     margin: auto;
+    padding: 1vh 1vw;
     background: ${white};
     @media (min-width: ${tablet}) {
         display: flex;
         height: 90vh;
+        padding: 0;
+    }
+`
+
+
+
+const Text = styled.div`
+    background: ${white};
+    width: 100%;
+    padding: 2vh 4vw;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1;
+    p {
+        line-height: 2;
+        margin-bottom: 2vh;
+        width: 100%;
+        padding: 0 1vw;
+    }
+    @media (min-width: ${tablet}) {
+        flex: 1;
+        padding: 2vh 1vw;
+        margin: 0;
+        overflow-y: scroll;
+        height: 90vh;
+        scrollbar-width:
+        -ms-overflow-style: none; 
+        &::-webkit-scrollbar { 
+            width: 0;
+            height: 0;
+        }
+        p, h1, h3, div {
+            max-width: 50vw;
+        }
     }
 `
 
@@ -27,49 +65,22 @@ const Title = styled.h3`
     line-height: 2;
     padding-bottom: 2vw;
     text-align: center;
-    width: 100%;
 `
 
 const Img = styled.div`
     img {
-        width: 100%;
+        max-width: 100%;
     }   
     @media (min-width: ${tablet}) {
+        flex: 1;
         overflow-y: scroll;
         height: 90vh;
-        max-width: 50vw;
-        img {
-            max-width: 50vw;
-        }
-    }
-`
-
-const Text = styled.div`
-    background: ${white};
-    width: 100v%;
-    padding: 2vh 2vw;
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-columns: 1;
-    p {
-        line-height: 2;
-        margin-bottom: 2vh;
-    }
-    @media (min-width: ${tablet}) {
-        overflow-y: scroll;
-        height: 90vh;
-        width: 50vw;
-        scrollbar-width:
-        -ms-overflow-style: none; 
-        &::-webkit-scrollbar { 
-            width: 0;
-            height: 0;
-        }
+        padding: 1vh 0;
     }
 `
 
 const Buttons = styled.div`
-    padding: 2vh 0 0;
+    padding: 2vh 1vw;
     width: 100%;
 `
 
@@ -119,7 +130,7 @@ const Slideshow = ({json, startStep, redirectLink="/", redirectMsg="Back to Home
                     { currentStep.name && currentStep.name !== title ? currentStep.name : "Getting Started" }
                     </Title>
                     <div>
-                    { currentStep.description && currentStep.description.map(item => <p>{item}</p>) }
+                    { currentStep.description && currentStep.description.map(item => <p key={item}>{item}</p>) }
                     </div>
                 <Buttons>
                     <SlideDots json={json} currentIndex={currentIndex}/>

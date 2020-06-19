@@ -5,6 +5,7 @@ import { darkGrey, darkBlue } from '../Styles';
 const Dots = styled.div`
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
     margin: 1vh 0 3vh;
 `
 const Dot = styled.div`
@@ -26,7 +27,7 @@ const ActiveDot = styled.div`
 const SlideDots = ({ json, currentIndex }) => {
     return (
         <Dots className="dots">
-            { json.map( (item, index) => index === currentIndex ? <ActiveDot/> : <Dot/>  ) }
+            { json.map( (item, index) => index === currentIndex ? <ActiveDot key={index}/> : <Dot key={index}/>  ) }
         </Dots>
     )
 };

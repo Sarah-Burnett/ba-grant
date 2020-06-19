@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import './app.css';
 import Nav from './layout/Nav';
 import Footer from './layout/Footer';
+import Login from './components/Login';
 import Home from './pages/Home';
 import SharepointIntro from './pages/SharepointIntro';
 import Macros from './pages/Macros';
@@ -33,11 +34,19 @@ const routes = [
 ]
 
 const App = () => {
+  const [isAuth, setIsAuth] = useState(false);
+  const [ loading, setLoading ] = useState(true);
+  useEffect( () => {
+    if (sessionStorage.getItem('baAuth')) setIsAuth(true);
+    setLoading(false);
+  }, [])
   return (
-    <div className="App">
+    <div className="app">
       <Nav/>
+      { !isAuth && !loading && <Login setIsAuth={setIsAuth}/>}
+      { isAuth &&
       <Router>
-        <div style={{minHeight: "79.8vh"}}>
+        <React.Fragment>
           {routes.map(({path, Component}) => (
            <Route key={path} exact path={path}>
            {({ match }) => (
@@ -47,8 +56,9 @@ const App = () => {
            )}
          </Route>
           ))}
-        </div>
+        </React.Fragment>
       </Router>
+      }
       <Footer/>
     </div>
   );
