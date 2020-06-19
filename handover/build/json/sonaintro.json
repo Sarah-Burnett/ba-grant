@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Logging in",
+        "image": "./images/sona/sona-login.png",
+        "description": [
+            "Input login details",
+            "Click 'Log in'",
+            "Click 'Researcher'"
+        ]
+    },
+    {
+        "name": "Main screen",
+        "image": "./images/sona/sona-main.png",
+        "description": [
+            "This is the main screen",
+            "Well labelled main page of interest is 'My Studies'",
+            "You can also confirm timings of participants under 'Upcoming Appointments'"
+        ]
+    },
+    {
+        "name": "My Studies",
+        "image": "./images/sona/sona-studies.png",
+        "description": [
+            "The initial screen is for 'Active' surveys only",
+            "The active study is called *2.5 credits* Mood, Concentration and Problem solving",
+            "A second study is also used to grant credits for part 1 only which is under 'Inactive' surveys called *0.5 Credits* Mood, Concentration and Problem solving Survey"
+        ]
+    },
+    {
+        "name": "Adding timeslots",
+        "image": "./images/sona/sona-timeslots.png",
+        "description": [
+            "You can add individual slots using the 'Add A Timeslot' button",
+            "You can also add multiple slots at once using the 'Add Multiple Timeslots' (see next page)",
+            "There are also buttons to delete slots if you make a mistake",
+            "Be careful with this there is nothing to stop you creating duplicate slots at the same time"
+        ]
+    },
+    {
+        "name": "Adding multiple timeslots",
+        "image": "./images/sona/sona-multipletime.png",
+        "description": [
+            "Clicking 'Add Multiple Timeslots' brings you to this screen",
+            "If you are testing at the same times each week, there is a useful option to copy timeslots from week to week",
+            "There is a screen to confirm you are happy with the times before adding them"
+        ]
+    },
+    {
+        "name": "Timeslot information",
+        "image": "./images/sona/sona-timeslot.png",
+        "description": [
+            "Clicking on an individual timeslot brings you to this screen",
+            "Most signups the participant signs themselves up although sometimes they may want to re-arrange",
+            "You can manually sign a person up on this screen by adding either their username (uni email) or name",
+            "You can also use this to add participants to the inactive survey to grant them 0.5 credits for the Qualtrics survey"
+        ]
+    },
+    {
+        "name": "Granting credits",
+        "image": "./images/sona/sona-uncredited.png",
+        "description": [
+            "Clicking 'View your uncredited timeslots' brings you a list of participants",
+            "Your options here are to grant credits (2.5) or to report no-shows",
+            "You also have the 'Mark all 'Participated'' option for granting credits to multiple participants",
+            "Ensure you click 'Process changes' to save"
+        ]
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "name": "E-prime preprocessing",
+        "image": "./images/eprime/preprocessing-start.png",
+        "description": [
+            "This tutorial outlines the preprocessing for the PANAS, SART, goal practice task and writing tasks",
+            "The files for these are under 'eprime' on sharepoint"
+        ]
+    },
+    {
+        "name": "PANAS",
+        "image": "./images/eprime/preprocessing-panas.png",
+        "description": [
+            "Open the excel file called 'PANAS'",
+            "This document is currently laid out to allow a direct copy and paste from the e.dat files",
+            "Need to add in labelling to know which question is which",
+            "Open the e.dat file and copy over the PANAS column for each time point",
+            "Once this is complete you will be able to 'copy' and 'transpose' to get this laid out with participant as rows and the data as columns"
+        ]
+    },
+    {
+        "name": "Writing Tasks",
+        "image": "./images/eprime/preprocessing-writing-tasks.png",
+        "description": [
+            "Open the excel file called 'Writing tasks'",
+            "Like the PANAS this is a direct copy and paste from the e.dat files.",
+            "Use 'find' and 'replace' to remove all the extra characters",
+            "E.g. find '{SPACE}' and replace with ' '"
+        ]
+    },
+    {
+        "name": "SART",
+        "image": "./images/eprime/preprocessing-sart.png",
+        "description": [
+            "For the SART you will need to export the e.dat files into excel",
+            "Export as a text file into 'raw text' which you can then open in excel",
+            "Open the text file in excel and save as excel macro enabled workbook into 'raw excel'",
+            "You can automate this process using the 'SARTConvertFileType' macro",
+            "The next step is to clean up this file and output thought probes, accuracy and reaction time data"
+        ]
+    },
+    {
+        "name": "SART p1 - SART clean and analyse macro",
+        "image": "./images/eprime/preprocessing-run-sart-macro.png",
+        "description": [
+            "Open the raw excel file and run the 'SARTCleanandAnalyse' macro",
+            "Click 'Run' and then 'Ok'",
+            "The macro does a couple of odd things for the reaction time data so there are a couple of quick tweaks to make"
+        ]
+   },
+   {
+    "name": " SART p2 - Removing pesky '@' symbol for filter",
+    "image": "./images/eprime/preprocessing-at-filter.png",
+    "description": [
+        "In order to calculate the reaction time results, there are a couple of edits to make",
+        "The macro does a couple of odd things so there are a couple of quick tweaks that need making before you get the results",
+        "Firstly, on the 'GoTrials' sheet in cell A2 remove the '@' symbol before 'FILTER'",
+        "This should then populate this sheet"
+    ]
+    },
+    {
+        "name": "SART p3 - Adjust RT for correct go trials rows",
+        "image": "./images/eprime/preprocessing-correct-go-only.png",
+        "description": [
+            "If you go next to the 'Results' tab, you will see the RT mean and SD calculation defaults to the maximum possible number of rows '2:1351'",
+            "This needs individually adjusting according to each participants performance, adjust ththe range to the exact number of rows in 'GoTrials' (this should be equal to the number in 'Results!H2' + 1)",
+            "Adjust the range for BOTH the MEAN and SD and those are the results",
+            "Save your work"
+        ]
+    },
+    {
+        "name": "SART p4 - Consolidate results",
+        "image": "./images/eprime/preprocessing-sart.png",
+        "description": [
+            "Once you have made the adjustments to the macro output for the reaction time (previous 2 slides), you can now add the data to the 'SART' spreadsheet on SharePoint",
+            "Open the file inside '2020 Data/eprime/SART'",
+            "In a new row, add in the participant ID into the first column, then copy and paste the data from the 'Results' tab you just created"
+        ]
+    }
+]
