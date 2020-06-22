@@ -17,6 +17,12 @@ const NavBar = styled.nav`
     background: ${darkBlue};
     color: ${lightBlue};
     border-bottom: 1px solid grey;
+    .home {
+        font-size: 200%;
+        @media (min-width: ${tablet}) {
+            font-size: 125%
+        }
+    }
 `
 const Img = styled.div`
     height: 10vh;

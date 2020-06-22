@@ -17,7 +17,6 @@ const H1 = styled.h1`
 
 
 const FullSlides = ({json, title}) => {
-    json.map( slide => console.log(slide))
     return (
         <Container>
                 <H1>{title}</H1>

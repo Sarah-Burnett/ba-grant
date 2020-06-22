@@ -24,7 +24,7 @@ const QualtricsIntro = () => {
     }, [])
 
     return (
-        <Slideshow json={json} startStep={startStep} redirectLink="/qualtrics-export-data" redirectMsg="Proceed to export data"/>
+        <Slideshow json={json} startStep={startStep} redirectLink="/qualtrics-export" redirectMsg="Proceed to export data"/>
     )
 }
 

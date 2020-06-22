@@ -7,20 +7,20 @@ import EPrime from '../images/E-Prime2-logo.jpg';
 import BIOPAC from '../images/biopac-logo.png';
 import styled from 'styled-components';
 import { LinkIcon } from '../layout/Icons';
-import { darkBlue, darkGrey, white, accent } from '../Styles';
+import { darkBlue, darkGrey, white, accent, tablet, desktop } from '../Styles';
 
-const HomePage = styled.nav`
+const HomePage = styled.div`
     padding: 1vh 0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+    grid-gap: 1rem;
     color: ${darkBlue};
-    min-height: 79vh;
+    margin: 1rem;
 `
 
 const H2 = styled.h2`
-    height: 15vh;
-    line-height: 15vh;
+    height: 10vh;
+    line-height: 10vh;
     border-bottom: 1px solid ${darkGrey};
     margin-bottom: 1vh;
 `
@@ -31,19 +31,22 @@ const Links = styled.div`
     grid-template-columns: auto;
     grid-template-rows: auto 1fr 20vh;
     text-align: center;
-    margin: 3vh 5px;
-    width: 235px;
     background: ${white};
     li {
         list-style: none;
         margin: 2vh 1vw;
-        line-height: 2;
     }
     a {
+        font-size: inherit;
+        line-height: inherit;
         text-decoration: none;
         color: ${darkBlue};
         &:hover {
             color: ${accent};
+        }
+        line-height: 250%;
+        @media (min-width: ${tablet}){
+            line-height: auto;
         }
     }
     ul {
@@ -54,7 +57,9 @@ const Links = styled.div`
 
 const Img = styled.img`
     height: 100%;
-    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 1vh;
 `
 
 
@@ -103,11 +108,8 @@ const Home = () => {
                 <H2>Psychophys</H2>
                 <ul>
                     <li><Link to="/psychophys-testing">Testing</Link></li>
-                    <li className="dropdownHover">Preprocessing</li>
-                    <ul className="dropdownContent">
-                        <li><Link to="/psychophys-preprocess-p1">Part 1</Link></li>
-                        <li><Link to="/psychophys-preprocess-p2">Part 2</Link></li>
-                    </ul>
+                    <li><Link to="/psychophys-preprocess-p1">Preprocessing Part 1</Link></li>
+                    <li><Link to="/psychophys-preprocess-p2"> Preprocessing Part 2</Link></li>
                     <li><a href="https://www.biopac.com/wp-content/uploads/acqknowledge-4-software-guide.pdf" target="_blank" rel="noopener noreferrer">AcqKnowledge guide <LinkIcon/></a></li>
                 </ul>
                 <Img src={BIOPAC} alt="BIOPAC"/>

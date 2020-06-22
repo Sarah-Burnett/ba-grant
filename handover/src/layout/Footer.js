@@ -14,6 +14,10 @@ const FooterBar = styled.div`
         justify-content: flex-end;
     }
     border-top: 1px solid grey;
+    line-height: 250%;
+    @media(min-width: ${tablet}){
+        line-height: inherit;
+    }
 `
 
 const Footer = () => {

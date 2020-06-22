@@ -8,6 +8,7 @@ export const accent = "#198dff";
 export const white = "#FFF";
 
 export const tablet = "600px";
+export const desktop = "1900px";
 
 export const Links = styled.ul`
 li {
@@ -43,5 +44,11 @@ box-shadow: 0px 0px 2px 2px ${darkBlue};
 &:hover {
     background: ${darkBlue};
     color: ${accent};
+}
+line-height: 150%;
+font-size: inherit;
+@media(min-width: ${tablet}){
+    line-height: inherit;
+    font-size: 90%
 }
 `
