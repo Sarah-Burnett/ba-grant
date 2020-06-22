@@ -108,7 +108,7 @@ const Home = () => {
                 <H2>Psychophys</H2>
                 <ul>
                     <li><Link to="/psychophys-testing">Testing</Link></li>
-                    <li><Link to="/preprocessing-preprocess-p1">Preprocessing Part 1</Link></li>
+                    <li><Link to="/psychophys-preprocess-p1">Preprocessing Part 1</Link></li>
                     <li><Link to="/psychophys-preprocess-p2"> Preprocessing Part 2</Link></li>
                     <li><a href="https://www.biopac.com/wp-content/uploads/acqknowledge-4-software-guide.pdf" target="_blank" rel="noopener noreferrer">AcqKnowledge guide <LinkIcon/></a></li>
                 </ul>

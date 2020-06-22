@@ -43,10 +43,10 @@ const App = () => {
   return (
     <div className="app">
       <Nav/>
-      { !isAuth && !loading && <Login setIsAuth={setIsAuth}/>}
+      { !isAuth &&  !loading && <Login className="fade" setIsAuth={setIsAuth}/> }
       { isAuth &&
       <Router>
-        <React.Fragment>
+        <div style={{minHeight: "79vh"}}>
           {routes.map(({path, Component}) => (
            <Route key={path} exact path={path}>
            {({ match }) => (
@@ -56,7 +56,7 @@ const App = () => {
            )}
          </Route>
           ))}
-        </React.Fragment>
+        </div>
       </Router>
       }
       <Footer/>
