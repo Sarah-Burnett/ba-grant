@@ -1,7 +1,7 @@
 import React from 'react'
-import { darkGrey, lightGrey, white } from '../Styles';
+import { darkGrey, lightGrey, white } from '../../Styles';
 import styled from 'styled-components';
-import Description from './Description';
+import Description from '../Description';
 
 const Text = styled.div`
     margin: 2vh 0;
@@ -24,15 +24,16 @@ const Title = styled.h3`
 `
 
 const Img = styled.img`
-    max-width: 74vw;
+    max-width: 70vw;
 `
 
-const Slide = ({ slide }) => {
+const Slide = ({ slide, title }) => {
+    const { name, image, description } = slide;
     return (
         <Text>
-            <Title>{slide.name}</Title>
-            { slide.image && <Img src={slide.image } alt="screenshot"/>}
-            <Description desc={slide.description}/>
+            <Title>{name && name !== title && name}</Title>
+            { image && <Img src={image } alt="screenshot"/>}
+            <Description desc={description}/>
         </Text>
     )
 }

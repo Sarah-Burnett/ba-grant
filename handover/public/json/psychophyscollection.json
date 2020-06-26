@@ -1,6 +1,14 @@
 [
-    { 
+    {
         "name": "Collecting the psychophys data",
+        "image": "./images/psychophys/testing-example.png", 
+        "description": [
+            "This will cover the steps taken to set up the lab for the psychophys recordings",
+           "Click 'Next' to get started"
+        ]
+    }, 
+    { 
+        "name": "Tracking completed steps",
         "image": "./images/sharepoint/sharepoint-checklist.png",
         "description": [
             "Use the 'Checklist' to track your progress in setting up the lab for each participant",

@@ -1,5 +1,14 @@
 [
     {
+        "name": "Getting starting with Sona",
+        "image": "./images/sona/sona-login.png",
+        "description": [
+           "The following information details how to login and navigate around SONA",
+           "After this, see separate tutorial for bulk granting credits for the screener survey.",
+           "Click 'Next' to get started"
+        ]
+    },
+    {
         "name": "Logging in",
         "image": "./images/sona/sona-login.png",
         "description": [

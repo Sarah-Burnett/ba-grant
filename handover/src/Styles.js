@@ -8,7 +8,6 @@ export const accent = "#198dff";
 export const white = "#FFF";
 
 export const tablet = "600px";
-export const desktop = "1900px";
 
 export const Links = styled.ul`
 li {
@@ -51,4 +50,7 @@ font-size: inherit;
     line-height: inherit;
     font-size: 90%
 }
+`
+export const PrimaryButton = styled(Button)`
+    background: ${accent};
 `

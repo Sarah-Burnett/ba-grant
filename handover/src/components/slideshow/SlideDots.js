@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
-import { darkGrey, darkBlue } from '../Styles';
+import { darkGrey, darkBlue } from '../../Styles';
+import SlidesContext from '../../context/slides/slidesContext';
 
 const Dots = styled.div`
     display: flex;
@@ -24,7 +25,9 @@ const ActiveDot = styled.div`
     margin: 0 1vw;
 `
 
-const SlideDots = ({ json, currentIndex }) => {
+const SlideDots = () => {
+    const slidesContext = useContext(SlidesContext);
+    const { json, currentIndex } = slidesContext;
     return (
         <Dots className="dots">
             { json.map( (item, index) => index === currentIndex ? <ActiveDot key={index}/> : <Dot key={index}/>  ) }

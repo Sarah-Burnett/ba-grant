@@ -4,7 +4,7 @@ import Slideshow from '../components/Slideshow'
 const DataStorage = () => {
     const [ json, setJson ] = useState([]);
 
-    const startStep = {
+    const startSlide = {
         "name": "Guide to data storage",
         "image": "./images/sharepoint/sharepoint-2020-data.png",
         "description": [
