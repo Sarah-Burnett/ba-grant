@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
 import styled from 'styled-components';
-import {accent, Button, PrimaryButton } from '../../Styles';
+import {Button, PrimaryButton } from '../../Styles';
+import { RedirectButton } from '../RedirectButton';
 import SlidesContext from '../../context/slides/slidesContext';
 
 const Container = styled.div`
@@ -9,17 +9,14 @@ const Container = styled.div`
     width: 100%;
 `
 
-
-
 const Buttons = () => {
     const slidesContext = useContext(SlidesContext);
-    const { viewFullSlides, redirectMsg, redirectUrl, nextSlide, prevSlide, end, start, json, currentIndex } = slidesContext; 
+    const { nextSlide, prevSlide, end, start, json, currentIndex } = slidesContext; 
     return (
         <Container>
-                { end && <Link to={redirectUrl}><Button className="previous" type="button">{redirectMsg}</Button></Link>}
+                { end && <RedirectButton/>}
                 { !end && <PrimaryButton className="next" type="button" onClick={() => nextSlide(json, currentIndex)}>Next</PrimaryButton> }
                 { !start && <Button className="previous" type="button" onClick={() => prevSlide(json, currentIndex)}>Previous</Button> }
-                <Button onClick={viewFullSlides}>View Full Slides</Button>
         </Container>
     )
 }

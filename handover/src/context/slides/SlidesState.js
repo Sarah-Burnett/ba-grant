@@ -16,6 +16,7 @@ const SlidesState = props => {
         viewAsSlideshow: true,
         redirectUrl: '',
         redirectMsg: '',
+        progress: '',
         loading: true,
         currentSlide: [],
         currentIndex: 0,
@@ -25,7 +26,7 @@ const SlidesState = props => {
     }
     const [state, dispatch] = useReducer(slidesReducer, initialState);
     
-    const loadSlides = async (url, redirectMsg, redirectUrl) => {
+    const loadSlides = async (url, redirectMsg, redirectUrl, progress) => {
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -39,6 +40,7 @@ const SlidesState = props => {
                         loading: false,
                         redirectMsg,
                         redirectUrl,
+                        progress,
                         start: true,
                         end: false,
                     }
@@ -105,6 +107,7 @@ const SlidesState = props => {
             viewAsSlideshow: state.viewAsSlideshow,
             redirectUrl: state.redirectUrl,
             redirectMsg: state.redirectMsg,
+            progress: state.progress,
             loading: state.loading,
             currentSlide: state.currentSlide,
             currentIndex: state.currentIndex,

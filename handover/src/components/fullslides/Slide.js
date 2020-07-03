@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { darkGrey, lightGrey, white } from '../../Styles';
 import styled from 'styled-components';
 import Description from '../Description';

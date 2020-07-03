@@ -6,23 +6,9 @@ import SlidesState from './context/slides/SlidesState';
 import Nav from './layout/Nav';
 import Footer from './layout/Footer';
 import Login from './components/Login';
-import Home from './layout/Home';
 import Slides from './components/Slides';
-
-const routes = [
-  { path: '/sharepoint-getting-started', url: './json/sharepointintro.json' },
-  { path: '/using-macros', url: './json/macros.json' },
-  { path: '/data-storage', url: './json/datastorage.json'},
-  { path: '/sona-getting-started', url: './json/sonaintro.json' },
-  { path: '/qualtrics-getting-started', url: './json/qualtricsintro.json', redirectMsg: 'Proceed to exporting data', redirectUrl: '/qualtrics-export'},
-  { path: '/qualtrics-export', url: './json/qualtricsexport.json' },
-  { path: '/eprime-testing', url: './json/eprimecollection.json'},
-  { path: '/eprime-preprocess', url: './json/eprimepreprocessing.json' },
-  { path: '/psychophys-testing', url: './json/psychophyscollection.json' },
-  { path: '/psychophys-preprocess-p1', url: './json/psychophysp1.json', redirectMsg: 'Proceed to p2', redirectUrl: '/psychophys-preprocess-p2' },
-  { path: '/psychophys-preprocess-p2', url: './json/psychophysp2.json'},
-  { path: '/', Component: Home },
-]
+import ProgressState from './context/progress/ProgressState';
+import routes from './utilities/routes';
 
 const App = () => {
   const [isAuth, setIsAuth] = useState(false);
@@ -32,28 +18,26 @@ const App = () => {
     setLoading(false);
   }, [])
   return (
-    <SlidesState>
-         <div className="app">
-            <Nav/>
-            { !isAuth &&  !loading && <Login className="fade" setIsAuth={setIsAuth}/> }
-            { isAuth &&
-            <Router>
+    <ProgressState>
+        <SlidesState>
+          <div className="app">
+              <Nav/>
+              { !isAuth &&  !loading && <Login className="fade" setIsAuth={setIsAuth}/> }
+              { isAuth &&
               <div style={{minHeight: "79vh"}}>
-                {routes.map(({path, Component, url, redirectMsg, redirectUrl}) => (
-                <Route key={path} exact path={path}>
-                {({ match }) => (
-                  <CSSTransition in={match != null} timeout={500} classNames="fade" unmountOnExit>
-                      { Component ? <Component/> : <Slides url={url} redirectMsg={redirectMsg} redirectUrl={redirectUrl}/> }
-                  </CSSTransition>
-                )}
-              </Route>
-                ))}
+              <Router>
+                  {routes.map(({path, Component, url, redirectMsg, redirectUrl, progress}) => (
+                  <Route key={path} exact path={path}>
+                      { Component ? <Component/> : <Slides url={url} progress={progress} redirectMsg={redirectMsg} redirectUrl={redirectUrl}/> }
+                </Route>
+                  ))}
+              </Router>
               </div>
-            </Router>
-            }
-            <Footer/>
-        </div>
-    </SlidesState>
+              }
+              <Footer/>
+          </div>
+      </SlidesState>
+    </ProgressState>
   );
 }
 

@@ -81,6 +81,7 @@ h2 {
 
   .fade {
     position: absolute;
+    top: 10vh;
   }
 
    .fade-enter {
@@ -91,7 +92,7 @@ h2 {
   .fade-enter-active {
     opacity: 1;
     height: auto;
-    transition: opacity 500ms, height 500ms;
+    transition: opacity 300ms, height 300ms;
   }
   
   .fade-exit {
@@ -102,5 +103,5 @@ h2 {
   .fade-exit-active {
     opacity: 0;
     height: 0;
-    transition: opacity 500ms, height 500ms;
+    transition: opacity 300ms, height 300ms;
   }

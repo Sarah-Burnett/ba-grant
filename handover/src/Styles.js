@@ -17,6 +17,7 @@ li {
 a {
     font-weight: bold;
     text-decoration: none;
+    cursor: pointer;
     color: ${lightBlue};
     &:hover {
         color: ${accent};

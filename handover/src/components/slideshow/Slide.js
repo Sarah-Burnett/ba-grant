@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import { lightGrey, darkGrey, darkBlue, accent, white, Button } from '../../Styles';
 import Buttons from './Buttons';
@@ -17,6 +18,7 @@ const Container = styled.div`
         height: 90vh;
         padding: 0;
     }
+    transition: opacity .5s;
 `
 
 const Text = styled.div`
@@ -80,7 +82,7 @@ const Img = styled.div`
 const Slide = ({currentSlide, title}) => {
     const { name, description, image } = currentSlide;
     return (
-        <Container>
+        <Container className='slide'>
                 <Text>
                     <H1>{title}</H1>
                     <Title>
@@ -89,8 +91,8 @@ const Slide = ({currentSlide, title}) => {
                     <div>
                     { description && description.map(item => <p key={item}>{item}</p>) }
                     </div>
-                <SlideDots/>
-                <Buttons/>
+                    <SlideDots/>
+                    <Buttons/>
                 </Text>
                 <Img>
                 { image && <img src={image} alt="screenshot"/>}

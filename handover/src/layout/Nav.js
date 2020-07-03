@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 import styled from 'styled-components';
-import { lightBlue, darkBlue, Links, tablet } from '../Styles';
-import { HomeIcon } from './Icons';
+import { lightBlue, darkBlue, accent, tablet } from '../Styles';
+import { EllipsisIcon } from './Icons';
+import { EllipsisMenu } from '../components/EllipsisMenu';
 
 const NavBar = styled.nav`
     @media (max-width: ${tablet}){
@@ -12,6 +13,7 @@ const NavBar = styled.nav`
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        height: 10vh;
     }
     min-height: 10vh;
     background: ${darkBlue};
@@ -37,15 +39,37 @@ const Title = styled.h1`
     padding: 1vh 0;
 `
 
+const Ellipsis = styled.button`
+    display: block;
+    color: ${lightBlue};
+    &:hover, &:focus {
+        color: ${accent};
+    }
+    background: none;
+    border: none;
+    padding: 1vh 4vw;
+    font-size: larger;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    @media (min-width: ${tablet}) {
+       width: auto;
+    }
+`
+
+
 const Nav = () => {
+    const [ showMenu, setShowMenu ] = useState(false);
     return (
-        <NavBar>
+        <Fragment>
+            <NavBar>
             <Img><img src="https://exetercles.eu.qualtrics.com/ControlPanel/Graphic.php?IM=IM_0cEBafEeKfQXbM1" alt="logo"/></Img>
             <Title>BA Regulatory Focus and Rumination</Title>
-            <Links>
-                <li><a href="/"><HomeIcon/></a></li>
-            </Links>
+            <Ellipsis onClick={() => setShowMenu(!showMenu)}><EllipsisIcon/></Ellipsis>
         </NavBar>
+        { showMenu && <EllipsisMenu/> }
+        </Fragment>
+        
     )
 };
 
