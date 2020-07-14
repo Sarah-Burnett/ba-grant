@@ -40,7 +40,6 @@ const Text = styled.div`
         margin: 0;
         overflow-y: scroll;
         height: 90vh;
-        scrollbar-width:
         -ms-overflow-style: none; 
         &::-webkit-scrollbar { 
             width: 0;

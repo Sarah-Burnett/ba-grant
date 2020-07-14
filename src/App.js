@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import { CSSTransition } from 'react-transition-group';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './app.css';
 import SlidesState from './context/slides/SlidesState';
 import Nav from './layout/Nav';
@@ -21,7 +20,7 @@ const App = () => {
     <ProgressState>
         <SlidesState>
           <div className="app">
-              <Nav/>
+              <Nav isAuth={isAuth}/>
               { !isAuth &&  !loading && <Login className="fade" setIsAuth={setIsAuth}/> }
               { isAuth &&
               <div style={{minHeight: "79vh"}}>
@@ -42,23 +41,3 @@ const App = () => {
 }
 
 export default App;
-
-//
-{/* <Route path="/qualtrics-getting-started">
-            <QualtricsIntro/>
-          </Route>
-          <Route path="/qualtrics-export">
-            <QualtricsExport/>
-          </Route>
-          <Route path="/sharepoint-getting-started">
-            <SharepointIntro/>
-          </Route>
-          <Route path="/psychophys-preprocess-p1">
-            <PsychophysP1/>
-          </Route>
-          <Route path="/psychophys-preprocess-p1">
-            <PsychophysP1/>
-          </Route>
-          <Route path="/">
-            <Home/>
-          </Route> */}

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { darkBlue, darkGrey, lightGrey, white, accent, Button, tablet } from '../Styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationCircle as Warning, faEye as Eye, faEyeSlash as EyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { password } from '../utilities/password';
 
 const LoginPage = styled.div`
     padding: 1vh 0;
@@ -75,8 +76,6 @@ const LoginPage = styled.div`
         color: red;
     }
 `
-
-const password = "BAGrant100%";
 
 const Login = ({setIsAuth}) => {
     const [ loginInput, setLoginInput ] = useState('');

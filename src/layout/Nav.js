@@ -58,14 +58,14 @@ const Ellipsis = styled.button`
 `
 
 
-const Nav = () => {
+const Nav = ({isAuth}) => {
     const [ showMenu, setShowMenu ] = useState(false);
     return (
         <Fragment>
             <NavBar>
             <Img><img src="https://exetercles.eu.qualtrics.com/ControlPanel/Graphic.php?IM=IM_0cEBafEeKfQXbM1" alt="logo"/></Img>
             <Title>BA Regulatory Focus and Rumination</Title>
-            <Ellipsis onClick={() => setShowMenu(!showMenu)}><EllipsisIcon/></Ellipsis>
+            { isAuth && <Ellipsis onClick={() => setShowMenu(!showMenu)}><EllipsisIcon/></Ellipsis> }
         </NavBar>
         { showMenu && <EllipsisMenu/> }
         </Fragment>
