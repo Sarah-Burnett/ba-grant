@@ -1,5 +1,16 @@
 [
-     {
+    {
+        "name": "Macros",
+        "image": "./images/sharepoint/sharepoint-macros.png",
+        "description": [
+                "There are various excel and Acqknowledge macros to make the preprocessing more efficient",
+                "These are all within the 'Macros' folder in '2020 data' on SharePoint",
+                "They are also on the first harddrive 'BA Grant 1'",
+                "This tutorial will go through using the excel macros I created (.bas)",
+                "For the AcqKnowledge macro (.bbs), see the separate psychophys preprocessing tutorials"
+            ]
+    }, 
+    {
         "name": "Part 1 - Excel macros",
         "image": "./images/sharepoint/macro-excel.png",
         "description": [

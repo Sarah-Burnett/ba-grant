@@ -1,5 +1,14 @@
 [
     {
+        "name": "Navigation around SharePoint",
+        "image": "./images/sharepoint/sharepoint-home.png",
+        "description": [
+           "The following information details how to navigate around sharepoint",
+           "After this, see separate slides on introductions to the e-prime and psychophys data",
+           "Click 'Next' to get started"
+        ]
+    },
+    {
         "name": "Sharepoint",
         "image": "./images/sharepoint/sharepoint-documents.png",
         "description": [

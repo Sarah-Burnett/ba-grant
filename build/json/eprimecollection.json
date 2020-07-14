@@ -1,6 +1,15 @@
 [
-    { 
+    {
         "name": "Collecting the e-prime data",
+        "image": "./images/eprime/collection-scripts.png",
+        "description": [
+            "This will cover the steps taken to set up the delivery of the e-prime scripts in the lab",
+            "This will also cover delivering the rest of the protocol minus the psychophys which is covered separately",
+           "Click 'Next' to get started"
+        ]
+    },
+    { 
+        "name": "Tracking completed steps",
         "image": "./images/sharepoint/sharepoint-checklist.png", 
         "description": [
             "Use the 'Checklist' to track your progress in setting up the lab for each participant",

@@ -1,5 +1,16 @@
 [
     {
+        "name": "Exporting Data from Qualtrics",
+        "image": "./images/qualtrics/qualtrics-screener.png",
+        "description": [
+           "The following information details how to export data from Qualtrics",
+           "It also covers cleaning up the excel file ready to add to sharepoint",
+           "If you are new to Qualtrics, please view the introductory slides first",
+           "For more information see the Qualtrics support pages",
+           "Click 'Next' to get started"
+        ]
+    },
+    {
         "name": "Step 1 - Login to Qualtrics",
         "image": "./images/qualtrics/qualtrics-project.png",
         "description": [
