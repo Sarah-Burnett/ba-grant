@@ -23,12 +23,16 @@ State management using react hooks (useState and useContext)
 
 Routing with react-router
 
+Password in utilities
+
 ## Installation
 ```bash
 # Install dependencies
+
 npm install
 # Run the react server
 npm start
+
 # Generate production build 
 npm run build
 ```
