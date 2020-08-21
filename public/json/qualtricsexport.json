@@ -1,0 +1,77 @@
+[
+    {
+        "name": "Exporting Data from Qualtrics",
+        "image": "./images/qualtrics/qualtrics-screener.png",
+        "description": [
+           "The following information details how to export data from Qualtrics",
+           "It also covers cleaning up the excel file ready to add to sharepoint",
+           "If you are new to Qualtrics, please view the introductory slides first",
+           "For more information see the Qualtrics support pages",
+           "Click 'Next' to get started"
+        ]
+    },
+    {
+        "name": "Step 1 - Login to Qualtrics",
+        "image": "./images/qualtrics/qualtrics-project.png",
+        "description": [
+            "Login to Qualtrics (click link in header)",
+            "Click on 'BA Grant Project' to navigate to project page"
+        ]
+    },
+    {
+        "name": "Step 2 - Navigate to Data & Analysis",
+        "image": "./images/qualtrics/qualtrics-screener.png",
+        "description": [
+            "This is the page when you can edit the screener",
+            "For more information visit the qualtrics support pages (link in footer)",
+            "To view and export collect data, click on the 'Data & Analysis' tab"
+        ]
+    },
+    {
+        "name": "Step 3 - Viewing collected responses",
+        "image": "./images/qualtrics/qualtrics-data.png",
+        "description": [
+            "This is the page when you can view and download the data",
+            "To change the columns you can preview, click on 'Tools' and then 'Choose Columns"
+        ]
+    },
+    {
+        "name": "Step 4 - Downloading collected responses",
+        "image": "./images/qualtrics/qualtrics-download1.png",
+        "description": [
+            "To download the responses into excel, click 'Export and Import' and then 'Export data...'"
+        ]
+    },
+    {
+        "name": "Step 4 - Downloading excel file",
+        "image": "./images/qualtrics/qualtrics-download2.png",
+        "description": [
+            "Use the default tab to download as 'csv' file",
+            "Keep 'Download all fields' selected. (You will need to remove the contact fields from the download manually)",
+            "Select 'Use Numerical Values'",
+            "Click 'Download' to download" 
+        ]
+    },
+    {
+        "name": "Step 5 - Editing columns",
+        "image": "./images/qualtrics/qualtrics-excel-download.png",
+        "description": [
+            "Open the downloaded excel file",
+            "Delete the columns containing personally identifying information",
+            "These are: 'Status', 'IPAddress', 'LocationLatitude', 'LocationLongitude', 'name' and 'email'", 
+            "The responses can still be identified using the 'id' (and as a back up by logging onto Qualtrics)"
+        ]
+    },
+    {
+        "name": "Step 6 - Updating sharepoint data",
+        "image": "./images/qualtrics/qualtrics-qualtrics-export.png",
+        "description": [
+            "Open the 'Qualtrics Export' file on SharePoint in '2020 Data' under 'qualtrics'",
+            "Identify the timepoint of your last update and find this row in the new download",
+            "Copy and paste data below this point into the sharepoint file (columns in grey are manually added)",
+            "Ensure the data fields match up (if not you have probably not deleted enough columns)",
+            "The 'id' column is a direct copy of the 'id' field from Qualtrics (FYI those in red are abbrievated from the ResponseID as these participants completed Qualtrics prior to adding of the participant generated id question)",
+            "The 'ID' and Condition' need adding in once participant has attended the lab session"
+        ]
+    }
+]

@@ -1,3 +1,0 @@
-BA Grant Research Assistant Handover
-
-You can download these files (the images and text for the pages are in 'handover/public'), although any changes though will need 'pushing' back here to be published to the netlify website. This requires knowledge of git and making edits to pages requires editing JSON. Since making any changes right now is not particularly user friendly so you are welcome to contact me to do them (in my spare time) as this would not take me long and is good coding practice for me! 

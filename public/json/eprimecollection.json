@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Collecting the e-prime data",
+        "image": "./images/eprime/collection-scripts.png",
+        "description": [
+            "This will cover the steps taken to set up the delivery of the e-prime scripts in the lab",
+            "This will also cover delivering the rest of the protocol minus the psychophys which is covered separately",
+           "Click 'Next' to get started"
+        ]
+    },
+    { 
+        "name": "Tracking completed steps",
+        "image": "./images/sharepoint/sharepoint-checklist.png", 
+        "description": [
+            "Use the 'Checklist' to track your progress in setting up the lab for each participant",
+            "Printed copies are in the black letter trays in the lab",
+            "On SharePoint found in 'Printed' under '2020 Document and Protocol'"
+        ]
+    },
+    {
+        "name": "Setting up protocol folders",
+        "image": "./images/eprime/collection-printed.png",
+        "description": [
+            "The four protocol folders (one for each condition) are located on the right hand wall as you enter", 
+            "The materials are in the black letter trays (ethics, goal ratings, rumination ratings)",
+            "To replenish and store the materials see the separate tutorial",
+            "Completed materials are stored in the locked cabinet in the MDC group office",
+            "Select the folder corresponding to the participant condition",
+            "Add in the relavent paper files to the corresponding page and then place in the lab"
+        ]
+    },
+    {
+        "name": "Setting up lab computer",
+        "image": "./images/eprime/collection-monitor.png",
+        "description": [
+            "The control computers for lab 133b are at the back on the left as you go into 133b",
+            "The E-prime computer is the one on the left",
+            "The password is 'mangochutney'",
+            "The folders you need are on the desktop",
+            "There is a general 'BA Grant' folder which contains all the files and then inidivual folders for each condition",
+            "The condition folders are named by condition and the color of the corresponding file",
+            "Open the folder for the participants condition",
+            "Check that the computer in the lab is showing the screen"
+        ]
+    },
+    {
+        "name": "Backing up data",
+        "image": "./images/eprime/collection-data-files.png",
+        "description": [
+            "The files in the condition folders are shortcuts to the live files inside 'BA Grant'",
+            "Therefore all generated data will be in the 'Live' Folder",
+            "At the end of the data transfer the data into participant folders inside 'Data'",
+            "Then back the participant files up onto the harddrive and sharepoint (see separate tutorial)"
+        ]
+    }
+]

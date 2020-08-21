@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Guide to data storage",
+        "image": "./images/sharepoint/sharepoint-2020-data.png",
+        "description": [
+           "The following information details the storage of data",
+           "This includes SharePoint, the harddrives, the lab and the cabinent in the MDC group office",
+           "Click 'Next' to get started"
+        ]
+    },
+    {
+        "name": "Paper files",
+        "image": "./images/sharepoint/sharepoint-printed.png",
+        "description": [
+            "Paper materials include the information sheet, consent forms, checklist for testing and the goal and rumination ratings",
+            "These are found on sharepoint in 'Printed' in '2020 Documents and Protocol",
+            "The uncompleted printed materials are stored in the lab in the black letter trays",
+            "Completed materials are stored in the locked cabinet in MDC group office",
+            "The files are currently stored by document rather than by participant",
+            "i.e. consent forms are on separate shelf, one wallet contains checklists, one wallet contains goal ratings and another wallet contains "
+        ]
+    },
+    {
+        "name": "Harddrives and dongle",
+        "image": "./images/sharepoint/sharepoint-harddrive.png",
+        "description": [
+            "The two harddrives and dongle for AcqKnowledge are stored with the paper files in the locked cabinet in MDC group office",
+            "I use just one harddrive for backing up files",
+            "Once a week, add new files onto the second hardddrive"
+        ]
+    },
+    {
+        "name": "E-prime and psychophys",
+        "image": "./images/sharepoint/sharepoint-raw-files.png",
+        "description": [
+            "At the end of the day, all raw data from the EEG and psychophys computer needs uploading to sharepoint",
+            "Lab computers are not connected to network therefore this is via hard drive (or memory stick for psychophys computer)",
+            "This also means the harddrive contains back up of data too",
+            "You will need to first move the eprime files from the live versions into a participant folder under 'Data'",
+            "On my laptop, I then copy the memory stick files over onto the harddrive and then all files are uploaded into raw files on sharepoint"
+        ]
+    },
+    {
+        "name": "Goal and rumination ratings",
+        "image": "./images/sharepoint/sharepoint-ratings.png",
+        "description": [
+            "The hardcopies of the ratings are stored in the cabinet",
+            "The hardcopies need scanning and imported into the 'scans' folder on Sharepoint",
+            "The data also needs entering into the 'Problem ratings' spreadsheet on SharePoint"
+        ]
+    }
+
+]
