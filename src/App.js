@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
-import './app.css';
+import './styles/app.css';
 import SlidesState from './context/slides/SlidesState';
-import Nav from './layout/Nav';
-import Footer from './layout/Footer';
-import Login from './components/Login';
-import Slides from './components/Slides';
+import Nav from './components/nav/Nav';
+import Footer from './components/nav/Footer';
+import Login from './components/auth/Login';
+import Slides from './components/slides/Slides';
 import ProgressState from './context/progress/ProgressState';
 import routes from './utilities/routes';
 
