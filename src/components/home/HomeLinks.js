@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {
 	darkBlue,
 	darkGrey,
+	lightGrey,
 	white,
 	accent,
 	tablet,
@@ -12,7 +13,6 @@ import { Checkbox } from "./Checkbox";
 const H2 = styled.h2`
 	height: 10vh;
 	line-height: 10vh;
-	border-bottom: 1px solid ${darkGrey};
 	margin-bottom: 1vh;
 `;
 
@@ -28,7 +28,7 @@ const HomeLinks = styled.div`
 	position: relative;
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: auto 1fr 20vh;
+	grid-template-rows: auto 20vh 1fr;
 	text-align: center;
 	background: ${white};
 	li {
@@ -52,16 +52,18 @@ const HomeLinks = styled.div`
 		}
 	}
 	ul {
-		border-bottom: 1px solid ${darkGrey};
 		margin-bottom: 1vh;
 		text-align: left;
 	}
+	border: .5px solid ${lightGrey};
+	border-radius: 1px;
 `;
 
 export const Links = ({ name, links, image }) => {
 	return (
 		<HomeLinks>
 			<H2>{name}</H2>
+			<Img src={image} alt={image} />
 			<ul>
 				{links.map((link) => (
 					<li key={link.name}>
@@ -74,7 +76,6 @@ export const Links = ({ name, links, image }) => {
 					</li>
 				))}
 			</ul>
-			<Img src={image} alt={image} />
 		</HomeLinks>
 	);
 };

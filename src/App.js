@@ -10,7 +10,7 @@ import ProgressState from './context/progress/ProgressState';
 import routes from './utilities/routes';
 
 const App = () => {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
   const [ loading, setLoading ] = useState(true);
   useEffect( () => {
     if (sessionStorage.getItem('baAuth')) setIsAuth(true);

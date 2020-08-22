@@ -1,8 +1,9 @@
 import React, { Fragment, useState } from "react";
 import styled from "styled-components";
-import { lightBlue, darkBlue, accent, tablet } from "../../styles/Styles";
-import { EllipsisIcon } from "../Icons";
-import { EllipsisMenu } from "./EllipsisMenu";
+import { lightBlue, darkBlue, tablet } from "../../styles/Styles";
+import UserMenu from "./UserMenu";
+import NavBtns from "./NavBtns";
+import Logo from "../../images/BrainHeartRate.jpg";
 
 const NavBar = styled.nav`
 	@media (max-width: ${tablet}) {
@@ -18,18 +19,11 @@ const NavBar = styled.nav`
 	min-height: 10vh;
 	background: ${darkBlue};
 	color: ${lightBlue};
-	border-bottom: 1px solid grey;
-	.home {
-		font-size: 200%;
-		@media (min-width: ${tablet}) {
-			font-size: 125%;
-		}
-	}
 `;
 const Img = styled.div`
 	height: 10vh;
 	img {
-		height: 100%;
+		height: 10vh;
 		width: auto;
 	}
 `;
@@ -39,24 +33,7 @@ const Title = styled.h1`
 	padding: 1vh 0;
 `;
 
-const Ellipsis = styled.button`
-	display: block;
-	color: ${lightBlue};
-	&:hover,
-	&:focus {
-		color: ${accent};
-	}
-	background: none;
-	border: none;
-	padding: 1vh 4vw;
-	font-size: larger;
-	outline: none;
-	text-align: center;
-	width: 100%;
-	@media (min-width: ${tablet}) {
-		width: auto;
-	}
-`;
+
 
 const Nav = ({ isAuth }) => {
 	const [showMenu, setShowMenu] = useState(false);
@@ -64,19 +41,12 @@ const Nav = ({ isAuth }) => {
 		<Fragment>
 			<NavBar>
 				<Img>
-					<img
-						src="https://exetercles.eu.qualtrics.com/ControlPanel/Graphic.php?IM=IM_0cEBafEeKfQXbM1"
-						alt="logo"
-					/>
+					<img src={Logo} alt="BA Grant" />
 				</Img>
 				<Title>BA Regulatory Focus and Rumination</Title>
-				{isAuth && (
-					<Ellipsis onClick={() => setShowMenu(!showMenu)}>
-						<EllipsisIcon />
-					</Ellipsis>
-				)}
+				{isAuth && <NavBtns showMenu={showMenu} setShowMenu={setShowMenu} />}
 			</NavBar>
-			{showMenu && <EllipsisMenu />}
+			{showMenu && <UserMenu/>}
 		</Fragment>
 	);
 };

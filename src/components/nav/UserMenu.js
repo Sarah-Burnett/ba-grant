@@ -17,13 +17,13 @@ const Menu = styled.div`
 	hr {
 		border: 1px solid ${darkGrey};
 	}
-	button {
+	button {	
 		display: block;
 		padding: 1vh 1vw;
 		margin: 2vh 2vw;
 		font-size: inherit;
 		line-height: inherit;
-		width: 96vw;
+		width: inherit;
 		color: ${lightBlue};
 		&:hover,
 		&:focus {
@@ -39,23 +39,18 @@ const Menu = styled.div`
 		top: 10vh;
 		right: 0;
 		height: auto;
-		width: 40vw;
+		width: 12vw;
 		font-size: smaller;
-		button {
-			width: 36vw;
-		}
+		padding-right: 3vw;
 	}
 `;
 
-export const EllipsisMenu = ({ showMenu }) => {
-	const slidesContext = useContext(SlidesContext);
-	const { viewSlideshow, viewFullSlides } = slidesContext;
+const UserMenu = ({ showMenu }) => {
 	return (
 		<Menu>
-			<button onClick={viewSlideshow}>View Slideshow</button>
-			<button onClick={viewFullSlides}>View Full Slides</button>
-			<hr />
 			<button>Logout</button>
 		</Menu>
 	);
 };
+
+export default UserMenu;

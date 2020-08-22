@@ -1,62 +1,42 @@
 import React from "react";
 import styled from "styled-components";
-import { lightBlue, tablet, darkBlue, Links } from "../../styles/Styles";
-import { HomeIcon, LinkIcon } from "../Icons";
+import { lightBlue, tablet, darkBlue } from "../../styles/Styles";
+import FooterLinks from "./FooterLinks";
+import { footerLinks } from "../../utilities/footerLinks";
 
 const FooterBar = styled.div`
-	background: ${darkBlue};
+	background: rgba(0, 0, 0, 0.9);
 	min-height: 10vh;
 	color: ${lightBlue};
 	padding: 1vh 1vw;
 	@media (min-width: ${tablet}) {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
 	}
-	border-top: 1px solid grey;
 	line-height: 250%;
 	@media (min-width: ${tablet}) {
 		line-height: inherit;
 	}
+	li {
+		list-style: none;
+	}
+	font-size: 16px;
 `;
 
 const Footer = () => {
+	const keys = Object.keys(footerLinks);
 	return (
 		<FooterBar>
-			<Links>
-				<li>
-					<a href="/">
-						<HomeIcon />
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://exetercles.eu.qualtrics.com/login"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Qualtrics <LinkIcon />
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://exeter-psychology.sona-systems.com/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						SONA <LinkIcon />
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://universityofexeteruk.sharepoint.com/sites/BA_Regulatory_Focus_and_Rumination"
-						rel="noopener noreferrer"
-						target="_blank"
-					>
-						Sharepoint <LinkIcon />
-					</a>
-				</li>
-			</Links>
+			<div />
+			<div/>
+			{keys.map((heading) => {
+				return (
+					<ul key={heading}>
+						<h4>{heading}</h4>
+						<FooterLinks links={footerLinks[heading]} />
+					</ul>
+				)
+			})}
 		</FooterBar>
 	);
 };
