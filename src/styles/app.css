@@ -6,7 +6,7 @@
 }
 
 body {
-	background-color: rgba(0, 0, 0, 0.02); 
+	background-color: rgba(0, 0, 0, 0.02);
 	color: #001429;
 	overflow-x: hidden;
 	font-size: 18px;
@@ -23,6 +23,10 @@ h2 {
 	font-size: 130%;
 }
 
+h4 {
+	font-family: "Abel", sans-serif;
+}
+
 .app {
 	display: grid;
 	grid-template-columns: auto;
@@ -32,7 +36,7 @@ h2 {
 }
 
 title {
-	background-color: rgba(0, 0, 0, 0.05); 
+	background-color: rgba(0, 0, 0, 0.05);
 	color: #001429;
 	padding: 1vh;
 }
@@ -110,4 +114,26 @@ title {
 	opacity: 0;
 	height: 0;
 	transition: opacity 300ms, height 300ms;
+}
+
+.fade-enter {
+	width: 0;
+	color: transparent
+}
+
+.fade-enter-active {
+	width: auto;
+	color: auto;
+	transition: all 300ms;
+}
+
+.fade-exit {
+	width: auto;
+	color: auto;
+}
+
+.fade-exit-active {
+	width: 0;
+	color: transparent;
+	transition: all 300ms;
 }

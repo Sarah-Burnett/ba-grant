@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { lightBlue, tablet } from "../../styles/Styles";
+import { lightBlue, desktop } from "../../styles/variables";
+import { A } from "../../styles/components";
 import FooterLinks from "./FooterLinks";
 import { footerLinks } from "../../utilities/footerLinks";
 
@@ -8,27 +9,48 @@ const FooterBar = styled.div`
 	background: rgba(0, 0, 0, 0.9);
 	min-height: 10vh;
 	color: ${lightBlue};
-	padding: 1vh 1vw;
-	@media (min-width: ${tablet}) {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-	}
+	padding: 2vh 2vw;
+	text-align: center;
 	line-height: 250%;
-	@media (min-width: ${tablet}) {
-		line-height: inherit;
-	}
+	font-size: 16px;
 	li {
 		list-style: none;
 	}
-	font-size: 16px;
+	div {
+		padding: 0 2vw;
+		a {
+			color: inherit;
+		}
+		p {
+			display: none;
+		}
+	}
+	h2,
+	h4 {
+		margin-bottom: 1vh;
+	}
+	@media (min-width: ${desktop}) {
+		display: grid;
+		grid-template-columns: 40% repeat(3, 1fr);
+		line-height: inherit;
+		text-align: left;
+		div p {
+			display: block;
+		}
+	}
 `;
 
 const Footer = () => {
 	const keys = Object.keys(footerLinks);
 	return (
 		<FooterBar>
-			<div />
-			<div />
+			<div>
+				<h2>BA Regulatory Focus and Rumination</h2>
+				<p>
+					Built by{" "}
+					<A href="mailto:sarahkvburnett@btinternet.com">Sarah Burnett</A>
+				</p>
+			</div>
 			{keys.map((heading) => {
 				return (
 					<ul key={heading}>

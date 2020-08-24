@@ -1,5 +1,5 @@
 import React from "react";
-import { white } from "../../../styles/Styles";
+import { white } from "../../../styles/variables";
 import styled from "styled-components";
 import Description from "./Description";
 

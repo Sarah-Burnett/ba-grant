@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import {
-	darkBlue,
 	lightGrey,
 	white,
-	accent,
 	tablet,
-} from "../../styles/Styles";
+} from "../../styles/variables";
+import { A } from "../../styles/components";
 import { Checkbox } from "./Checkbox";
 
 const H2 = styled.h2`
@@ -44,10 +43,6 @@ const HomeLinks = styled.div`
 		font-size: inherit;
 		line-height: inherit;
 		text-decoration: none;
-		color: ${darkBlue};
-		&:hover {
-			color: ${accent};
-		}
 		line-height: 250%;
 		@media (min-width: ${tablet}) {
 			line-height: auto;
@@ -67,13 +62,9 @@ export const Links = ({ name, links, image }) => {
 			<H2>{name}</H2>
 			<Img src={image} alt={image} />
 			<ul>
-				{links.map(({name, url, state, Component}) => (
+				{links.map(({ name, url, state, Component }) => (
 					<li key={name}>
-						<Component
-							name={name}
-							url={url}
-							state={state}
-						/>
+						<A darker href={url}>{name}</A>
 						<Checkbox state={state} />
 					</li>
 				))}

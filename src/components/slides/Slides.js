@@ -10,11 +10,13 @@ const Slides = ({
 	redirectMsg = "Back to Home",
 	redirectUrl = "/",
 	progress,
+	setIsHome
 }) => {
 	const { loading, viewAsSlideshow } = useSelector((state) => state.slides);
 	const dispatch = useDispatch();
 	console.log(url);
 	useEffect(() => {
+		setIsHome(false);
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => {

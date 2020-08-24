@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import styled from "styled-components";
-import { lightBlue, darkBlue, tablet } from "../../styles/Styles";
+import { lightBlue, darkBlue, tablet } from "../../styles/variables";
 import UserMenu from "./UserMenu";
 import NavBtns from "./NavBtns";
 import Logo from "../../images/BrainHeartRate.jpg";
@@ -44,7 +44,7 @@ const Nav = ({ isAuth, setIsAuth }) => {
 				<Title>BA Regulatory Focus and Rumination</Title>
 				{isAuth && <NavBtns setShowMenu={setShowMenu} />}
 			</NavBar>
-			{showMenu && isAuth && <UserMenu setIsAuth={setIsAuth}/>}
+			{showMenu && isAuth && <UserMenu setIsAuth={setIsAuth} />}
 		</Fragment>
 	);
 };

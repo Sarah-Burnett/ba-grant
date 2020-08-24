@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { darkGrey, darkBlue } from "../../../styles/Styles";
+import { darkGrey, darkBlue } from "../../../styles/variables";
 import { useSelector } from "react-redux";
 
 const Dots = styled.div`

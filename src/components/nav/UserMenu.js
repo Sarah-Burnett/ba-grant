@@ -6,7 +6,7 @@ import {
 	lightBlue,
 	accent,
 	tablet,
-} from "../../styles/Styles";
+} from "../../styles/variables";
 
 const Menu = styled.div`
 	background: ${darkBlue};

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button, PrimaryButton } from "../../../styles/Styles";
+import { Button, PrimaryButton } from "../../../styles/components";
 import { RedirectButton } from "../RedirectButton";
 import { useSelector, useDispatch } from "react-redux";
 import { nextSlide, prevSlide } from "../../../redux/actions/slidesActions";

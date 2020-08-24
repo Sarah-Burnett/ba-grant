@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { darkGrey, white } from "../../../styles/Styles";
+import { darkGrey, white, desktop } from "../../../styles/variables";
 import Buttons from "./Buttons";
 import SlideDots from "./SlideDots";
 
-const tablet = "850px";
 
 const Container = styled.div`
 	width: 100vw;
@@ -12,7 +11,7 @@ const Container = styled.div`
 	margin: auto;
 	padding: 1vh 1vw;
 	background: ${white};
-	@media (min-width: ${tablet}) {
+	@media (min-width: ${desktop}) {
 		display: flex;
 		height: 90vh;
 		padding: 0;
@@ -33,7 +32,7 @@ const Text = styled.div`
 		width: 100%;
 		padding: 0 1vw;
 	}
-	@media (min-width: ${tablet}) {
+	@media (min-width: ${desktop}) {
 		flex: 1;
 		padding: 2vh 1vw;
 		margin: 0;
@@ -70,7 +69,7 @@ const Img = styled.div`
 	img {
 		max-width: 100%;
 	}
-	@media (min-width: ${tablet}) {
+	@media (min-width: ${desktop}) {
 		flex: 1;
 		overflow-y: scroll;
 		height: 90vh;

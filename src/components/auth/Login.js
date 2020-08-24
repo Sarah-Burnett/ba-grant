@@ -6,9 +6,9 @@ import {
 	lightGrey,
 	white,
 	accent,
-	Button,
 	tablet,
-} from "../../styles/Styles";
+} from "../../styles/variables";
+import { Button } from "../../styles/components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faExclamationCircle as Warning,

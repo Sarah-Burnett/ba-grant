@@ -1,12 +1,13 @@
 import React from "react";
 import { ListIcon, HomeIcon, UserIcon } from "../Icons";
 import styled from "styled-components";
-import { tablet, accent } from "../../styles/Styles";
+import { tablet, accent } from "../../styles/variables";
 import { useSelector, useDispatch } from "react-redux";
 import {
 	viewFullSlides,
 	viewSlideshow,
 } from "../../redux/actions/slidesActions";
+import { A } from "../../styles/components";
 
 const Buttons = styled.div`
 	height: 10vh;
@@ -25,7 +26,6 @@ const Buttons = styled.div`
 	}
 	a {
 		font-size: inherit;
-		color: inherit;
 	}
 	@media (min-width: ${tablet}) {
 		min-width: auto;
@@ -39,9 +39,9 @@ const NavBtns = ({ setShowMenu }) => {
 	return (
 		<Buttons>
 			<abbr>
-				<a href="/" title="Home Page">
+				<A href="/" title="Home Page">
 					<HomeIcon />
-				</a>
+				</A>
 			</abbr>
 			<abbr
 				onClick={() =>

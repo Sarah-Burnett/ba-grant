@@ -9,15 +9,17 @@ import routes from "./utilities/routes";
 
 const App = () => {
 	const [isAuth, setIsAuth] = useState(true);
-	const [loading, setLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(true);
 	useEffect(() => {
 		if (sessionStorage.getItem("baAuth")) setIsAuth(true);
-		setLoading(false);
+		setIsLoading(false);
 	}, []);
 	return (
 		<div className="app">
 			<Nav isAuth={isAuth} setIsAuth={setIsAuth} />
-			{!isAuth && !loading && <Login className="fade" setIsAuth={setIsAuth} />}
+			{!isAuth && !isLoading && (
+				<Login className="fade" setIsAuth={setIsAuth} />
+			)}
 			{isAuth && (
 				<div style={{ minHeight: "79vh" }}>
 					<Router>

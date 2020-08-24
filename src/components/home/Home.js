@@ -13,7 +13,7 @@ import EPrime from "../../images/E-Prime2-logo.jpg";
 import BIOPAC from "../../images/biopac-logo.png";
 import styled from "styled-components";
 import { Links } from "./HomeLinks";
-import { darkBlue } from "../../styles/Styles";
+import { darkBlue } from "../../styles/variables";
 import { useDispatch } from "react-redux";
 
 const HomePage = styled.div`

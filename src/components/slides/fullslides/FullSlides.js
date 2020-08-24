@@ -1,5 +1,5 @@
 import React from "react";
-import { darkGrey, tablet } from "../../../styles/Styles";
+import { darkGrey, tablet } from "../../../styles/variables";
 import styled from "styled-components";
 import Slide from "./Slide";
 import { RedirectButton } from "../RedirectButton";

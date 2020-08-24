@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { PrimaryButton } from "../../styles/Styles";
+import { PrimaryButton } from "../../styles/components";
 import { useSelector, useDispatch } from "react-redux";
 import { UPDATE_PROGRESS } from "../../redux/types";
 
