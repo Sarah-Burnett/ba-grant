@@ -1,1 +1,1 @@
-export const password = "BAGrant100%";
+export const password = "123456";

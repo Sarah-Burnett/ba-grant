@@ -19,11 +19,13 @@ Built from create-react-app
 
 Functional react components
 
-State management using react hooks (useState and useContext)
+State management using redux and hooks
 
 Routing with react-router
 
-Password in utilities
+Styling with styled-components
+
+Temporary password in utilities
 
 ## Installation
 ```bash
