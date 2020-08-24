@@ -10,7 +10,7 @@ import { loadProgress } from "./redux/actions/progressActions";
 import { useDispatch } from "react-redux";
 
 const App = () => {
-	const [isAuth, setIsAuth] = useState(true);
+	const [isAuth, setIsAuth] = useState(false);
 	const [isLoading, setIsLoading] = useState(true);
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -26,7 +26,7 @@ const App = () => {
 	return (
 		<div className="app">
 			<Nav isAuth={isAuth} setIsAuth={setIsAuth} />
-			{!isAuth && !isLoading (
+			{!isAuth && !isLoading && (
 				<Login className="fade" setIsAuth={setIsAuth} />
 			)}
 			{isAuth && (

@@ -15,7 +15,7 @@ import {
 	faEye as Eye,
 	faEyeSlash as EyeSlash,
 } from "@fortawesome/free-solid-svg-icons";
-import { password } from "../../utilities/password";
+import { password } from "../../utilities/tempPassword";
 
 const LoginPage = styled.div`
 	padding: 1vh 0;
