@@ -43,10 +43,10 @@ const Menu = styled.div`
 	}
 `;
 
-const UserMenu = ({ setIsAuth, setUserMenu }) => {
+const UserMenu = ({ setIsAuth, setShowMenu }) => {
 	const logout = () => {
 		setIsAuth(false);
-		setUserMenu(false);
+		setShowMenu(false);
 	};
 	return (
 		<Menu>
