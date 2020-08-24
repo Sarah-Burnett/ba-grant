@@ -27,15 +27,11 @@ const Img = styled.img`
 	max-width: 70vw;
 `;
 
-const Slide = ({ slide, title }) => {
-	const { name, image, description } = slide;
-	return (
-		<Text>
-			<Title>{name && name !== title && name}</Title>
-			{image && <Img src={image} alt="screenshot" />}
-			<Description desc={description} />
-		</Text>
-	);
-};
-
+const Slide = ({ slide: { name, image, description }, title }) => (
+	<Text>
+		<Title>{name && name !== title && name}</Title>
+		{image && <Img src={image} alt="screenshot" />}
+		<Description desc={description} />
+	</Text>
+);
 export default Slide;

@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { CheckedIcon, UncheckedIcon } from "../Icons";
-import ProgressContext from "../../context/progress/progressContext";
+import { useSelector } from "react-redux";
 
 export const Checkbox = ({ state }) => {
-	const progressContext = useContext(ProgressContext);
-	return progressContext[state] ? <CheckedIcon /> : <UncheckedIcon />;
+	const isCompleted = useSelector((storeState => storeState.progress[state]));
+	return isCompleted ? <CheckedIcon /> : <UncheckedIcon />;
 };

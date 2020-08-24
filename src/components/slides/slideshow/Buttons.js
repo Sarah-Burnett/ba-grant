@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Button, PrimaryButton } from "../../../styles/Styles";
 import { RedirectButton } from "../RedirectButton";
-import SlidesContext from "../../../context/slides/slidesContext";
+import { useSelector, useDispatch } from "react-redux";
+import { nextSlide, prevSlide } from "../../../redux/actions/slidesActions";
 
 const Container = styled.div`
 	padding: 2vh 1vw;
@@ -10,15 +11,10 @@ const Container = styled.div`
 `;
 
 const Buttons = () => {
-	const slidesContext = useContext(SlidesContext);
-	const {
-		nextSlide,
-		prevSlide,
-		end,
-		start,
-		json,
-		currentIndex,
-	} = slidesContext;
+	const { end, start, json, currentIndex } = useSelector(
+		(state) => state.slides
+	);
+	const dispatch = useDispatch();
 	return (
 		<Container>
 			{end && <RedirectButton />}
@@ -26,7 +22,7 @@ const Buttons = () => {
 				<PrimaryButton
 					className="next"
 					type="button"
-					onClick={() => nextSlide(json, currentIndex)}
+					onClick={() => dispatch(nextSlide(json, currentIndex))}
 				>
 					Next
 				</PrimaryButton>
@@ -35,7 +31,7 @@ const Buttons = () => {
 				<Button
 					className="previous"
 					type="button"
-					onClick={() => prevSlide(json, currentIndex)}
+					onClick={() => dispatch(prevSlide(json, currentIndex))}
 				>
 					Previous
 				</Button>

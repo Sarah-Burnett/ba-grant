@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import { darkGrey, darkBlue } from "../../../styles/Styles";
-import SlidesContext from "../../../context/slides/slidesContext";
+import { useSelector } from "react-redux";
 
 const Dots = styled.div`
 	display: flex;
@@ -25,8 +25,7 @@ const ActiveDot = styled.div`
 `;
 
 const SlideDots = () => {
-	const slidesContext = useContext(SlidesContext);
-	const { json, currentIndex } = slidesContext;
+	const { json, currentIndex } = useSelector((state) => state.slides);
 	return (
 		<Dots className="dots">
 			{json.map((item, index) =>

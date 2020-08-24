@@ -1,8 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ListIcon, HomeIcon, UserIcon } from "../Icons";
 import styled from "styled-components";
-import { tablet, accent, A } from "../../styles/Styles";
-import SlidesContext from "../../context/slides/slidesContext";
+import { tablet, accent } from "../../styles/Styles";
+import { useSelector, useDispatch } from "react-redux";
+import {
+	viewFullSlides,
+	viewSlideshow,
+} from "../../redux/actions/slidesActions";
 
 const Buttons = styled.div`
 	height: 10vh;
@@ -29,18 +33,22 @@ const Buttons = styled.div`
 	}
 `;
 
-const NavBtns = ({ showMenu, setShowMenu }) => {
-	const { viewAsSlideshow, viewFullSlides, viewSlideshow } = useContext(
-		SlidesContext
-	);
+const NavBtns = ({ setShowMenu }) => {
+	const { viewAsSlideshow } = useSelector((state) => state.slides);
+	const dispatch = useDispatch();
 	return (
 		<Buttons>
-			<abbr><a href="/" title="Home Page">
-				<HomeIcon />
+			<abbr>
+				<a href="/" title="Home Page">
+					<HomeIcon />
 				</a>
 			</abbr>
 			<abbr
-				onClick={() => (viewAsSlideshow ? viewFullSlides() : viewSlideshow())}
+				onClick={() =>
+					viewAsSlideshow
+						? dispatch(viewFullSlides())
+						: dispatch(viewSlideshow())
+				}
 				title="Change view"
 			>
 				<ListIcon />

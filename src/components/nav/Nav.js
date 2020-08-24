@@ -33,9 +33,7 @@ const Title = styled.h1`
 	padding: 1vh 0;
 `;
 
-
-
-const Nav = ({ isAuth }) => {
+const Nav = ({ isAuth, setIsAuth }) => {
 	const [showMenu, setShowMenu] = useState(false);
 	return (
 		<Fragment>
@@ -44,9 +42,9 @@ const Nav = ({ isAuth }) => {
 					<img src={Logo} alt="BA Grant" />
 				</Img>
 				<Title>BA Regulatory Focus and Rumination</Title>
-				{isAuth && <NavBtns showMenu={showMenu} setShowMenu={setShowMenu} />}
+				{isAuth && <NavBtns setShowMenu={setShowMenu} />}
 			</NavBar>
-			{showMenu && <UserMenu/>}
+			{showMenu && isAuth && <UserMenu setIsAuth={setIsAuth}/>}
 		</Fragment>
 	);
 };

@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-    darkGrey,
-	white,
-} from "../../../styles/Styles";
+import { darkGrey, white } from "../../../styles/Styles";
 import Buttons from "./Buttons";
 import SlideDots from "./SlideDots";
 
@@ -81,22 +78,19 @@ const Img = styled.div`
 	}
 `;
 
-const Slide = ({ currentSlide, title }) => {
-	const { name, description, image } = currentSlide;
-	return (
-		<Container className="slide">
-			<Text>
-				<H1>{title}</H1>
-				<Title>{name && name !== title && name}</Title>
-				<div>
-					{description && description.map((item) => <p key={item}>{item}</p>)}
-				</div>
-				<SlideDots />
-				<Buttons />
-			</Text>
-			<Img>{image && <img src={image} alt="screenshot" />}</Img>
-		</Container>
-	);
-};
+const Slide = ({ currentSlide: { name, description, image }, title }) => (
+	<Container className="slide">
+		<Text>
+			<H1>{title}</H1>
+			<Title>{name && name !== title && name}</Title>
+			<div>
+				{description && description.map((item) => <p key={item}>{item}</p>)}
+			</div>
+			<SlideDots />
+			<Buttons />
+		</Text>
+		<Img>{image && <img src={image} alt="screenshot" />}</Img>
+	</Container>
+);
 
 export default Slide;

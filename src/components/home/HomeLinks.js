@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import {
 	darkBlue,
-	darkGrey,
 	lightGrey,
 	white,
 	accent,
@@ -33,10 +32,13 @@ const HomeLinks = styled.div`
 	background: ${white};
 	li {
 		list-style: none;
-		margin: 2vh 1vw;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin: 2vh 4vw;
+		@media (min-width: ${tablet}) {
+			margin: 2vh 1vw;
+		}
 	}
 	a {
 		font-size: inherit;
@@ -55,7 +57,7 @@ const HomeLinks = styled.div`
 		margin-bottom: 1vh;
 		text-align: left;
 	}
-	border: .5px solid ${lightGrey};
+	border: 0.5px solid ${lightGrey};
 	border-radius: 1px;
 `;
 
@@ -65,14 +67,14 @@ export const Links = ({ name, links, image }) => {
 			<H2>{name}</H2>
 			<Img src={image} alt={image} />
 			<ul>
-				{links.map((link) => (
-					<li key={link.name}>
-						<link.Component
-							name={link.name}
-							url={link.url}
-							state={link.state}
+				{links.map(({name, url, state, Component}) => (
+					<li key={name}>
+						<Component
+							name={name}
+							url={url}
+							state={state}
 						/>
-						<Checkbox state={link.state} />
+						<Checkbox state={state} />
 					</li>
 				))}
 			</ul>

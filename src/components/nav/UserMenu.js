@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import SlidesContext from "../../context/slides/slidesContext";
 import {
 	darkBlue,
 	darkGrey,
@@ -17,7 +16,7 @@ const Menu = styled.div`
 	hr {
 		border: 1px solid ${darkGrey};
 	}
-	button {	
+	button {
 		display: block;
 		padding: 1vh 1vw;
 		margin: 2vh 2vw;
@@ -45,12 +44,10 @@ const Menu = styled.div`
 	}
 `;
 
-const UserMenu = ({ showMenu }) => {
-	return (
-		<Menu>
-			<button>Logout</button>
-		</Menu>
-	);
-};
+const UserMenu = ({ setIsAuth }) => (
+	<Menu>
+		<button onClick={setIsAuth(false)}>Logout</button>
+	</Menu>
+);
 
 export default UserMenu;

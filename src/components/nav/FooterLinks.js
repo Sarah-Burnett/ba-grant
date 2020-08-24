@@ -2,7 +2,6 @@ import React from "react";
 import FooterLink from "./FooterLink";
 
 const FooterLinks = ({ links }) => {
-	console.log(links);
 	const keys = Object.keys(links);
 	return (
 		<>
@@ -11,7 +10,7 @@ const FooterLinks = ({ links }) => {
 					<li key={link}>
 						<FooterLink text={link} url={links[link]} />
 					</li>
-				)
+				);
 			})}
 		</>
 	);

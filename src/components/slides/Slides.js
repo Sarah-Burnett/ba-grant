@@ -1,8 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
-import SlidesContext from "../../context/slides/slidesContext";
 import Slideshow from "./slideshow/Slideshow";
 import FullSlides from "./fullslides/FullSlides";
+import { useSelector, useDispatch } from "react-redux";
+import { loadSlides } from "../../redux/actions/slidesActions";
 
 const Slides = ({
 	url,
@@ -10,10 +11,15 @@ const Slides = ({
 	redirectUrl = "/",
 	progress,
 }) => {
-	const slidesContext = useContext(SlidesContext);
-	const { loadSlides, loading, viewAsSlideshow } = slidesContext;
+	const { loading, viewAsSlideshow } = useSelector((state) => state.slides);
+	const dispatch = useDispatch();
+	console.log(url);
 	useEffect(() => {
-		loadSlides(url, redirectMsg, redirectUrl, progress);
+		fetch(url)
+			.then((res) => res.json())
+			.then((data) => {
+				dispatch(loadSlides(data, redirectMsg, redirectUrl, progress))
+			});
 	}, []);
 	return (
 		<>

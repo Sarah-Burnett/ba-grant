@@ -1,12 +1,9 @@
-import React, { useContext } from "react";
-import {
-	darkGrey,
-	tablet,
-} from "../../../styles/Styles";
+import React from "react";
+import { darkGrey, tablet } from "../../../styles/Styles";
 import styled from "styled-components";
-import SlidesContext from "../../../context/slides/slidesContext";
 import Slide from "./Slide";
 import { RedirectButton } from "../RedirectButton";
+import { useSelector } from "react-redux";
 
 const Container = styled.div`
 	width: 100vw;
@@ -24,11 +21,7 @@ const H1 = styled.h1`
 `;
 
 const FullSlides = () => {
-	const slidesContext = useContext(SlidesContext);
-	const {
-		json,
-		title,
-	} = slidesContext;
+	const { json, title } = useSelector((state) => state.slides);
 	return (
 		<Container>
 			<H1>{title}</H1>

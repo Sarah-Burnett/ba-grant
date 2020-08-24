@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
-import SlidesContext from "../../../context/slides/slidesContext";
+import React from "react";
 import Slide from "./Slide";
+import { useSelector } from "react-redux";
 
 const Slideshow = () => {
-	const slidesContext = useContext(SlidesContext);
-	const { currentSlide, title } = slidesContext;
+	const { currentSlide, title } = useSelector((state) => state.slides);
 	return <Slide currentSlide={currentSlide} title={title} />;
 };
 

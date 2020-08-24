@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { lightBlue, tablet, darkBlue } from "../../styles/Styles";
+import { lightBlue, tablet } from "../../styles/Styles";
 import FooterLinks from "./FooterLinks";
 import { footerLinks } from "../../utilities/footerLinks";
 
@@ -28,14 +28,14 @@ const Footer = () => {
 	return (
 		<FooterBar>
 			<div />
-			<div/>
+			<div />
 			{keys.map((heading) => {
 				return (
 					<ul key={heading}>
 						<h4>{heading}</h4>
 						<FooterLinks links={footerLinks[heading]} />
 					</ul>
-				)
+				);
 			})}
 		</FooterBar>
 	);

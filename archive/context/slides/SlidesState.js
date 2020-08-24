@@ -26,7 +26,7 @@ const SlidesState = (props) => {
 	};
 	const [state, dispatch] = useReducer(slidesReducer, initialState);
 
-	const loadSlides = async (url, redirectMsg, redirectUrl, progress) => {
+	const loadSlides = (url, redirectMsg, redirectUrl, progress) => {
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
@@ -46,7 +46,7 @@ const SlidesState = (props) => {
 					},
 				});
 			})
-			.catch((err) => console.log(err)); //need to add error if cant find
+			.catch((err) => console.log(err)); //TODO:need to add error if cant find
 	};
 
 	const viewFullSlides = () => {
@@ -71,12 +71,12 @@ const SlidesState = (props) => {
 		if (newIndex < json.length - 1) {
 			dispatch({
 				type: CHANGE_SLIDE,
-				payload: payload,
+				payload,
 			});
 		} else {
 			dispatch({
 				type: END_SLIDE,
-				payload: payload,
+				payload,
 			});
 		}
 	};
@@ -91,12 +91,12 @@ const SlidesState = (props) => {
 		if (newIndex > 0) {
 			dispatch({
 				type: CHANGE_SLIDE,
-				payload: payload,
+				payload
 			});
 		} else {
 			dispatch({
 				type: START_SLIDE,
-				payload: payload,
+				payload
 			});
 		}
 	};
