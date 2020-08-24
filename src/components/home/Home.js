@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
 	sharepoint,
 	sona,
@@ -14,7 +14,6 @@ import BIOPAC from "../../images/biopac-logo.png";
 import styled from "styled-components";
 import { Links } from "./HomeLinks";
 import { darkBlue } from "../../styles/variables";
-import { useDispatch } from "react-redux";
 
 const HomePage = styled.div`
 	padding: 1vh 0;
@@ -28,10 +27,6 @@ const HomePage = styled.div`
 `;
 
 const Home = () => {
-	const dispatch = useDispatch();
-	useEffect(() => {
-		dispatch({ type: "LOAD_PROGRESS" });
-	}, [dispatch]);
 	return (
 		<HomePage>
 			<Links name="Sharepoint" links={sharepoint} image={Sharepoint} />

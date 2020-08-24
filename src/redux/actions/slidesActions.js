@@ -31,7 +31,6 @@ import {
 // };
 
 export const loadSlides = (data, redirectMsg, redirectUrl, progress) => {
-	console.log(data);
 	return {
 		type: LOAD_SLIDES,
 		payload: {

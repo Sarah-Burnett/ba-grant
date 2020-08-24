@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faExternalLinkAlt,
 	faHome,
-	faList,
+	faLaptopCode,
 	faUser
 } from "@fortawesome/free-solid-svg-icons";
 
 export const HomeIcon = () => <FontAwesomeIcon icon={faHome} />;
 export const UserIcon = () => <FontAwesomeIcon icon={faUser} />;
-export const ListIcon = () => <FontAwesomeIcon icon={faList} />;
+export const ListIcon = () => <FontAwesomeIcon icon={faLaptopCode} />;
 export const LinkIcon = () => <FontAwesomeIcon icon={faExternalLinkAlt} />;
 
 export const UncheckedIcon = () => <span>&#9744;</span>;

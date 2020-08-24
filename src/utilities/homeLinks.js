@@ -11,7 +11,7 @@ export const sharepoint = [
 	},
 	{
 		name: "Using macros",
-		url: "/using-storage",
+		url: "/using-macros",
 		state: "macros",
 	},
 ];

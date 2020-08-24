@@ -23,15 +23,11 @@ const initialState = {
 export default (state = initialState, action) => {
 	switch (action.type) {
 		case LOAD_PROGRESS:
-			if (localStorage.progress) {
-				const progress = JSON.parse(localStorage.progress);
-				return { ...state, ...progress };
-			} else return state;
+			return { ...state, ...action.payload};
 		case UPDATE_PROGRESS:
-			const newState = { ...state };
-			newState[action.payload] = true;
-			localStorage.setItem("progress", JSON.stringify(newState));
-			return newState;
+			return {
+				...state, [action.payload ]:  true
+			}
 		default:
 			return state;
 	}

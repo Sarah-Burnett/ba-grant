@@ -1,5 +1,5 @@
 import React from "react";
-import { ListIcon, HomeIcon, UserIcon } from "../Icons";
+import { HomeIcon, UserIcon, ListIcon } from "../Icons";
 import styled from "styled-components";
 import { tablet, accent } from "../../styles/variables";
 import { useSelector, useDispatch } from "react-redux";
@@ -49,7 +49,7 @@ const NavBtns = ({ setShowMenu }) => {
 						? dispatch(viewFullSlides())
 						: dispatch(viewSlideshow())
 				}
-				title="Change view"
+				title="Toggle slideshow"
 			>
 				<ListIcon />
 			</abbr>

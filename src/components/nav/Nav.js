@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { lightBlue, darkBlue, tablet } from "../../styles/variables";
 import UserMenu from "./UserMenu";
@@ -36,7 +36,7 @@ const Title = styled.h1`
 const Nav = ({ isAuth, setIsAuth }) => {
 	const [showMenu, setShowMenu] = useState(false);
 	return (
-		<Fragment>
+		<>
 			<NavBar>
 				<Img>
 					<img src={Logo} alt="BA Grant" />
@@ -44,8 +44,10 @@ const Nav = ({ isAuth, setIsAuth }) => {
 				<Title>BA Regulatory Focus and Rumination</Title>
 				{isAuth && <NavBtns setShowMenu={setShowMenu} />}
 			</NavBar>
-			{showMenu && isAuth && <UserMenu setIsAuth={setIsAuth} />}
-		</Fragment>
+			{showMenu && isAuth && (
+				<UserMenu setIsAuth={setIsAuth} setShowMenu={setShowMenu} />
+			)}
+		</>
 	);
 };
 

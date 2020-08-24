@@ -1,28 +1,38 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./styles/app.css";
 import Nav from "./components/nav/Nav";
 import Footer from "./components/nav/Footer";
 import Login from "./components/auth/Login";
 import Slides from "./components/slides/Slides";
 import routes from "./utilities/routes";
+import { loadProgress } from "./redux/actions/progressActions";
+import { useDispatch } from "react-redux";
 
 const App = () => {
 	const [isAuth, setIsAuth] = useState(true);
 	const [isLoading, setIsLoading] = useState(true);
+	const dispatch = useDispatch();
 	useEffect(() => {
-		if (sessionStorage.getItem("baAuth")) setIsAuth(true);
+		if (sessionStorage.baAuth) setIsAuth(true);
 		setIsLoading(false);
+	}, []);
+	useEffect(() => {
+		if (localStorage.progress) {
+			const progress = JSON.parse(localStorage.progress);
+			dispatch(loadProgress(progress));
+		}
 	}, []);
 	return (
 		<div className="app">
 			<Nav isAuth={isAuth} setIsAuth={setIsAuth} />
-			{!isAuth && !isLoading && (
+			{!isAuth && !isLoading (
 				<Login className="fade" setIsAuth={setIsAuth} />
 			)}
 			{isAuth && (
 				<div style={{ minHeight: "79vh" }}>
 					<Router>
+						<Switch>
 						{routes.map(
 							({
 								path,
@@ -32,7 +42,7 @@ const App = () => {
 								redirectUrl,
 								progress,
 							}) => (
-								<Route key={path} exact path={path}>
+									<Route key={path} path={path}>
 									{Component ? (
 										<Component />
 									) : (
@@ -46,6 +56,7 @@ const App = () => {
 								</Route>
 							)
 						)}
+						</Switch>
 					</Router>
 				</div>
 			)}

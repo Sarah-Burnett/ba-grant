@@ -5,7 +5,7 @@ import {
 	darkGrey,
 	lightBlue,
 	accent,
-	tablet,
+	desktop,
 } from "../../styles/variables";
 
 const Menu = styled.div`
@@ -32,22 +32,27 @@ const Menu = styled.div`
 		border: none;
 		outline: none;
 	}
-	@media (min-width: ${tablet}) {
+	@media (min-width: ${desktop}) {
 		position: absolute;
 		z-index: 99;
 		top: 10vh;
 		right: 0;
 		height: auto;
-		width: 12vw;
+		width: auto;
 		font-size: smaller;
-		padding-right: 3vw;
 	}
 `;
 
-const UserMenu = ({ setIsAuth }) => (
-	<Menu>
-		<button onClick={setIsAuth(false)}>Logout</button>
-	</Menu>
-);
+const UserMenu = ({ setIsAuth, setUserMenu }) => {
+	const logout = () => {
+		setIsAuth(false);
+		setUserMenu(false);
+	};
+	return (
+		<Menu>
+			<button onClick={logout}>Logout</button>
+		</Menu>
+	);
+};
 
 export default UserMenu;
