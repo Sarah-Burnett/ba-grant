@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e7e42a54.chunk.css",
+    "main.js": "/static/js/main.59cb3241.chunk.js",
+    "main.js.map": "/static/js/main.59cb3241.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4f48bc12.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4f48bc12.js.map",
+    "static/js/2.8c1c1b6f.chunk.js": "/static/js/2.8c1c1b6f.chunk.js",
+    "static/js/2.8c1c1b6f.chunk.js.map": "/static/js/2.8c1c1b6f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.1430d4f25a08dfce3df3f8ed15581cae.js": "/precache-manifest.1430d4f25a08dfce3df3f8ed15581cae.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e7e42a54.chunk.css.map": "/static/css/main.e7e42a54.chunk.css.map",
+    "static/js/2.8c1c1b6f.chunk.js.LICENSE.txt": "/static/js/2.8c1c1b6f.chunk.js.LICENSE.txt",
+    "static/media/BrainHeartRate.jpg": "/static/media/BrainHeartRate.b6254b8a.jpg",
+    "static/media/E-Prime2-logo.jpg": "/static/media/E-Prime2-logo.2509b305.jpg",
+    "static/media/biopac-logo.png": "/static/media/biopac-logo.15caf509.png",
+    "static/media/qualtrics-logo.jpg": "/static/media/qualtrics-logo.98fe617f.jpg",
+    "static/media/sharepoint-logo.png": "/static/media/sharepoint-logo.15b4c88e.png",
+    "static/media/sona-logo.PNG": "/static/media/sona-logo.751952a4.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4f48bc12.js",
+    "static/js/2.8c1c1b6f.chunk.js",
+    "static/css/main.e7e42a54.chunk.css",
+    "static/js/main.59cb3241.chunk.js"
+  ]
+}

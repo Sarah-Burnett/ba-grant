@@ -1,0 +1,64 @@
+[
+    {
+        "name": "Navigation around SharePoint",
+        "image": "./images/sharepoint/sharepoint-home.png",
+        "description": [
+           "The following information details how to navigate around sharepoint",
+           "After this, see separate slides on introductions to the e-prime and psychophys data",
+           "Click 'Next' to get started"
+        ]
+    },
+    {
+        "name": "Sharepoint",
+        "image": "./images/sharepoint/sharepoint-documents.png",
+        "description": [
+            "This quick tutorial will give an intro into the files on sharepoint",
+            "Do click on 'Documents' first to access files",
+            "The latest materials are in '2020 Documents and Protocol",
+            "The data collected and preprocessed so far is in '2020 Data'"
+        ]
+    },
+    {
+        "name": "2020 Documents and Protocol",
+        "image": "./images/sharepoint/sharepoint-2020-docs.png",
+        "description": [
+            "'E-prime Scripts' - the files on the lab computer in 'Live Versions' are the most up to date so this folder needs updating",
+            "'Printed' - these are the materials that need printing for each participant (ethics materials, goal and rumination ratings)",
+            "The rest of the files include the tasks programmed into e-prime (e.g. writing tasks)",
+            "This includes the mp3 files that are used in the audio induction",
+             "There is also document detailing the advert up on SONA and the emails sent out from Qualtrics"
+        ]
+    },
+    {
+        "name": "2020 Data",
+        "image":"./images/sharepoint/sharepoint-2020-data.png",
+        "description": [
+            "'Participants' contains the log of participants and a record of pre-processing steps",
+            "The 'eprime' folder contains the raw e.dat files and preprocessed excel files for the tasks completed on e-prime (goal practice task, PANAS, SART, writing tasks)",
+            "The 'macros' folder contains the macros I have created to pre-process the psychophys and SART data for your reference",
+            "The 'psychophys' folder contains the raw and pre-processed files from Acknowledge, as well as excel output files",
+            "The 'qualtrics' folder contains the export of the part 1 screener data from Qualtrics",
+            "The 'ratings' folder contains the scanned in goal and rumination ratings as well as an excel spreadsheet of the data"
+        ]
+    },
+    {
+        "name": "Participant Log",
+        "image": "./images/sharepoint/sharepoint-participant-log.png",
+        "description": [
+            "Two separate versions of this with different data (one on SharePoint, the other on harddrive1)",
+            "Both files list the participant number and the participant condition (either UV UM RV RM)",
+            "The harddrive version 'Participant Log' is password protected because is contains participants contact details",
+            "The Sharepoint version 'Participants' is separated by included/excluded and includes log of preprocessing progress"
+        ]
+    },
+    {
+        "name": "Backing up data",
+        "image":"./images/sharepoint/sharepoint-harddrive.png",
+        "description": [
+            "At the end of the day, all raw data from the EEG and psychophys computer needs uploading to sharepoint",
+            "The ratings need inputting into the excel file on sharepoint and the hard copy needs scanning in (there is a back log of this)",
+            "The paper hard copies are stored in the cabinet in the MDC group office",
+            "For more information see the separate tutorial"
+        ]
+    }
+]
