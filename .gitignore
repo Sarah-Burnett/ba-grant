@@ -1,4 +1,4 @@
-.yo-repository
-My Office Add-in
+client/node_modules
+client/archive
+.env
 node_modules
-archive

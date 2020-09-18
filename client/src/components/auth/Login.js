@@ -9,13 +9,8 @@ import {
 	tablet,
 } from "../../styles/variables";
 import { Button } from "../../styles/components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faExclamationCircle as Warning,
-	faEye as Eye,
-	faEyeSlash as EyeSlash,
-} from "@fortawesome/free-solid-svg-icons";
-import { password } from "../../utilities/tempPassword";
+import { password } from "../../utilities/password";
+import { WarningIcon, EyeSlashIcon, EyeIcon } from "../Icons";
 
 const LoginPage = styled.div`
 	padding: 1vh 0;
@@ -111,7 +106,6 @@ const Login = ({ setIsAuth }) => {
 	const togglePassword = () => {
 		setShowPassword(!showPassword);
 	};
-	const passIcon = () => (showPassword ? EyeSlash : Eye);
 	return (
 		<LoginPage>
 			<form onSubmit={loginSubmit}>
@@ -122,17 +116,14 @@ const Login = ({ setIsAuth }) => {
 						<input type="password" value={loginInput} onChange={loginChange} />
 					)}
 					{showPassword && <input value={loginInput} onChange={loginChange} />}
-					<FontAwesomeIcon
-						className="passIcon"
-						icon={passIcon()}
-						onClick={togglePassword}
-						fixedWidth
-					/>
+					<span onClick={togglePassword}>
+						{showPassword ? <EyeSlashIcon /> : <EyeIcon />}
+					</span>
 				</div>
 				<p className="error">
 					{loginError && (
 						<span>
-							<FontAwesomeIcon icon={Warning} /> Password incorrect
+							<WarningIcon /> Password incorrect
 						</span>
 					)}
 				</p>
