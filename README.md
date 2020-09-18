@@ -30,8 +30,8 @@ Temporary password in utilities
 ## Installation
 ```bash
 # Install dependencies
-
 npm install
+
 # Run the react server
 npm start
 
