@@ -1,5 +1,35 @@
-client/node_modules
-client/archive
 .env
 node_modules
 archive
+
+# client folder
+client/node_modules
+client/archive
+
+# gatsby folder 
+gatsby/logs
+gatsby/*.log
+gatsby/npm-debug.log*
+gatsby/yarn-debug.log*
+gatsby/yarn-error.log*
+gatsby/pids
+gatsby/*.pid
+gatsby/*.seed
+gatsby/*.pid.lock
+gatsby/lib-cov
+gatsby/coverage
+gatsby/.nyc_output
+gatsby/.grunt
+gatsby/bower_components
+gatsby/.lock-wscript
+gatsby/build/Release
+gatsby/node_modules/
+gatsby/jspm_packages/
+gatsby/typings/
+gatsby/.npm
+gatsby/.eslintcache
+gatsby/.node_repl_history
+gatsby/*.tgz
+gatsby/.env*
+gatsby/.cache/
+gatsby/public

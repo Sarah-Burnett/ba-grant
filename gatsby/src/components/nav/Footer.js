@@ -1,0 +1,92 @@
+import React from "react";
+import styled from "styled-components";
+import * as s from "../../styles/variables";
+import { A } from "../../styles/components";
+import FooterLinks from "./FooterLinks";
+
+const FooterBar = styled.div`
+	background: rgba(0, 0, 0, 0.9);
+	min-height: 10vh;
+	color: ${s.lightBlue};
+	padding: 2vh 2vw;
+	text-align: center;
+	line-height: 250%;
+	font-size: 16px;
+	li {
+		list-style: none;
+	}
+	div {
+		padding: 0 2vw;
+		a {
+			color: inherit;
+		}
+		p {
+			display: none;
+		}
+	}
+	h2,
+	h4 {
+		margin-bottom: 1vh;
+	}
+	@media (min-width: ${s.desktop}) {
+		display: grid;
+		grid-template-columns: 40% repeat(3, 1fr);
+		line-height: inherit;
+		text-align: left;
+		div p {
+			display: block;
+		}
+	}
+`;
+
+const footerLinks = {
+  Login: {
+    SONA: "https://exeter-psychology.sona-systems.com",
+    Qualtrics: "https://exetercles.eu.qualtrics.com/login",
+
+    SharePoint:
+      "https://universityofexeteruk.sharepoint.com/sites/BA_Regulatory_Focus_and_Rumination",
+  },
+  Support: {
+    "Qualtrics Support":
+      "https://www.qualtrics.com/support/survey-platform/my-projects/my-projects-overview/",
+    "E-prime Guide":
+      "https://universityofexeteruk.sharepoint.com/sites/BA_Regulatory_Focus_and_Rumination/_layouts/15/AccessDenied.aspx?Source=https%3A%2F%2Funiversityofexeteruk%2Esharepoint%2Ecom%2Fsites%2FBA%5FRegulatory%5FFocus%5Fand%5FRumination%2FShared%20Documents%2FForms%2FAllItems%2Easpx%3Fid%3D%252Fsites%252FBA%255FRegulatory%255FFocus%255Fand%255FRumination%252FShared%2520Documents%252F2020%2520documents%2520and%2520protocol%252FE%252DPrime%2520scripts%252FEPrime2%252E0GettingStartedGuide%252Epdf%26parent%3D%252Fsites%252FBA%255FRegulatory%255FFocus%255Fand%255FRumination%252FShared%2520Documents%252F2020%2520documents%2520and%2520protocol%252FE%252DPrime%2520scripts&correlation=203d729f%2De037%2Db000%2D184b%2De01f11465c9d&Type=list&name=d7bc4308%2Dd9ec%2D40d4%2Dba58%2D46400b31e090",
+    "E-prime Support":
+      "https://support.pstnet.com/hc/en-us/categories/204686967-E-Prime",
+    "AcqKnowledge Guide":
+      "https://www.biopac.com/wp-content/uploads/acqknowledge-4-software-guide.pdf",
+  },
+  Other: {
+    "Lab booking": "https://cles-mrbs.exeter.ac.uk/mdc/day.php",
+
+    "Live survey":
+      "https://exetercles.eu.qualtrics.com/jfe/form/SV_7aK3Ivy3A4i3A57",
+  },
+}
+
+
+const Footer = () => {
+	const keys = Object.keys(footerLinks);
+	return (
+		<FooterBar>
+			<div>
+				<h2>BA Regulatory Focus and Rumination</h2>
+				<p>
+					Built by
+					<A href="mailto:sarahkvburnett@btinternet.com"> Sarah Burnett</A>
+				</p>
+			</div>
+			{keys.map((heading) => {
+				return (
+					<ul key={heading}>
+						<h4>{heading}</h4>
+						<FooterLinks links={footerLinks[heading]} />
+					</ul>
+				);
+			})}
+		</FooterBar>
+	);
+};
+
+export default Footer;
