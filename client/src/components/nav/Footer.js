@@ -48,7 +48,7 @@ const Footer = () => {
 				<h2>BA Regulatory Focus and Rumination</h2>
 				<p>
 					Built by
-					<A href="mailto:sarahkvburnett@btinternet.com">Sarah Burnett</A>
+					<A href="mailto:sarahkvburnett@btinternet.com"> Sarah Burnett</A>
 				</p>
 			</div>
 			{keys.map((heading) => {
