@@ -14,17 +14,18 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
         tutorials {
           slug
           title
+          name
           redirect
           slides
+          category
         }
       }
     }
   `)
-  result.data.pg.tutorials.forEach(({ tutorial }) => {
-    console.log(tutorial);
+  result.data.pg.tutorials.forEach(tutorial => {
     createPage({
-      path: `/products/${tutorial.slug}`,
-      component: path.resolve(`./src/templates/tutorial.js`),
+      path: `/${tutorial.slug}`,
+      component: path.resolve(`./src/templates/Tutorial.js`),
       context: {
         tutorial: tutorial,
       },

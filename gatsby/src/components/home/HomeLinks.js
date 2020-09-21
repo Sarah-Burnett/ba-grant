@@ -3,20 +3,20 @@ import styled from "styled-components"
 import * as s from "../../styles/variables"
 import { A } from "../../styles/components"
 import Checkbox from "./Checkbox"
-import Image from "../image"
+import Image from "../Image"
 
-export default function HomeLinks({ name, image, links }) {
+export default function HomeLinks({ heading, image, links }) {
   return (
     <Links>
-      <h2>{name}</h2>
+      <h2>{heading}</h2>
       <Image filename={image.filename} alt={image.alt} />
       <ul>
-        {links.map(({ slug, title }) => (
+        {links.map(({ name, slug, title }) => (
           <li key={title}>
             <A darker href={`/${slug}`}>
               {title}
             </A>
-            <Checkbox />
+            <Checkbox name={name} />
           </li>
         ))}
       </ul>
@@ -28,7 +28,7 @@ const Links = styled.div`
   position: relative;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto 20vh 1fr;
+  grid-template-rows: auto 30vh 1fr;
   text-align: center;
   background: ${s.white};
   h2 {
@@ -58,13 +58,6 @@ const Links = styled.div`
   ul {
     margin-bottom: 1vh;
     text-align: left;
-  }
-  img {
-    height: 100%;
-    max-width: 100%;
-    margin: auto;
-    padding-bottom: 1vh;
-    transition: opacity 1s;
   }
   border: 0.5px solid ${s.lightGrey};
   border-radius: 1px;

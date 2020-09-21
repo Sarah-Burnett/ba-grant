@@ -28,15 +28,14 @@ client
 	.then(() => console.log(`Connected to db`))
 	.catch((err) => console.log(err));
 
-// client
-// 	.query(
-// 		`
-// 		SELECT * from tutorials
-// 		WHERE category = 'Qualtrics'
-// 		`
-// 	)
-// 	.then((res) => console.log(res))
-// 	.catch((err) => console.log(err));
+client
+	.query(
+		`
+		SELECT * FROM tutorials
+		`
+	)
+	.then((res) => console.log(res))
+	.catch((err) => console.log(err));
 
 //graphql route
 const QueryRoot = new GraphQLObjectType({

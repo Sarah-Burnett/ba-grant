@@ -12,6 +12,7 @@ export default function Home() {
           slug
           title
           category
+          name
         }
       }
     }
@@ -19,7 +20,7 @@ export default function Home() {
   return (
     <HomePage>
       <HomeLinks
-        name="Sharepoint"
+        heading="Sharepoint"
         links={data.pg.tutorials.filter(
           tutorial => tutorial.category === "Sharepoint"
         )}

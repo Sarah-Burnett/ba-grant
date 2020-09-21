@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 export default function Image({ filename, alt }) {
   const data = useStaticQuery(graphql`
-    query {
+    {
       images: allFile {
         edges {
           node {
@@ -20,6 +20,7 @@ export default function Image({ filename, alt }) {
       }
     }
   `)
+  console.log(filename)
   const image = data.images.edges.find(n =>
     n.node.relativePath.includes(filename)
   )
