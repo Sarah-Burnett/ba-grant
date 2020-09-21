@@ -4,6 +4,29 @@ import * as s from "../../styles/variables"
 import { useStaticQuery, graphql } from "gatsby"
 import HomeLinks from "../home/HomeLinks"
 
+const homeLinks = [
+  {
+    title: "SharePoint",
+    img: "sharepoint-logo.png",
+  },
+  {
+    title: "SONA",
+    img: "sona-logo.PNG",
+  },
+  {
+    title: "Qualtrics",
+    img: "qualtrics-logo.jpg",
+  },
+  {
+    title: "Eprime",
+    img: "E-Prime2-logo.jpg",
+  },
+  {
+    title: "Psychophys",
+    img: "biopac-logo.png",
+  },
+]
+
 export default function Home() {
   const data = useStaticQuery(graphql`
     {
@@ -19,13 +42,16 @@ export default function Home() {
   `)
   return (
     <HomePage>
-      <HomeLinks
-        heading="Sharepoint"
-        links={data.pg.tutorials.filter(
-          tutorial => tutorial.category === "Sharepoint"
-        )}
-        image={{filename:"sharepoint-logo.png", alt:""}}
-      />
+      {homeLinks.map(({ title, img }) => (
+        <HomeLinks
+          key={title}
+          heading={title}
+          links={data.pg.tutorials.filter(
+            tutorial => tutorial.category === title
+          )}
+          image={{ filename: img, alt: "" }}
+        />
+      ))}
     </HomePage>
   )
 }

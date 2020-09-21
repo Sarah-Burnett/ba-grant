@@ -1,25 +1,16 @@
 import React from "react"
-import { HomeIcon, UserIcon, ListIcon } from "../Icons"
+import { HomeIcon } from "../Icons"
 import styled from "styled-components"
 import * as s from "../../styles/variables"
 import { A } from "../../styles/components"
 
-export default function NavBtns({
-  menuProp: { toggleMobNav },
-  slideshowProp: { changeView },
-}) {
+export default function NavBtns() {
   return (
     <Buttons>
       <abbr>
         <A href="/" title="Home Page">
           <HomeIcon />
         </A>
-      </abbr>
-      <abbr onClick={changeView} title="Toggle slideshow">
-        <ListIcon />
-      </abbr>
-      <abbr onClick={toggleMobNav} title="User menu">
-        <UserIcon />
       </abbr>
     </Buttons>
   )

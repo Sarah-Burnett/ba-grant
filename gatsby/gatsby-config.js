@@ -9,7 +9,7 @@ module.exports = {
     author: `Sarah Burnett`,
   },
   plugins: [
-    // `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-page-transitions`,
     `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-source-graphql",

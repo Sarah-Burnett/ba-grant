@@ -1,0 +1,1229 @@
+{
+	"command": "SELECT",
+	"rowCount": 11,
+	"oid": null,
+	"rows": [
+		{
+			"id": 17,
+			"name": "eprimeTesting",
+			"slug": "eprime-testing",
+			"slides": [
+				{
+					"name": "Collecting the e-prime data",
+					"image": "collection-scripts.png",
+					"description": [
+						"This will cover the steps taken to set up the delivery of the e-prime scripts in the lab",
+						"This will also cover delivering the rest of the protocol minus the psychophys which is covered separately",
+						"Click 'Next' to get started"
+					]
+				},
+				{
+					"name": "Tracking completed steps",
+					"image": "sharepoint-checklist.png",
+					"description": [
+						"Use the 'Checklist' to track your progress in setting up the lab for each participant",
+						"Printed copies are in the black letter trays in the lab",
+						"On SharePoint found in 'Printed' under '2020 Document and Protocol'"
+					]
+				},
+				{
+					"name": "Setting up protocol folders",
+					"image": "collection-printed.png",
+					"description": [
+						"The four protocol folders (one for each condition) are located on the right hand wall as you enter",
+						"The materials are in the black letter trays (ethics, goal ratings, rumination ratings)",
+						"To replenish and store the materials see the separate tutorial",
+						"Completed materials are stored in the locked cabinet in the MDC group office",
+						"Select the folder corresponding to the participant condition",
+						"Add in the relavent paper files to the corresponding page and then place in the lab"
+					]
+				},
+				{
+					"name": "Setting up lab computer",
+					"image": "collection-monitor.png",
+					"description": [
+						"The control computers for lab 133b are at the back on the left as you go into 133b",
+						"The E-prime computer is the one on the left",
+						"The password is 'mangochutney'",
+						"The folders you need are on the desktop",
+						"There is a general 'BA Grant' folder which contains all the files and then inidivual folders for each condition",
+						"The condition folders are named by condition and the color of the corresponding file",
+						"Open the folder for the participants condition",
+						"Check that the computer in the lab is showing the screen"
+					]
+				},
+				{
+					"name": "Backing up data",
+					"image": "collection-data-files.png",
+					"description": [
+						"The files in the condition folders are shortcuts to the live files inside 'BA Grant'",
+						"Therefore all generated data will be in the 'Live' Folder",
+						"At the end of the data transfer the data into participant folders inside 'Data'",
+						"Then back the participant files up onto the harddrive and sharepoint (see separate tutorial)"
+					]
+				}
+			],
+			"redirect": null,
+			"title": "Testing",
+			"category": "Eprime"
+		},
+		{
+			"id": 20,
+			"name": "psychophysPreprocessP1",
+			"slug": "psychophys-preprocess-p1",
+			"slides": [
+				{
+					"name": "Psychophys preprocessing part 1",
+					"image": "preprocessing-1-intro.png",
+					"description": [
+						"This slideshow goes through the steps for part 1 of the preprocessing",
+						"The purpose of part 1 is to generate the beats (QRS peaks) per minute across the experiment",
+						"First we will apply a filter to the heart rate (ECG) data and then we can identify all the QRS peaks to calculate BPM",
+						"For further information, please speak to Anke and/or view the pdfs in the 'BiopacDA' folder on sharepoint/harddrive",
+						"Click 'Next' to get started"
+					]
+				},
+				{
+					"name": "Step 1 - Open file in AcqKnowledge",
+					"image": "preprocessing-1-intro.png",
+					"description": [
+						"Open AcqKnowledge 5.0 (you will need dongle)",
+						"Open the raw file to be processed",
+						"To demonstrate the process we will be using participant 1"
+					]
+				},
+				{
+					"name": "Step 2 - Filter the data",
+					"image": "preprocessing-1-filter.png",
+					"description": [
+						"The first step is to filter the heart rate to remove noise",
+						"Firstly, ensure you have the ECG channel (7) highlighted",
+						"Click 'Transform'",
+						"Click 'Digital Filter",
+						"Click 'FIR' then 'Band Pass'"
+					]
+				},
+				{
+					"name": "Step 3 - Apply the filter",
+					"image": "preprocessing-1-apply-filter.png",
+					"description": [
+						"We will apply a filter between 0.5 and 35 Hz, using 8000 coefficients, therefore",
+						"For 'Low Frequency Cutoff' click 'Fixed at' and type in '0.5'",
+						"For 'High Frequency Cutoff' click 'Fixed at' and type in '35'",
+						"For 'Number of Coefficiants' click 'Fixed at' and type in '8000'",
+						"Click 'Ok'"
+					]
+				},
+				{
+					"name": "Step 4 - Filtering",
+					"image": "preprocessing-1-filtering.png",
+					"description": [
+						"The filter then will be applied generating a new filtered ECG channel (3)",
+						"The next preprocessing step is to run a script to identify all the ECG peaks",
+						"However first we will save this as a new preprocessed file"
+					]
+				},
+				{
+					"name": "Step 5 - Save",
+					"image": "preprocessing-1-save.png",
+					"description": [
+						"Save the file in the preprocessed folder",
+						"Name the file with the participant number followed by the letter 'p'"
+					]
+				},
+				{
+					"name": "Step 6 - Open MarkandClean script",
+					"image": "preprocessing-1-open-script.png",
+					"description": [
+						"Now we will run the script which helps identify the QRS peaks",
+						"Click 'Script'",
+						"Click 'Script Editor'",
+						"Then click 'File' and 'Open...",
+						"Open the 'MarkandClean' script"
+					]
+				},
+				{
+					"name": "Step 7 - Run MarkandClean script ",
+					"image": "preprocessing-1-run-script.png",
+					"description": [
+						"Click 'Run'",
+						"You will then be asked a series of questions:",
+						"Click 'no' to 'Does your graph have a visible journal?'",
+						"Click the filtered ECG channel (3)",
+						"Click 'no' to the question 'Should I apply a 0.5 Hz high pass filter?'",
+						"Click 'continue'"
+					]
+				},
+				{
+					"name": "Step 8 - Highlight typical QRS peak",
+					"image": "preprocessing-1-highlight-peak.png",
+					"description": [
+						"As instructed we first need to give the algorithm a typical peak",
+						"Zoom in to get a good view of a peak",
+						"Click the cursor tool",
+						"Highlight a QRS peak",
+						"Click 'Peak is selected'"
+					]
+				},
+				{
+					"name": "Step 9 - Checking the algorithm",
+					"image": "preprocessing-1-six-peaks.png",
+					"description": [
+						"Click 'Ok'",
+						"You will now be asked to check the algorithm has correctly identified the first six peaks",
+						"In this case all the 'qrs' labels are correctly placed so we will answer 'yes'",
+						"If you answer no, you will then get a chance to place the 'qrs' labels correctly",
+						"The algorithm will now be run to identify the peaks and then it will evaluate the average distance between peaks (IBI)",
+						"You will then be shown each shorter/longer than average distance in turn to check whether the 'qrs' label is correctly placed"
+					]
+				},
+				{
+					"name": "Step 10 - Investigating short gaps between peaks",
+					"image": "preprocessing-1-short-ibi.png",
+					"description": [
+						"First you will be shown each shorter than average IBI to evaluate whether the peaks have been placed correctly",
+						"To remove a 'qrs' label, ensure this is selected and click 'Remove Selected Event'",
+						"If a 'qrs' lavel is in the wrong place, press down 'Alt' and move the 'qrs' to the correct location",
+						"If the 'qrs' peaks are correct, click 'Ignore this Short IBI'",
+						"In this case the displayed 'qrs' labels are correctly placed so we will click ignore",
+						"Keep doing this until a new pop up appears",
+						"If at any point you are not sure do send screenshots to Anke"
+					]
+				},
+				{
+					"name": "Step 11 - Investigating long gaps between peaks",
+					"image": "preprocessing-1-long-ibi.png",
+					"description": [
+						"Now you will be shown each longer than average IBI to evaluate whether any peaks have been missed",
+						"To add a 'qrs' label, ensure the cursor is on the peak click 'Add Event at Selected Peak'",
+						"If a 'qrs' label is in the wrong place, press down 'alt' and move the 'qrs' to the correct location",
+						"If the 'qrs' peaks are correct, click 'Ignore this Long IBI'",
+						"Ensure you scroll either side of the peak to check the distance",
+						"In this case the displayed 'qrs' labels are correctly placed so we will click ignore",
+						"Keep doing this until you get a box in the middle of the screen, click 'continue'"
+					]
+				},
+				{
+					"name": "Step 12 - Create beats per minute channel",
+					"image": "preprocessing-1-create-bpm.png",
+					"description": [
+						"Click 'yes'",
+						"The script will now create a new bpm channel (4)",
+						"In part 2 you will extract the average bpm for each task",
+						"You will be given the option to save click 'no' for now"
+					]
+				},
+				{
+					"name": "Step 13 - Check new bpm channel",
+					"image": "preprocessing-1-check-bpm.png",
+					"description": [
+						"The final step of part 1 is to examine the new bpm channel to double-check the algorithm output",
+						"For this you will need to zoom in on channel 3 and 4",
+						"You can remove uneccesary channels by selecting then while holding down 'Alt'",
+						"Examine the entire bpm for any jaggedly lines",
+						"If there are any jaggedly lines, then it is likely a 'qrs' peak is missing and you may need to rerun the script"
+					]
+				},
+				{
+					"name": "Step 14 - Finish and save",
+					"image": "./images/psychophys/preprocessing-1-final.png",
+					"description": [
+						"When you are happy the peaks are correctly labelled, save your work",
+						"That is the end of part 1",
+						"In part 2, we will extract the mean heart rate (and skin conductance) and heart rate variability to excel"
+					]
+				}
+			],
+			"redirect": {
+				"slug": "psychophys-preprocess-p2",
+				"msg": "Proceed to part 2"
+			},
+			"title": "Preprocessing Part 1",
+			"category": "Psychophys"
+		},
+		{
+			"id": 21,
+			"name": "psychophysPreprocessP2",
+			"slug": "psychophys-preprocess-p2",
+			"slides": [
+				{
+					"name": "Psychophys preprocessing part 2",
+					"image": "preprocessing-2-intro.png",
+					"description": [
+						"This slideshow goes through the steps for part 2 of the preprocessing",
+						"The purpose of part 1 is to output the heart rate and skin condunctance for each of the tasks",
+						"Click 'Next' to get started"
+					]
+				},
+				{
+					"name": "Step 1 - Open file",
+					"image": "preprocessing-2-intro.png",
+					"description": [
+						"Open processed file e.g. '1p'",
+						"We are now going to extract the mean heart rate and skin conductance for each of the interested tasks",
+						"We will also extract the minimum and maximum skin conductance",
+						"We first need to tell Acqknowledge which timepoints correspond to each of the interested tasks",
+						"To do this we can create 'focus areas'"
+					]
+				},
+				{
+					"name": "Step 2 - Show selection palette  ",
+					"image": "preprocessing-2-display-show.png",
+					"description": [
+						"First we need to display the 'Selection Palette' and 'Show Focus Area' tools",
+						"Click 'Display' then 'Show'",
+						"Click 'Selection Palette'"
+					]
+				},
+				{
+					"name": "Step 3 - Show Focus Areas  ",
+					"image": "preprocessing-2-show-focus-areas.png",
+					"description": [
+						"You should now see the selection palette with the currently highlighted area",
+						"Repeat the process to also show the focus areas"
+					]
+				},
+				{
+					"name": "Step 4 - Baseline Focus Area  ",
+					"image": "preprocessing-2-baseline.png",
+					"description": [
+						"Zoom in over the first trigger peak - the baseline",
+						"Place the cursor at the beginning of the peak",
+						"Then in the 'Right' input box on the selection palette add 5 minutes",
+						"This should then highlight all the baseline pick",
+						"Then click the dropdown arrow to the right",
+						"Click 'Create Focus Area'",
+						"Then type in 'Baseline' as the focus area label"
+					]
+				},
+				{
+					"name": "Step 5 - SART Practice Focus Area  ",
+					"image": "preprocessing-2-practice-SART.png",
+					"description": [
+						"Now if you click outside the selection, you should still the 'Baseline' focus area in pink",
+						"The next timepoint of interest is the practice SART task",
+						"Again place your cursor at the beginning of the next peak",
+						"This time add 1 minute to the right selection palette",
+						"Create a new focus area with label 'SART practice'"
+					]
+				},
+				{
+					"name": "Step 6 - Audio Focus Area",
+					"image": "preprocessing-2-audio.png",
+					"description": [
+						"The next task we want data for is the audio recording",
+						"Skip the next peak over the goal focus recording and place your cursor at the beginning of the audio peak (~35mins)",
+						"We can only make analysis over whole minutes so add 9 minutes for this selection",
+						"There will be some recording not selected that is fine",
+						"Again create focus area this time called 'Audio'"
+					]
+				},
+				{
+					"name": "Step 7 - SART Focus Areas",
+					"image": "preprocessing-2-sart.png",
+					"description": [
+						"The SART analysis is being performed for the first 30 minutes",
+						"This 30 minutes is being broken up into 9 time windows",
+						"The first 10 minutes is in 1 minute focus areas:",
+						"SART 1min, SART 2min, SART 3min, SART 4min, SART 5min, SART 6min,SART 7min, SART 8min, SART 9min, SART 10min",
+						"Then the remaining 20 minutes is split up into 5 minute focus areas:",
+						"SART 15min, SART 20min, SART 25min, SART 30min",
+						"Start the first selection at the beginning of the peak and then add 1/5 minutes updating the left and right selection palette each time",
+						"When you're done your screen should look like the image"
+					]
+				},
+				{
+					"name": "Step 8 - Check Focus Areas",
+					"image": "preprocessing-2-all-focus-areas.png",
+					"description": [
+						"Zoom out to view the whole collection",
+						"Before we start the analysis, just double check that all the focus areas are correct",
+						"To make any necessary edits use the 'Focus Area Bar'",
+						"Again you can find this in 'Display' then 'Show'",
+						"To delete a focus area, press the '-'",
+						"To rename a focus area, press the '...'"
+					]
+				},
+				{
+					"name": "Step 9 - Extracting means",
+					"image": "preprocessing-2-epoch-analysis.png",
+					"description": [
+						"Now we will extract the means (and min and max for SCR) into excel for each focus area",
+						"Click 'Analysis'",
+						"Click 'Epoch Analysis'"
+					]
+				},
+				{
+					"name": "Step 10 - Epoch Analysis",
+					"image": "preprocessing-2-epoch-analysis-2.png",
+					"description": [
+						"Change Epoch width to 60 seconds'",
+						"At the bottom for 'Analyze' click 'focus areas only'",
+						"Then For 'Locate epochs at:' click 'fixed time intervals' ",
+						"Ensure 'Start first epoch at:' is 'left edge of focus area'",
+						"Change 'Time between epochs' to 0 seconds",
+						"Change 'Output type' to 'Excel Spreadsheet Only",
+						"Click 'OK'"
+					]
+				},
+				{
+					"name": "Step 11 - Data to extract",
+					"image": "preprocessing-2-epoch-analysis-3.png",
+					"description": [
+						"Now we tell the software which data to extract",
+						"Click 'Add..'",
+						"Select 'Mean' and click 'OK'",
+						"Select the BPM channel (4)",
+						"Repeat the above for 'Mean' of the SCR channel (6)",
+						"Repeat the above for 'Min' of the SCR channel (6)",
+						"Repeat the above for 'Max' of the SCR channel (6)",
+						"Your screen should match the image and then click 'Ok'"
+					]
+				},
+				{
+					"name": "Step 12 - Means Spreadsheet",
+					"image": "preprocessing-2-save-spreadsheet.png",
+					"description": [
+						"The software will now conduct the analysis and export it to excel",
+						"Check through the file ensuring that data looks good",
+						"E.g. check the heart rate is between ~60-120bpm",
+						"Save the resulting spreadsheet in 'Output' with the file number",
+						"Add a new sheet and call it 'HRV'",
+						"Leave this file open to come back to"
+					]
+				},
+				{
+					"name": "Step 13 - Further heart rate analysis",
+					"image": "preprocessing-2-start-hrv.png",
+					"description": [
+						"Keep the excel file open and go back to AcqKnowledge",
+						"Firstly go into the Journal (box at the bottom) and delete the contents (you will get an error in the next step otherwise)",
+						"Then click 'Analysis'",
+						"Click 'HRV and RSA",
+						"Click 'Multi-epoch HRV and RSA - Spectral"
+					]
+				},
+				{
+					"name": "Step 14 - HRV spectral analysis",
+					"image": "preprocessing-2-hrv-settings.png",
+					"description": [
+						"Ensure the ECG channel is selected (3)",
+						"Change 'Extract HRV and RSA for' to 'Focus Areas'",
+						"Change 'Output type' to 'Excel Spreadsheet Only'",
+						"Click 'OK'"
+					]
+				},
+				{
+					"name": "Step 15 - HRV spreadsheet",
+					"image": "preprocessing-2-hrv-excel.png",
+					"description": [
+						"The programme will now run the analysis and export to a second excel spreadsheet",
+						"Now we can merge the two spreadsheets together"
+					]
+				},
+				{
+					"name": "Step 16 - Merge spreadsheets",
+					"image": "preprocessing-2-final.png",
+					"description": [
+						"Copy and paste the HRV data into the 'HRV' sheet you created on the means column",
+						"Then add in the 'Time window' column to label the time windows",
+						"You can automate this using the 'PsychophysOutput' macro",
+						"Save the means spreadsheet and back up (you can discard the HRV one)",
+						"This is the end of part 2"
+					]
+				}
+			],
+			"redirect": null,
+			"title": "Preprocessing Part 2",
+			"category": "Psychophys"
+		},
+		{
+			"id": 18,
+			"name": "eprimePreprocess",
+			"slug": "eprime-preprocess",
+			"slides": [
+				{
+					"name": "E-prime preprocessing",
+					"image": "preprocessing-start.png",
+					"description": [
+						"This tutorial outlines the preprocessing steps for the data collected on E-Prime",
+						"These are the PANAS, SART, goal practice task and writing tasks",
+						"The files for these are under 'eprime' on sharepoint",
+						"The majority of this will need to be done on a university computer with E-Prime installed",
+						"Click 'next' to get started"
+					]
+				},
+				{
+					"name": "PANAS",
+					"image": "preprocessing-panas.png",
+					"description": [
+						"Open the excel file called 'PANAS'",
+						"This document is currently laid out to allow a direct copy and paste from the e.dat files",
+						"Need to add in labelling to know which question is which",
+						"Open the e.dat file and copy over the PANAS column for each time point",
+						"Once this is complete you will be able to 'copy' and 'transpose' to get this laid out with participant as rows and the data as columns"
+					]
+				},
+				{
+					"name": "Writing Tasks",
+					"image": "preprocessing-writing-tasks.png",
+					"description": [
+						"Open the excel file called 'Writing tasks'",
+						"Like the PANAS this is a direct copy and paste from the e.dat files.",
+						"Use 'find' and 'replace' to remove all the extra characters",
+						"E.g. find '{SPACE}' and replace with ' '"
+					]
+				},
+				{
+					"name": "SART",
+					"image": "preprocessing-sart.png",
+					"description": [
+						"For the SART you will need to export the e.dat files into excel",
+						"Export as a text file into 'raw text' which you can then open in excel",
+						"Open the text file in excel and save as excel macro enabled workbook into 'raw excel'",
+						"You can automate this process using the 'SARTConvertFileType' macro",
+						"The next step is to clean up this file and output thought probes, accuracy and reaction time data"
+					]
+				},
+				{
+					"name": "SART p1 - SART clean and analyse macro",
+					"image": "preprocessing-run-sart-macro.png",
+					"description": [
+						"Open the raw excel file and run the 'SARTCleanandAnalyse' macro",
+						"Click 'Run' and then 'Ok'",
+						"The macro does a couple of odd things for the reaction time data so there are a couple of quick tweaks to make"
+					]
+				},
+				{
+					"name": " SART p2 - Removing pesky '@' symbol for filter",
+					"image": "preprocessing-at-filter.png",
+					"description": [
+						"In order to calculate the reaction time results, there are a couple of edits to make",
+						"The macro does a couple of odd things so there are a couple of quick tweaks that need making before you get the results",
+						"Firstly, on the 'GoTrials' sheet in cell A2 remove the '@' symbol before 'FILTER'",
+						"This should then populate this sheet"
+					]
+				},
+				{
+					"name": "SART p3 - Adjust RT for correct go trials rows",
+					"image": "preprocessing-correct-go-only.png",
+					"description": [
+						"If you go next to the 'Results' tab, you will see the RT mean and SD calculation defaults to the maximum possible number of rows '2:1351'",
+						"This needs individually adjusting according to each participants performance, adjust ththe range to the exact number of rows in 'GoTrials' (this should be equal to the number in 'Results!H2' + 1)",
+						"Adjust the range for BOTH the MEAN and SD and those are the results",
+						"Save your work"
+					]
+				},
+				{
+					"name": "SART p4 - Consolidate results",
+					"image": "preprocessing-sart.png",
+					"description": [
+						"Once you have made the adjustments to the macro output for the reaction time (previous 2 slides), you can now add the data to the 'SART' spreadsheet on SharePoint",
+						"Open the file inside '2020 Data/eprime/SART'",
+						"In a new row, add in the participant ID into the first column, then copy and paste the data from the 'Results' tab you just created"
+					]
+				}
+			],
+			"redirect": null,
+			"title": "Preprocessing",
+			"category": "Eprime"
+		},
+		{
+			"id": 19,
+			"name": "psychophysCollection",
+			"slug": "psychophys-testing",
+			"slides": [
+				{
+					"name": "Collecting the psychophys data",
+					"image": "testing-example.png",
+					"description": [
+						"This will cover the steps taken to set up the lab for the psychophys recordings",
+						"Click 'Next' to get started"
+					]
+				},
+				{
+					"name": "Tracking completed steps",
+					"image": "sharepoint-checklist.png",
+					"description": [
+						"Use the 'Checklist' to track your progress in setting up the lab for each participant",
+						"Printed copies are in the black letter trays in the lab",
+						"On SharePoint found in 'Printed' under '2020 Document and Protocol'"
+					]
+				},
+				{
+					"name": "Setting up BIOPAC",
+					"image": "testing-biopac.png",
+					"description": [
+						"Enter the testing room 133b and find the BIOPAC machine at the back",
+						"Turn on the machine by pressing the button at the back on the left inwards",
+						"Switch air conditioning on"
+					]
+				},
+				{
+					"name": "Setting up computer",
+					"image": "testing-open-acq.png",
+					"description": [
+						"The control computers are back out in the main room at the back on the left",
+						"The computer on the right is the Acqknowledge/BIOPAC machine",
+						"Switch this computer on (ensure you do this after turning the BIOPAC on)",
+						"The password is 'eeg'",
+						"There is a folder on the desktop called 'BA Grant'",
+						"This folder contains the template graph and a folder called 'Data' with the data in",
+						"Open Acknowledge"
+					]
+				},
+				{
+					"name": "Setting up AcqKnowledge",
+					"image": "testing-new-ppt.png",
+					"description": [
+						"Open the template graph so that you can see channels for the ECG (heart rate), SCR (skin conductance) and trigger",
+						"Save as a new file in 'BA Grant/Data' with the participant number",
+						"As the experiment runs you will likely need to recenter the SCR vertically using the outlined button",
+						"To zoom out and view the whole experiment on screen click the button to the right"
+					]
+				},
+				{
+					"name": "Changing the acquisition time",
+					"image": "testing-aquisition-time.png",
+					"description": [
+						"The default collection length is 30minutes with AcqKnowledge so the recording will stop during the experiment",
+						"To do this, click 'MP160'",
+						"Then click 'Set Up Data Aquisition...",
+						"Increase the 'Aquisition Time' to '7200' seconds",
+						"Then you can close the window",
+						"When you are have placed the sensors on the participant and are ready to begin recording, press 'Start'"
+					]
+				},
+				{
+					"name": "Sensors",
+					"image": "testing-sensors.png",
+					"description": [
+						"The heart rate sensors are disposable and stored in the cupboard on the left as you enter the main 133 room",
+						"You will need two for each participant",
+						"Place these, the alcohol and the Q-tips in the testing room ready",
+						"The skin conductance sensors are washed between participants and will be on the drying rack by the sink",
+						"Collect one (of two) of these wires and plug into the BIOPAC machine in channel 6 (no tape goes in middle)",
+						"Instructions for placing the sensors on the participant are in the protocol folder (and speak to Anke)"
+					]
+				},
+				{
+					"name": "End of testing",
+					"image": "testing-data-files.png",
+					"description": [
+						"After each participant, unplug the sensors, bin the heart rate and wash the skin conductance",
+						"At the end of the day, turn off machines and the air conditioning",
+						"Then back the participant files up onto the harddrive and sharepoint (see separate tutorial)",
+						"You will likely have to do this via memory stick as the machine did not recognise harddrive"
+					]
+				}
+			],
+			"redirect": null,
+			"title": "Testing",
+			"category": "Psychophys"
+		},
+		{
+			"id": 15,
+			"name": "qualtricsIntro",
+			"slug": "qualtrics-getting-started",
+			"slides": [
+				{
+					"name": "Getting starting with Qualtrics",
+					"image": "qualtrics.png",
+					"description": [
+						"The following information details how to login and navigate around Qualtrics",
+						"This outlines the basic use of Qualtrics for the screening survey for part 1 of the study.",
+						"After this, for more information on extracting the data see separate tutorial",
+						"For more information see the Qualtrics support pages (link on home page)",
+						"Click 'Next' to get started"
+					]
+				},
+				{
+					"name": "Logging in",
+					"image": "qualtrics-login.png",
+					"description": [
+						"Navigate to the Exeter CLES Qualtrics login site",
+						"Input username and password",
+						"Use my login details until you add yourself"
+					]
+				},
+				{
+					"name": "Project List",
+					"image": "qualtrics-project.png",
+					"description": [
+						"Signing in you get navigated to the list of projects. Click on 'BA Grant Project'"
+					]
+				},
+				{
+					"name": "Project Page",
+					"image": "qualtrics-screener.png",
+					"description": [
+						"This is the page when you can edit the screener",
+						"The blocks of the questionnaires are listed in the order they appear",
+						"Inside 'Info and consent' is the participant generated 'id' question allowing you to identify the survey responses once you delete the contact information for anonymity on SharePoint",
+						"'Survey Flow' details the order in which participants view the pages of the site including the set up of exclusions",
+						"The following pages will go over the 'Actions' and 'Data & Analysis' tabs for details on the emails sent out by Qualtrics and how you can view and export data",
+						"You should not need any of the other buttons but instructions are on the support pages which there is a link to on the home page"
+					]
+				},
+				{
+					"name": "Actions",
+					"image": "qualtrics-actions.png",
+					"description": [
+						"This is the page where the automated emails are set up and monitored",
+						"There is one email sent to participants that are 'included' as a reminder for their lab session",
+						"There is another email sent participants who are 'excluded' which is cc'd to Nick",
+						"For both email taks you will need to add your email address to be alerted by clicking on the email task (multiple emails are separated with a comma)"
+					]
+				},
+				{
+					"name": "Data & Analysis",
+					"image": "qualtrics-data.png",
+					"description": [
+						"This is the page when you can view and download the data",
+						"To change the columns you can preview, click on 'Tools' and then 'Choose Columns",
+						"For instructions on how to do download the data and add to SharePoint, continue onto the separate tutorial"
+					]
+				},
+				{
+					"name": "Logging Out",
+					"image": "qualtrics-logout.png",
+					"description": [
+						"To logout, click on the icon top right and press 'Logout'"
+					]
+				}
+			],
+			"redirect": {
+				"slug": "qualtrics-export",
+				"msg": "Proceed to exporting data"
+			},
+			"title": "Getting Started",
+			"category": "Qualtrics"
+		},
+		{
+			"id": 12,
+			"name": "dataStorage",
+			"slug": "data-storage",
+			"slides": [
+				{
+					"name": "Guide to data storage",
+					"image": "sharepoint-2020-data.png",
+					"description": [
+						"The following information details the storage of data",
+						"This includes SharePoint, the harddrives, the lab and the cabinent in the MDC group office",
+						"Click 'Next' to get started"
+					]
+				},
+				{
+					"name": "Paper files",
+					"image": "sharepoint-printed.png",
+					"description": [
+						"Paper materials include the information sheet, consent forms, checklist for testing and the goal and rumination ratings",
+						"These are found on sharepoint in 'Printed' in '2020 Documents and Protocol",
+						"The uncompleted printed materials are stored in the lab in the black letter trays",
+						"Completed materials are stored in the locked cabinet in MDC group office",
+						"The files are currently stored by document rather than by participant",
+						"i.e. consent forms are on separate shelf, one wallet contains checklists, one wallet contains goal ratings and another wallet contains "
+					]
+				},
+				{
+					"name": "Harddrives and dongle",
+					"image": "sharepoint-harddrive.png",
+					"description": [
+						"The two harddrives and dongle for AcqKnowledge are stored with the paper files in the locked cabinet in MDC group office",
+						"I use just one harddrive for backing up files",
+						"Once a week, add new files onto the second hardddrive"
+					]
+				},
+				{
+					"name": "E-prime and psychophys",
+					"image": "sharepoint-raw-files.png",
+					"description": [
+						"At the end of the day, all raw data from the EEG and psychophys computer needs uploading to sharepoint",
+						"Lab computers are not connected to network therefore this is via hard drive (or memory stick for psychophys computer)",
+						"This also means the harddrive contains back up of data too",
+						"You will need to first move the eprime files from the live versions into a participant folder under 'Data'",
+						"On my laptop, I then copy the memory stick files over onto the harddrive and then all files are uploaded into raw files on sharepoint"
+					]
+				},
+				{
+					"name": "Goal and rumination ratings",
+					"image": "sharepoint-ratings.png",
+					"description": [
+						"The hardcopies of the ratings are stored in the cabinet",
+						"The hardcopies need scanning and imported into the 'scans' folder on Sharepoint",
+						"The data also needs entering into the 'Problem ratings' spreadsheet on SharePoint"
+					]
+				}
+			],
+			"redirect": null,
+			"title": "Data Storage",
+			"category": "SharePoint"
+		},
+		{
+			"id": 16,
+			"name": "qualtricsExport",
+			"slug": "qualtrics-export",
+			"slides": [
+				{
+					"name": "Exporting Data from Qualtrics",
+					"image": "qualtrics-screener.png",
+					"description": [
+						"The following information details how to export data from Qualtrics",
+						"It also covers cleaning up the excel file ready to add to sharepoint",
+						"If you are new to Qualtrics, please view the introductory slides first",
+						"For more information see the Qualtrics support pages",
+						"Click 'Next' to get started"
+					]
+				},
+				{
+					"name": "Step 1 - Login to Qualtrics",
+					"image": "qualtrics-project.png",
+					"description": [
+						"Login to Qualtrics (click link in header)",
+						"Click on 'BA Grant Project' to navigate to project page"
+					]
+				},
+				{
+					"name": "Step 2 - Navigate to Data & Analysis",
+					"image": "qualtrics-screener.png",
+					"description": [
+						"This is the page when you can edit the screener",
+						"For more information visit the qualtrics support pages (link in footer)",
+						"To view and export collect data, click on the 'Data & Analysis' tab"
+					]
+				},
+				{
+					"name": "Step 3 - Viewing collected responses",
+					"image": "qualtrics-data.png",
+					"description": [
+						"This is the page when you can view and download the data",
+						"To change the columns you can preview, click on 'Tools' and then 'Choose Columns"
+					]
+				},
+				{
+					"name": "Step 4 - Downloading collected responses",
+					"image": "qualtrics-download1.png",
+					"description": [
+						"To download the responses into excel, click 'Export and Import' and then 'Export data...'"
+					]
+				},
+				{
+					"name": "Step 4 - Downloading excel file",
+					"image": "qualtrics-download2.png",
+					"description": [
+						"Use the default tab to download as 'csv' file",
+						"Keep 'Download all fields' selected. (You will need to remove the contact fields from the download manually)",
+						"Select 'Use Numerical Values'",
+						"Click 'Download' to download"
+					]
+				},
+				{
+					"name": "Step 5 - Editing columns",
+					"image": "qualtrics-excel-download.png",
+					"description": [
+						"Open the downloaded excel file",
+						"Delete the columns containing personally identifying information",
+						"These are: 'Status', 'IPAddress', 'LocationLatitude', 'LocationLongitude', 'name' and 'email'",
+						"The responses can still be identified using the 'id' (and as a back up by logging onto Qualtrics)"
+					]
+				},
+				{
+					"name": "Step 6 - Updating sharepoint data",
+					"image": "qualtrics-qualtrics-export.png",
+					"description": [
+						"Open the 'Qualtrics Export' file on SharePoint in '2020 Data' under 'qualtrics'",
+						"Identify the timepoint of your last update and find this row in the new download",
+						"Copy and paste data below this point into the sharepoint file (columns in grey are manually added)",
+						"Ensure the data fields match up (if not you have probably not deleted enough columns)",
+						"The 'id' column is a direct copy of the 'id' field from Qualtrics (FYI those in red are abbrievated from the ResponseID as these participants completed Qualtrics prior to adding of the participant generated id question)",
+						"The 'ID' and Condition' need adding in once participant has attended the lab session"
+					]
+				}
+			],
+			"redirect": null,
+			"title": "Export data",
+			"category": "Qualtrics"
+		},
+		{
+			"id": 13,
+			"name": "macros",
+			"slug": "macros",
+			"slides": [
+				{
+					"name": "Macros",
+					"image": "sharepoint-macros.png",
+					"description": [
+						"There are various excel and Acqknowledge macros to make the preprocessing more efficient",
+						"These are all within the 'Macros' folder in '2020 data' on SharePoint",
+						"They are also on the first harddrive 'BA Grant 1'",
+						"This tutorial will go through using the excel macros I created (.bas)",
+						"For the AcqKnowledge macro (.bbs), see the separate psychophys preprocessing tutorials"
+					]
+				},
+				{
+					"name": "Part 1 - Excel macros",
+					"image": "macro-excel.png",
+					"description": [
+						"When to use each macro will be covered by the preprocessing tutorials but this will go through how to download and run the excel macros (.bas) on your device.",
+						"First go onto sharepoint and download the macros onto your machine",
+						"Alternatively you can use the files on the harddrive",
+						"To run the macros, you first need to import them into excel",
+						"Open excel"
+					]
+				},
+				{
+					"name": "Part 2 - Enabling developer tools",
+					"image": "macro-dev-tools.png",
+					"description": [
+						"To run the macros onto your device, you will need to enable 'Developer' tools in excel",
+						"To do this open excel and click 'File'",
+						"Click 'Options' bottom left",
+						"Then click 'Customise Ribbon'",
+						"In 'Customise the Ribbon' on the right down scroll down to 'Developer' and check the box",
+						"Click 'Ok'"
+					]
+				},
+				{
+					"name": "Part 3 - Macros and creating PERSONAL workbook",
+					"image": "macro-personal.png",
+					"description": [
+						"Macros are usually stored in the current open workbook",
+						"It is also possible to store them in the PERSONAL workbook which is available to any excel workbooks opened on your device.",
+						"We first need to open the PERSONAL workbook",
+						"You will now be able to access the 'Developer' tab",
+						"Click'Developer'",
+						"Click 'Record Macro'",
+						"You do not need to give this macros a specific name or shortcut",
+						"Ensure you select 'Personal Macro Workbook' as the place to store macro in"
+					]
+				},
+				{
+					"name": "Part 5  - Visual Basic",
+					"image": "macro-visual-basic.png",
+					"description": [
+						"Now to import the files into your newly created PERSONAL workbook we now need to open the code editor 'Visual Basic'",
+						"You do not need to write any code to do this",
+						"You should only have to do this once"
+					]
+				},
+				{
+					"name": "Part 4  - Importing macros",
+					"image": "macro-vba-files.png",
+					"description": [
+						"use 'File' and 'Import File...' to import each macro",
+						"Drag and drop the files into 'Modules' under 'VBAProject (PERSONAL.XLSB)",
+						"You can delete your macro you just created by right clicking on it and then clicking 'Remove Macro1'",
+						"When you are done your files should match the image (your code may be formatted differently)",
+						"You can now close visual basic"
+					]
+				},
+				{
+					"name": "Part 5 - Running a macro",
+					"image": "macro-run-macro.png",
+					"description": [
+						"To run the macro, on the 'Developer' tab click 'Macros'",
+						"Then select the macro you wish to use and click 'Run' ",
+						"When running the macros ensure you have the correct sheet open"
+					]
+				}
+			],
+			"redirect": null,
+			"title": "Macros",
+			"category": "SharePoint"
+		},
+		{
+			"id": 10,
+			"name": "sharepointIntro",
+			"slug": "sharepoint-getting-started",
+			"slides": [
+				{
+					"name": "Navigation around SharePoint",
+					"image": "sharepoint-home.png",
+					"description": [
+						"The following information details how to navigate around sharepoint",
+						"After this, see separate slides on introductions to the e-prime and psychophys data",
+						"Click 'Next' to get started"
+					]
+				},
+				{
+					"name": "Sharepoint",
+					"image": "sharepoint-documents.png",
+					"description": [
+						"This quick tutorial will give an intro into the files on sharepoint",
+						"Do click on 'Documents' first to access files",
+						"The latest materials are in '2020 Documents and Protocol",
+						"The data collected and preprocessed so far is in '2020 Data'"
+					]
+				},
+				{
+					"name": "2020 Documents and Protocol",
+					"image": "sharepoint-2020-docs.png",
+					"description": [
+						"'E-prime Scripts' - the files on the lab computer in 'Live Versions' are the most up to date so this folder needs updating",
+						"'Printed' - these are the materials that need printing for each participant (ethics materials, goal and rumination ratings)",
+						"The rest of the files include the tasks programmed into e-prime (e.g. writing tasks)",
+						"This includes the mp3 files that are used in the audio induction",
+						"There is also document detailing the advert up on SONA and the emails sent out from Qualtrics"
+					]
+				},
+				{
+					"name": "2020 Data",
+					"image": "sharepoint-2020-data.png",
+					"description": [
+						"'Participants' contains the log of participants and a record of pre-processing steps",
+						"The 'eprime' folder contains the raw e.dat files and preprocessed excel files for the tasks completed on e-prime (goal practice task, PANAS, SART, writing tasks)",
+						"The 'macros' folder contains the macros I have created to pre-process the psychophys and SART data for your reference",
+						"The 'psychophys' folder contains the raw and pre-processed files from Acknowledge, as well as excel output files",
+						"The 'qualtrics' folder contains the export of the part 1 screener data from Qualtrics",
+						"The 'ratings' folder contains the scanned in goal and rumination ratings as well as an excel spreadsheet of the data"
+					]
+				},
+				{
+					"name": "Participant Log",
+					"image": "sharepoint-participant-log.png",
+					"description": [
+						"Two separate versions of this with different data (one on SharePoint, the other on harddrive1)",
+						"Both files list the participant number and the participant condition (either UV UM RV RM)",
+						"The harddrive version 'Participant Log' is password protected because is contains participants contact details",
+						"The Sharepoint version 'Participants' is separated by included/excluded and includes log of preprocessing progress"
+					]
+				},
+				{
+					"name": "Backing up data",
+					"image": "sharepoint-harddrive.png",
+					"description": [
+						"At the end of the day, all raw data from the EEG and psychophys computer needs uploading to sharepoint",
+						"The ratings need inputting into the excel file on sharepoint and the hard copy needs scanning in (there is a back log of this)",
+						"The paper hard copies are stored in the cabinet in the MDC group office",
+						"For more information see the separate tutorial"
+					]
+				}
+			],
+			"redirect": { "slug": "macros", "msg": "Proceed to macros" },
+			"title": "Getting Started",
+			"category": "SharePoint"
+		},
+		{
+			"id": 14,
+			"name": "sonaIntro",
+			"slug": "sona-getting-started",
+			"slides": [
+				{
+					"name": "Getting starting with Sona",
+					"image": "sona-login.png",
+					"description": [
+						"The following information details how to login and navigate around SONA",
+						"After this, see separate tutorial for bulk granting credits for the screener survey.",
+						"Click 'Next' to get started"
+					]
+				},
+				{
+					"name": "Logging in",
+					"image": "sona-login.png",
+					"description": [
+						"Input login details",
+						"Click 'Log in'",
+						"Click 'Researcher'"
+					]
+				},
+				{
+					"name": "Main screen",
+					"image": "sona-main.png",
+					"description": [
+						"This is the main screen",
+						"Well labelled main page of interest is 'My Studies'",
+						"You can also confirm timings of participants under 'Upcoming Appointments'"
+					]
+				},
+				{
+					"name": "My Studies",
+					"image": "sona-studies.png",
+					"description": [
+						"The initial screen is for 'Active' surveys only",
+						"The active study is called *2.5 credits* Mood, Concentration and Problem solving",
+						"A second study is also used to grant credits for part 1 only which is under 'Inactive' surveys called *0.5 Credits* Mood, Concentration and Problem solving Survey"
+					]
+				},
+				{
+					"name": "Adding timeslots",
+					"image": "sona-timeslots.png",
+					"description": [
+						"You can add individual slots using the 'Add A Timeslot' button",
+						"You can also add multiple slots at once using the 'Add Multiple Timeslots' (see next page)",
+						"There are also buttons to delete slots if you make a mistake",
+						"Be careful with this there is nothing to stop you creating duplicate slots at the same time"
+					]
+				},
+				{
+					"name": "Adding multiple timeslots",
+					"image": "sona-multipletime.png",
+					"description": [
+						"Clicking 'Add Multiple Timeslots' brings you to this screen",
+						"If you are testing at the same times each week, there is a useful option to copy timeslots from week to week",
+						"There is a screen to confirm you are happy with the times before adding them"
+					]
+				},
+				{
+					"name": "Timeslot information",
+					"image": "sona-timeslot.png",
+					"description": [
+						"Clicking on an individual timeslot brings you to this screen",
+						"Most signups the participant signs themselves up although sometimes they may want to re-arrange",
+						"You can manually sign a person up on this screen by adding either their username (uni email) or name",
+						"You can also use this to add participants to the inactive survey to grant them 0.5 credits for the Qualtrics survey"
+					]
+				},
+				{
+					"name": "Granting credits",
+					"image": "sona-uncredited.png",
+					"description": [
+						"Clicking 'View your uncredited timeslots' brings you a list of participants",
+						"Your options here are to grant credits (2.5) or to report no-shows",
+						"You also have the 'Mark all 'Participated'' option for granting credits to multiple participants",
+						"Ensure you click 'Process changes' to save"
+					]
+				}
+			],
+			"redirect": null,
+			"title": "Getting Started",
+			"category": "SONA"
+		}
+	],
+	"fields": [
+		{
+			"name": "id",
+			"tableID": 39446148,
+			"columnID": 1,
+			"dataTypeID": 23,
+			"dataTypeSize": 4,
+			"dataTypeModifier": -1,
+			"format": "text"
+		},
+		{
+			"name": "name",
+			"tableID": 39446148,
+			"columnID": 2,
+			"dataTypeID": 1043,
+			"dataTypeSize": -1,
+			"dataTypeModifier": 154,
+			"format": "text"
+		},
+		{
+			"name": "slug",
+			"tableID": 39446148,
+			"columnID": 3,
+			"dataTypeID": 1043,
+			"dataTypeSize": -1,
+			"dataTypeModifier": 259,
+			"format": "text"
+		},
+		{
+			"name": "slides",
+			"tableID": 39446148,
+			"columnID": 4,
+			"dataTypeID": 114,
+			"dataTypeSize": -1,
+			"dataTypeModifier": -1,
+			"format": "text"
+		},
+		{
+			"name": "redirect",
+			"tableID": 39446148,
+			"columnID": 5,
+			"dataTypeID": 114,
+			"dataTypeSize": -1,
+			"dataTypeModifier": -1,
+			"format": "text"
+		},
+		{
+			"name": "title",
+			"tableID": 39446148,
+			"columnID": 6,
+			"dataTypeID": 1043,
+			"dataTypeSize": -1,
+			"dataTypeModifier": 154,
+			"format": "text"
+		},
+		{
+			"name": "category",
+			"tableID": 39446148,
+			"columnID": 7,
+			"dataTypeID": 1043,
+			"dataTypeSize": -1,
+			"dataTypeModifier": 154,
+			"format": "text"
+		}
+	],
+	"_parsers": [null, null, null, null, null, null, null],
+	"_types": {
+		"_types": {
+			"arrayParser": {},
+			"builtins": {
+				"BOOL": 16,
+				"BYTEA": 17,
+				"CHAR": 18,
+				"INT8": 20,
+				"INT2": 21,
+				"INT4": 23,
+				"REGPROC": 24,
+				"TEXT": 25,
+				"OID": 26,
+				"TID": 27,
+				"XID": 28,
+				"CID": 29,
+				"JSON": 114,
+				"XML": 142,
+				"PG_NODE_TREE": 194,
+				"SMGR": 210,
+				"PATH": 602,
+				"POLYGON": 604,
+				"CIDR": 650,
+				"FLOAT4": 700,
+				"FLOAT8": 701,
+				"ABSTIME": 702,
+				"RELTIME": 703,
+				"TINTERVAL": 704,
+				"CIRCLE": 718,
+				"MACADDR8": 774,
+				"MONEY": 790,
+				"MACADDR": 829,
+				"INET": 869,
+				"ACLITEM": 1033,
+				"BPCHAR": 1042,
+				"VARCHAR": 1043,
+				"DATE": 1082,
+				"TIME": 1083,
+				"TIMESTAMP": 1114,
+				"TIMESTAMPTZ": 1184,
+				"INTERVAL": 1186,
+				"TIMETZ": 1266,
+				"BIT": 1560,
+				"VARBIT": 1562,
+				"NUMERIC": 1700,
+				"REFCURSOR": 1790,
+				"REGPROCEDURE": 2202,
+				"REGOPER": 2203,
+				"REGOPERATOR": 2204,
+				"REGCLASS": 2205,
+				"REGTYPE": 2206,
+				"UUID": 2950,
+				"TXID_SNAPSHOT": 2970,
+				"PG_LSN": 3220,
+				"PG_NDISTINCT": 3361,
+				"PG_DEPENDENCIES": 3402,
+				"TSVECTOR": 3614,
+				"TSQUERY": 3615,
+				"GTSVECTOR": 3642,
+				"REGCONFIG": 3734,
+				"REGDICTIONARY": 3769,
+				"JSONB": 3802,
+				"REGNAMESPACE": 4089,
+				"REGROLE": 4096
+			}
+		},
+		"text": {},
+		"binary": {}
+	},
+	"RowCtor": null,
+	"rowAsArray": false
+}

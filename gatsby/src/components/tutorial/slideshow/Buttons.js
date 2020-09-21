@@ -5,12 +5,12 @@ import { RedirectButton } from "../RedirectButton"
 
 export default function Buttons({
   slideProp,
-  slideProp: { nextSlide, prevSlide, isFirstSlide, isFinalSlide },
+  slideProp: { nextSlide, prevSlide, isFirstSlide, isFinalSlide, changeView },
 }) {
   return (
     <Container>
       {isFinalSlide ? (
-        <RedirectButton slideProp={slideProp}/>
+        <RedirectButton slideProp={slideProp} />
       ) : (
         <PrimaryButton className="next" type="button" onClick={nextSlide}>
           Next
@@ -21,6 +21,9 @@ export default function Buttons({
           Previous
         </Button>
       )}
+      <Button className="next" type="button" onClick={changeView}>
+        View As List
+      </Button>
     </Container>
   )
 }

@@ -20,7 +20,6 @@ export default function Image({ filename, alt }) {
       }
     }
   `)
-  console.log(filename)
   const image = data.images.edges.find(n =>
     n.node.relativePath.includes(filename)
   )

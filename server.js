@@ -1,16 +1,8 @@
 const express = require("express");
 const PORT = process.env.PORT || 5000;
 const { graphqlHTTP } = require("express-graphql");
-const {
-	GraphQLObjectType,
-	GraphQLSchema,
-	GraphQLString,
-	GraphQLList,
-	GraphQLNonNull,
-	GraphQLInt,
-} = require("graphql");
-const { GraphQLJSON } = require("graphql-type-json");
 const { Client } = require("pg");
+const fs = require("fs");
 
 require("dotenv").config();
 
@@ -28,16 +20,30 @@ client
 	.then(() => console.log(`Connected to db`))
 	.catch((err) => console.log(err));
 
-client
-	.query(
-		`
-		SELECT * FROM tutorials
-		`
-	)
-	.then((res) => console.log(res))
-	.catch((err) => console.log(err));
+// client
+// 	.query(`SELECT * FROM tutorials`)
+// 	.then((res) => fs.writeFile('db.json', JSON.stringify(res), () => console.log("File updated")));
+
+// client
+// 	.query(
+// 		`
+// 		UPDATE tutorials SET title = 'Preprocessing Part 2' WHERE id = 21;
+// 		`
+// 	)
+// 	.then((res) => console.log(res))
+// 	.catch((err) => console.log(err));
 
 //graphql route
+const {
+	GraphQLObjectType,
+	GraphQLSchema,
+	GraphQLString,
+	GraphQLList,
+	GraphQLNonNull,
+	GraphQLInt,
+} = require("graphql");
+const { GraphQLJSON } = require("graphql-type-json");
+
 const QueryRoot = new GraphQLObjectType({
 	name: "Query",
 	fields: () => ({
@@ -48,8 +54,8 @@ const QueryRoot = new GraphQLObjectType({
 		tutorials: {
 			type: new GraphQLList(Tutorial),
 			resolve: async () => {
-				const res = await client.query("SELECT * from tutorials");
-				return res.rows
+				const res = await client.query("SELECT * from tutorials ORDER BY id");
+				return res.rows;
 			},
 		},
 		tutorial: {
@@ -124,10 +130,36 @@ const MutationRoot = new GraphQLObjectType({
 				}
 			},
 		},
+		updateTutorial: {
+			type: Tutorial,
+			args: {
+				id: { type: GraphQLNonNull(GraphQLInt) },
+				update: { type: GraphQLNonNull(GraphQLJSON) },
+			},
+			resolve: async (parent, args, context, resolveInfo) => {
+				let set = "";
+				args.update.forEach((column) => {
+					if (!set) set += `${column[0]} = ${column[1]}`;
+					else set += `, ${column[0]} = ${column[1]}`;
+				});
+				console.log(set);
+				try {
+					return await client.query(
+						`UPDATE tutorials SET: ${set} WHERE: id = ${args.id} `
+					);
+				} catch (err) {
+					console.log(err);
+					throw new Error("Failed to update tutorial");
+				}
+			},
+		},
 	}),
 });
 
-const schema = new GraphQLSchema({ query: QueryRoot, mutation: MutationRoot });
+const schema = new GraphQLSchema({
+	query: QueryRoot,
+	mutation: MutationRoot,
+});
 
 app.use(
 	"/graphql",

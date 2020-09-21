@@ -5,11 +5,6 @@ import NavBtns from "./NavBtns"
 import Logo from "../../images/BrainHeartRate.jpg"
 
 export default function Nav({ slideshowProp }) {
-  const [isMobNavOpen, setIsMobNavOpen] = useState(false)
-  const menuProp = {
-    isMobNavOpen,
-    toggleMobNav: () => setIsMobNavOpen(prev => !prev),
-  }
   return (
     <>
       <NavBar>
@@ -17,7 +12,7 @@ export default function Nav({ slideshowProp }) {
           <img src={Logo} alt="BA Grant" />
         </Img>
         <Title>BA Regulatory Focus and Rumination</Title>
-        <NavBtns menuProp={menuProp} slideshowProp={slideshowProp} />
+        <NavBtns />
       </NavBar>
     </>
   )

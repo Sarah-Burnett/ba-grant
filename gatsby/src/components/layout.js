@@ -1,19 +1,14 @@
-import React, { useState } from "react"
+import React, { cloneElement, useState } from "react"
 import Footer from "./nav/Footer"
 import Nav from "./nav/Nav"
 import styled from "styled-components"
 import "../styles/app.css"
 
 export default function Layout({ children }) {
-  const [isSlideshowView, setIsSlideshowView] = useState(true)
-  const slideshowProp = {
-    isSlideshowView,
-    changeView: () => setIsSlideshowView(prev => !prev),
-  }
   return (
     <>
-      <Nav slideshowProp={slideshowProp} />
-      <Main slideshowProp={slideshowProp}>{children}</Main>
+      <Nav />
+      <Main>{children}</Main>
       <Footer />
     </>
   )
