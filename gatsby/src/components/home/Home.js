@@ -59,7 +59,7 @@ export default function Home() {
 const HomePage = styled.div`
   padding: 1vh 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
   color: ${s.darkBlue};
   margin: 1rem;
