@@ -15,17 +15,14 @@ Tutorial page
 - View changed via toggle in nav bar
 
 ## Dev Notes
-Built from create-react-app
+Current gatsby/postgres/graphql version
+Prior live version - create-react-app, auth, redux, tutorials as json
 
-Functional react components
-
-State management using redux and hooks
-
-Routing with react-router
-
-Styling with styled-components
-
-Temporary password in utilities
+## To do
+- use gatsby-image for images
+- add auth
+- put slides as separate postgres table to use SQL join
+- progress session stoarge 
 
 ## Installation
 ```bash

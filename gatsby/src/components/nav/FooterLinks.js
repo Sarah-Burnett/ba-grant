@@ -1,19 +1,17 @@
-import React from "react";
-import FooterLink from "./FooterLink";
+import React from "react"
+import FooterLink from "./FooterLink"
 
-const FooterLinks = ({ links }) => {
-	const keys = Object.keys(links);
-	return (
-		<>
-			{keys.map((link) => {
-				return (
-					<li key={link}>
-						<FooterLink text={link} url={links[link]} />
-					</li>
-				);
-			})}
-		</>
-	);
-};
-
-export default FooterLinks;
+export default function FooterLinks({ links }) {
+  const keys = Object.keys(links)
+  return (
+    <>
+      {keys.map(link => {
+        return (
+          <li key={link}>
+            <FooterLink text={link} url={links[link]} />
+          </li>
+        )
+      })}
+    </>
+  )
+}

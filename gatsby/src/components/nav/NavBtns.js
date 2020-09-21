@@ -4,6 +4,27 @@ import styled from "styled-components"
 import * as s from "../../styles/variables"
 import { A } from "../../styles/components"
 
+export default function NavBtns({
+  menuProp: { toggleMobNav },
+  slideshowProp: { changeView },
+}) {
+  return (
+    <Buttons>
+      <abbr>
+        <A href="/" title="Home Page">
+          <HomeIcon />
+        </A>
+      </abbr>
+      <abbr onClick={changeView} title="Toggle slideshow">
+        <ListIcon />
+      </abbr>
+      <abbr onClick={toggleMobNav} title="User menu">
+        <UserIcon />
+      </abbr>
+    </Buttons>
+  )
+}
+
 const Buttons = styled.div`
   height: 10vh;
   display: flex;
@@ -27,26 +48,3 @@ const Buttons = styled.div`
     padding-right: 3vw;
   }
 `
-
-const NavBtns = ({
-  menuProp: { toggleMobNav },
-  slideshowProp: { changeView },
-}) => {
-  return (
-    <Buttons>
-      <abbr>
-        <A href="/" title="Home Page">
-          <HomeIcon />
-        </A>
-      </abbr>
-      <abbr onClick={changeView} title="Toggle slideshow">
-        <ListIcon />
-      </abbr>
-      <abbr onClick={toggleMobNav} title="User menu">
-        <UserIcon />
-      </abbr>
-    </Buttons>
-  )
-}
-
-export default NavBtns

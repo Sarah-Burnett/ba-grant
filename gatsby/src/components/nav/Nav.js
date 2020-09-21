@@ -4,6 +4,25 @@ import * as s from "../../styles/variables"
 import NavBtns from "./NavBtns"
 import Logo from "../../images/BrainHeartRate.jpg"
 
+export default function Nav({ slideshowProp }) {
+  const [isMobNavOpen, setIsMobNavOpen] = useState(false)
+  const menuProp = {
+    isMobNavOpen,
+    toggleMobNav: () => setIsMobNavOpen(prev => !prev),
+  }
+  return (
+    <>
+      <NavBar>
+        <Img>
+          <img src={Logo} alt="BA Grant" />
+        </Img>
+        <Title>BA Regulatory Focus and Rumination</Title>
+        <NavBtns menuProp={menuProp} slideshowProp={slideshowProp} />
+      </NavBar>
+    </>
+  )
+}
+
 const NavBar = styled.nav`
   @media (max-width: ${s.tablet}) {
     text-align: center;
@@ -31,24 +50,3 @@ const Title = styled.h1`
   margin: auto;
   padding: 1vh 0;
 `
-
-const Nav = ({ slideshowProp }) => {
-  const [isMobNavOpen, setIsMobNavOpen] = useState(false)
-  const menuProp = {
-    isMobNavOpen,
-    toggleMobNav: () => setIsMobNavOpen(prev => !prev),
-  }
-  return (
-    <>
-      <NavBar>
-        <Img>
-          <img src={Logo} alt="BA Grant" />
-        </Img>
-        <Title>BA Regulatory Focus and Rumination</Title>
-        <NavBtns menuProp={menuProp} slideshowProp={slideshowProp} />
-      </NavBar>
-    </>
-  )
-}
-
-export default Nav

@@ -4,15 +4,11 @@ import Nav from "./nav/Nav"
 import styled from "styled-components"
 import "../styles/app.css"
 
-const Main = styled.main`
-  min-height: 70vh;
-`
-
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   const [isSlideshowView, setIsSlideshowView] = useState(true)
   const slideshowProp = {
     isSlideshowView,
-    changeView: () => setIsSlideshowView(prev => !prev)
+    changeView: () => setIsSlideshowView(prev => !prev),
   }
   return (
     <>
@@ -23,4 +19,6 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout
+const Main = styled.main`
+  min-height: 70vh;
+`

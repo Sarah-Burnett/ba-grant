@@ -1,19 +1,12 @@
 import styled from "styled-components";
-import {
-	lightBlue,
-	accent,
-	darkBlue,
-	lightGrey,
-	white,
-	tablet,
-} from "./variables";
+import * as s from "./variables";
 
 export const A = styled.a`
-	color: ${(props) => (props.darker ? `${darkBlue}` : `${lightBlue}`)};
+	color: ${(props) => (props.darker ? `${s.darkBlue}` : `${s.lightBlue}`)};
 	cursor: pointer;
 	text-decoration: none;
 	&:hover {
-		color: ${accent};
+		color: ${s.accent};
 	}
 `;
 
@@ -23,20 +16,20 @@ export const Button = styled.button`
 	width: 100%;
 	border: none;
 	border-radius: 1px;
-	color: ${darkBlue};
+	color: ${s.darkBlue};
 	cursor: pointer;
-	background: ${lightGrey};
+	background: ${s.lightGrey};
 	&:hover {
-		background: ${darkBlue};
-		color: ${white};
+		background: ${s.darkBlue};
+		color: ${s.white};
 	}
 	line-height: 150%;
 	font-size: inherit;
-	@media (min-width: ${tablet}) {
+	@media (min-width: ${s.tablet}) {
 		line-height: inherit;
 		font-size: 90%;
 	}
 `;
 export const PrimaryButton = styled(Button)`
-	background: ${accent};
+	background: ${s.accent};
 `;

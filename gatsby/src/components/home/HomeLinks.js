@@ -1,0 +1,71 @@
+import React from "react"
+import styled from "styled-components"
+import * as s from "../../styles/variables"
+import { A } from "../../styles/components"
+import Checkbox from "./Checkbox"
+import Image from "../image"
+
+export default function HomeLinks({ name, image, links }) {
+  return (
+    <Links>
+      <h2>{name}</h2>
+      <Image filename={image.filename} alt={image.alt} />
+      <ul>
+        {links.map(({ slug, title }) => (
+          <li key={title}>
+            <A darker href={`/${slug}`}>
+              {title}
+            </A>
+            <Checkbox />
+          </li>
+        ))}
+      </ul>
+    </Links>
+  )
+}
+
+const Links = styled.div`
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 20vh 1fr;
+  text-align: center;
+  background: ${s.white};
+  h2 {
+    height: 10vh;
+    line-height: 10vh;
+    margin-bottom: 1vh;
+  }
+  li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2vh 4vw;
+    @media (min-width: ${s.tablet}) {
+      margin: 2vh 1vw;
+    }
+  }
+  a {
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    line-height: 250%;
+    @media (min-width: ${s.tablet}) {
+      line-height: auto;
+    }
+  }
+  ul {
+    margin-bottom: 1vh;
+    text-align: left;
+  }
+  img {
+    height: 100%;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 1vh;
+    transition: opacity 1s;
+  }
+  border: 0.5px solid ${s.lightGrey};
+  border-radius: 1px;
+`

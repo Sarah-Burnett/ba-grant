@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { lightBlue, desktop } from "../../styles/variables";
 import { A } from "../../styles/components";
 import FooterLinks from "./FooterLinks";
-import { footerLinks } from "../../utilities/footerLinks";
+
 
 const FooterBar = styled.div`
 	background: rgba(0, 0, 0, 0.9);
