@@ -3,8 +3,8 @@
 > React tutorial site for software used for psychological research project
 
 Main page
-- Login modal with simple one user/password auth
-- To-do list of tutorials
+- Login modal with simple one user/password auth (live branch only)
+- To-do list of tutorials tracking progress
 - Nav with dropdown menu including logout
 - Footer with links to external sites
 
@@ -25,7 +25,7 @@ Routing with react-router
 
 Styling with styled-components
 
-Temporary password in utilities
+Progress stored in local storage
 
 ## Installation
 ```bash

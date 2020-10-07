@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { lightBlue, darkBlue, tablet } from "../../styles/variables";
-import UserMenu from "./UserMenu";
 import NavBtns from "./NavBtns";
 import Logo from "../../images/BrainHeartRate.jpg";
 
@@ -33,8 +32,7 @@ const Title = styled.h1`
 	padding: 1vh 0;
 `;
 
-const Nav = ({ isAuth, setIsAuth }) => {
-	const [showMenu, setShowMenu] = useState(false);
+const Nav = () => {
 	return (
 		<>
 			<NavBar>
@@ -42,11 +40,8 @@ const Nav = ({ isAuth, setIsAuth }) => {
 					<img src={Logo} alt="BA Grant" />
 				</Img>
 				<Title>BA Regulatory Focus and Rumination</Title>
-				{isAuth && <NavBtns setShowMenu={setShowMenu} />}
+				<NavBtns/>
 			</NavBar>
-			{showMenu && isAuth && (
-				<UserMenu setIsAuth={setIsAuth} setShowMenu={setShowMenu} />
-			)}
 		</>
 	);
 };

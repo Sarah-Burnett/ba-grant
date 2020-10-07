@@ -53,7 +53,7 @@ const NavBtns = ({ setShowMenu }) => {
 			>
 				<ListIcon />
 			</abbr>
-			<abbr onClick={() => setShowMenu((prev) => !prev)} title="User menu">
+			<abbr title="User menu">
 				<UserIcon />
 			</abbr>
 		</Buttons>
