@@ -27,6 +27,8 @@ Styling with styled-components
 
 Progress stored in local storage
 
+Refactor branch - gatsby/graphql/postgres version in progress
+
 ## Installation
 ```bash
 # Install dependencies
