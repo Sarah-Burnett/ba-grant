@@ -37,13 +37,7 @@ Refactor - gatsby/postgres/graphql version
 ## Installation
 
 ```bash
-# Install dependencies
-npm install
-# Run the react server
-npm start
-
-# Generate production build
-npm run build
+#See scripts in package.json
 ```
 
 ## Credits
